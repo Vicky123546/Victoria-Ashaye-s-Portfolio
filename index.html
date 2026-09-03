@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victoria Ashaye — Technology Governance, GRC, Cybersecurity, AI Security &amp; Governance</title>
+<meta name="description" content="Victoria Ashaye is a Technology Governance Analyst and GRC professional working where cybersecurity, governance, technology and AI intersect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF9F5; --ivory:#F3EFE7; --stone:#E6E1D7; --line:#D6D0C5; --line-soft:#E4DED3;
+  --grey:#8B877E; --graphite:#4B4F55; --ink:#22262B; --black:#171A1D;
+  --accent:#3F566B; --accent-mid:#6D8296; --accent-soft:#C3CDD6;
+  --amber:#A07A33; --green:#57705B; --red:#8B4A45;
+  --sans:'Manrope',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --gut:clamp(20px,4vw,64px);
+  --maxw:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ivory);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.62;font-weight:400;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.022em;line-height:1.12}
+p{margin:0 0 1em}
+a{color:inherit}
+button{font-family:inherit;font-size:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+img,svg{max-width:100%}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+.mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);font-weight:500}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- section frame ---------- */
+.sec{padding:clamp(64px,9vw,124px) 0;position:relative}
+.sec--paper{background:var(--paper)}
+.sec--deep{background:var(--black);color:#EDEAE4}
+.sec--deep .mono{color:#8D948F}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:clamp(32px,5vw,58px);max-width:66ch}
+.sec-num{display:flex;align-items:baseline;gap:14px}
+.sec-num span:first-child{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;color:var(--accent-mid);font-weight:500}
+.sec-num span:last-child{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.sec h2{font-size:clamp(1.7rem,3.5vw,2.6rem)}
+.sec-lede{font-size:clamp(1rem,1.5vw,1.12rem);color:var(--graphite);max-width:60ch}
+.sec--deep .sec-lede{color:#B4B9B3}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(243,239,231,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);height:62px;display:flex;align-items:center;gap:26px}
+.nav-mark{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.03em;font-size:.98rem;text-decoration:none;flex-shrink:0}
+.nav-mark i{width:19px;height:19px;display:block;position:relative;flex-shrink:0}
+.nav-mark i b{position:absolute;left:0;width:19px;height:2px;background:var(--accent);display:block;opacity:.45;border-radius:1px}
+.nav-mark i b:nth-child(1){top:2px}.nav-mark i b:nth-child(2){top:7px;opacity:.65}
+.nav-mark i b:nth-child(3){top:12px;opacity:.82}.nav-mark i b:nth-child(4){top:17px;opacity:1}
+.nav-links{display:flex;gap:2px;margin-left:auto;align-items:center}
+.nav-links a{font-size:.86rem;font-weight:500;text-decoration:none;color:var(--graphite);padding:7px 11px;border-radius:2px;transition:background .16s,color .16s}
+.nav-links a:hover{background:var(--stone);color:var(--ink)}
+.nav-links a.on{color:var(--accent);background:var(--stone)}
+.nav-cta{margin-left:14px;font-size:.82rem;font-weight:600;text-decoration:none;padding:9px 16px;border:1px solid var(--ink);border-radius:2px;background:var(--ink);color:var(--paper);transition:background .18s,border-color .18s;white-space:nowrap}
+.nav-cta:hover{background:var(--accent);border-color:var(--accent)}
+.nav-burger{display:none;margin-left:auto;padding:8px;border:1px solid var(--line);border-radius:2px;line-height:0}
+.nav-burger svg{width:18px;height:18px;stroke:var(--ink);stroke-width:1.6;fill:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(48px,7vw,84px) 0 clamp(56px,8vw,96px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,64px);align-items:center}
+.hero-name{font-size:clamp(2.4rem,6.2vw,4.15rem);font-weight:800;letter-spacing:-.042em;line-height:.96;margin-bottom:16px}
+.hero-disc{display:flex;flex-wrap:wrap;gap:7px 0;align-items:center;margin-bottom:30px}
+.hero-disc span{font-family:var(--mono);font-size:.685rem;letter-spacing:.075em;text-transform:uppercase;color:var(--graphite);padding-right:11px;margin-right:11px;border-right:1px solid var(--line)}
+.hero-disc span:last-child{border-right:0}
+.hero-h{font-size:clamp(1.28rem,2.55vw,1.85rem);font-weight:600;letter-spacing:-.025em;line-height:1.25;max-width:19ch;margin-bottom:18px}
+.hero-sub{font-size:clamp(.98rem,1.4vw,1.08rem);color:var(--graphite);max-width:48ch;margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:.87rem;font-weight:600;text-decoration:none;padding:12px 20px;border-radius:2px;transition:background .18s,border-color .18s,color .18s}
+.btn-solid{background:var(--ink);color:var(--paper);border:1px solid var(--ink)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink);background:var(--stone)}
+.btn i{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5;display:block}
+
+/* ---------- isometric stack ---------- */
+.stage{perspective:1500px;height:clamp(330px,44vw,470px);position:relative;display:flex;align-items:center;justify-content:center}
+.stack{position:relative;width:270px;height:270px;transform-style:preserve-3d;transform:rotateX(60deg) rotateZ(-40deg);transition:transform .5s cubic-bezier(.22,.8,.3,1)}
+.slab{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.22,.8,.3,1)}
+.slab-face{position:absolute;inset:0;border:1px solid var(--line);background:
+  repeating-linear-gradient(0deg,rgba(63,86,107,.11) 0 1px,transparent 1px 27px),
+  repeating-linear-gradient(90deg,rgba(63,86,107,.11) 0 1px,transparent 1px 27px),
+  rgba(251,249,245,.9);
+  box-shadow:0 12px 26px -18px rgba(34,38,43,.5)}
+.slab-face::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 25%,rgba(63,86,107,.1),transparent 62%)}
+.slab[data-i="0"] .slab-face{background-color:rgba(63,86,107,.10)}
+.slab[data-i="1"] .slab-face{background-color:rgba(63,86,107,.07)}
+.slab[data-i="2"] .slab-face{background-color:rgba(251,249,245,.94)}
+.slab[data-i="3"] .slab-face{background-color:rgba(251,249,245,.98)}
+.node{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.32}
+.slab.act .node{opacity:.85}
+.slab.act .slab-face{border-color:var(--accent);box-shadow:0 22px 40px -20px rgba(63,86,107,.65)}
+.stack-legend{position:absolute;left:0;bottom:0;display:flex;flex-direction:column;gap:5px}
+.stack-legend button{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.655rem;letter-spacing:.085em;text-transform:uppercase;color:var(--grey);padding:3px 6px;border-radius:2px;transition:color .16s,background .16s}
+.stack-legend button:hover,.stack-legend button.on{color:var(--accent);background:var(--stone)}
+.stack-legend em{width:16px;height:1px;background:currentColor;display:block;font-style:normal;opacity:.6}
+
+/* ---------- provenance tags ---------- */
+.pv{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.615rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid;border-radius:2px;white-space:nowrap;font-weight:500}
+.pv::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+.pv-built{color:var(--accent);border-color:var(--accent-soft);background:rgba(63,86,107,.06)}
+.pv-done{color:var(--green);border-color:rgba(87,112,91,.35);background:rgba(87,112,91,.06)}
+.pv-know{color:var(--graphite);border-color:var(--line);background:transparent}
+.pv-dev{color:var(--amber);border-color:rgba(160,122,51,.35);background:rgba(160,122,51,.06)}
+
+/* ---------- journey ---------- */
+.jrn{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(26px,4.5vw,58px);align-items:start}
+.jrn-stage{position:sticky;top:96px}
+.jrn-panel{border-top:1px solid var(--line)}
+.jrn-step{border-bottom:1px solid var(--line)}
+.jrn-btn{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;width:100%;text-align:left;padding:19px 4px;transition:padding-left .2s}
+.jrn-btn:hover{padding-left:10px}
+.jrn-btn .lvl{font-family:var(--mono);font-size:.68rem;color:var(--accent-mid);letter-spacing:.08em}
+.jrn-btn h3{font-size:1.12rem;font-weight:600;letter-spacing:-.02em}
+.jrn-btn .chev{width:11px;height:11px;border-right:1.5px solid var(--grey);border-bottom:1.5px solid var(--grey);transform:rotate(45deg);transition:transform .25s;margin-right:4px}
+.jrn-step.open .jrn-btn .chev{transform:rotate(-135deg)}
+.jrn-step.open .jrn-btn h3{color:var(--accent)}
+.jrn-body{display:none;padding:0 4px 26px}
+.jrn-step.open .jrn-body{display:block}
+.jrn-body p{color:var(--graphite);max-width:56ch}
+.jrn-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:20px;padding-top:20px;border-top:1px dashed var(--line)}
+.jrn-meta h4{font-family:var(--mono);font-size:.655rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);font-weight:500;margin-bottom:9px}
+.jrn-meta ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:5px}
+.jrn-meta li{font-size:.875rem;color:var(--graphite);padding-left:13px;position:relative}
+.jrn-meta li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:1px;background:var(--accent-mid)}
+.jrn-quote{margin-top:clamp(38px,5vw,62px);padding:clamp(24px,3.5vw,38px);background:var(--black);color:#EDEAE4;border-radius:2px}
+.jrn-quote p{font-size:clamp(1.1rem,2.1vw,1.45rem);font-weight:600;letter-spacing:-.025em;line-height:1.34;max-width:34ch;margin:0}
+.jrn-quote p em{font-style:normal;color:var(--accent-soft)}
+
+/* ---------- experience ---------- */
+.xp{border-top:1px solid var(--line)}
+.xp-item{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:clamp(18px,3vw,44px);padding:clamp(26px,4vw,42px) 0;border-bottom:1px solid var(--line);position:relative}
+.xp-when{position:relative}
+.xp-when .d{font-family:var(--mono);font-size:.72rem;color:var(--graphite);letter-spacing:.04em;display:block;margin-bottom:6px}
+.xp-when .org{font-size:.9rem;font-weight:600;color:var(--ink)}
+.xp-when .loc{font-size:.8rem;color:var(--grey);margin-top:2px}
+.xp-item h3{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:700;margin-bottom:6px}
+.xp-role-note{font-size:.84rem;color:var(--accent);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.xp-role-note i{width:22px;height:1px;background:var(--accent-soft);display:block}
+.xp-item>div>p{color:var(--graphite);max-width:62ch}
+.xp-block{margin-top:18px}
+.xp-block h4{font-family:var(--mono);font-size:.655rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);font-weight:500;margin-bottom:10px}
+.xp-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
+.xp-list li{font-size:.93rem;color:var(--graphite);padding-left:17px;position:relative;max-width:70ch}
+.xp-list li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--accent-mid)}
+.xp-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.xp-chips span{font-family:var(--mono);font-size:.645rem;letter-spacing:.07em;text-transform:uppercase;color:var(--graphite);border:1px solid var(--line);padding:4px 9px;border-radius:2px;background:var(--paper)}
+.xp-prog{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(63,86,107,.07),transparent 65%)}
+.xp-prog em{font-style:normal;font-family:var(--mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);padding-left:4px}
+.xp-prog i{flex:1;height:1px;background:linear-gradient(90deg,var(--accent-soft),var(--line));display:block}
+.xp-prog b{font-size:.83rem;font-weight:600;color:var(--graphite)}
+
+/* ---------- filter bar ---------- */
+.fbar{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:26px;align-items:center}
+.fbar button{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 13px;border:1px solid var(--line);border-radius:2px;color:var(--graphite);background:var(--paper);transition:all .16s}
+.fbar button:hover{border-color:var(--grey)}
+.fbar button.on{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.fbar .sep{width:1px;height:20px;background:var(--line);margin:0 5px}
+
+/* ---------- register (selected work) ---------- */
+.reg{border-top:1px solid var(--ink)}
+.reg-head{display:grid;grid-template-columns:64px minmax(0,1fr) 200px 132px;gap:16px;padding:9px 6px;border-bottom:1px solid var(--line);align-items:center}
+.reg-head span{font-family:var(--mono);font-size:.625rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.reg-row{display:grid;grid-template-columns:64px minmax(0,1fr) 200px 132px;gap:16px;width:100%;text-align:left;padding:17px 6px;border-bottom:1px solid var(--line-soft);align-items:center;transition:background .16s,padding-left .18s}
+.reg-row:hover{background:var(--paper);padding-left:14px}
+.reg-row[hidden]{display:none}
+.reg-id{font-family:var(--mono);font-size:.7rem;color:var(--accent-mid)}
+.reg-t{min-width:0}
+.reg-t b{display:block;font-size:1rem;font-weight:600;letter-spacing:-.015em;margin-bottom:3px}
+.reg-t span{display:block;font-size:.855rem;color:var(--grey);line-height:1.5}
+.reg-cat{font-family:var(--mono);font-size:.655rem;letter-spacing:.07em;text-transform:uppercase;color:var(--graphite)}
+.reg-empty{padding:40px 6px;color:var(--grey);font-size:.9rem;border-bottom:1px solid var(--line-soft)}
+
+/* ---------- legend for provenance ---------- */
+.pvkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;padding:20px;border:1px solid var(--line);background:var(--paper);border-radius:2px;margin-bottom:28px}
+.pvkey div{display:flex;flex-direction:column;gap:7px}
+.pvkey p{margin:0;font-size:.82rem;color:var(--grey);line-height:1.5}
+
+/* ---------- dossier overlay ---------- */
+.dossier{position:fixed;inset:0;z-index:100;display:none}
+.dossier.open{display:block}
+.dossier-scrim{position:absolute;inset:0;background:rgba(23,26,29,.5);backdrop-filter:blur(3px)}
+.dossier-panel{position:absolute;right:0;top:0;bottom:0;width:min(720px,100%);background:var(--paper);overflow-y:auto;box-shadow:-30px 0 60px -30px rgba(23,26,29,.6);animation:slidein .34s cubic-bezier(.22,.8,.3,1)}
+@keyframes slidein{from{transform:translateX(28px);opacity:.4}to{transform:none;opacity:1}}
+.dossier-top{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--line);padding:16px clamp(20px,4vw,40px);display:flex;align-items:center;gap:14px;z-index:2}
+.dossier-top .mono{margin-right:auto}
+.dossier-x{padding:8px;border:1px solid var(--line);border-radius:2px;line-height:0}
+.dossier-x svg{width:15px;height:15px;stroke:var(--ink);stroke-width:1.7;fill:none}
+.dossier-in{padding:clamp(24px,4vw,42px) clamp(20px,4vw,40px) 70px}
+.dossier-in h3{font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.03em;margin-bottom:10px}
+.dossier-sub{color:var(--graphite);font-size:1rem;margin-bottom:22px;max-width:56ch}
+.dsteps{border-top:1px solid var(--line);margin-top:8px}
+.dstep{border-bottom:1px solid var(--line-soft);padding:20px 0;display:grid;grid-template-columns:132px minmax(0,1fr);gap:20px}
+.dstep h4{font-family:var(--mono);font-size:.655rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-mid);font-weight:500;padding-top:3px}
+.dstep p{margin:0;color:var(--graphite);font-size:.95rem}
+.dstep p+p{margin-top:.7em}
+.dstep ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.dstep li{font-size:.93rem;color:var(--graphite);padding-left:16px;position:relative}
+.dstep li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--accent-mid)}
+.dstep .stack-chips{display:flex;flex-wrap:wrap;gap:6px}
+.dstep .stack-chips span{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--graphite);border:1px solid var(--line);padding:3px 8px;border-radius:2px}
+
+/* ---------- featured case study frame ---------- */
+.feat{border:1px solid var(--line);background:var(--paper);border-radius:2px;overflow:hidden;margin-bottom:26px}
+.feat-top{padding:clamp(22px,3.4vw,38px);border-bottom:1px solid var(--line);display:grid;gap:12px}
+.feat-eyebrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.feat-top h3{font-size:clamp(1.35rem,2.9vw,2rem);letter-spacing:-.03em;max-width:22ch}
+.feat-top p{margin:0;color:var(--graphite);max-width:62ch}
+.feat-body{padding:clamp(22px,3.4vw,38px)}
+
+/* governance cycle */
+.cyc{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center}
+.cyc-ring{position:relative;aspect-ratio:1;max-width:320px;margin:0 auto;width:100%}
+.cyc-ring svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cyc-node{cursor:pointer}
+.cyc-node circle{fill:var(--ivory);stroke:var(--line);stroke-width:1;transition:fill .2s,stroke .2s}
+.cyc-node text{font-family:var(--mono);font-size:7.4px;letter-spacing:.06em;fill:var(--graphite);text-anchor:middle;dominant-baseline:middle;text-transform:uppercase;pointer-events:none}
+.cyc-node:hover circle{stroke:var(--accent-mid)}
+.cyc-node.on circle{fill:var(--accent);stroke:var(--accent)}
+.cyc-node.on text{fill:var(--paper)}
+.cyc-ring .arc{fill:none;stroke:var(--line);stroke-width:1}
+.cyc-mid{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;pointer-events:none;padding:0 26%}
+.cyc-mid b{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:var(--accent)}
+.cyc-mid span{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);line-height:1.5}
+.cyc-detail{min-height:172px}
+.cyc-detail .mono{color:var(--accent-mid);margin-bottom:9px;display:block}
+.cyc-detail h4{font-size:1.24rem;margin-bottom:9px;letter-spacing:-.02em}
+.cyc-detail p{color:var(--graphite);margin:0;max-width:52ch}
+.cyc-detail .inplat{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:.87rem;color:var(--grey)}
+
+/* layer explorer */
+.lyr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,4vw,48px);align-items:start}
+.lyr-stack{display:flex;flex-direction:column;gap:6px}
+.lyr-stack button{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:13px;align-items:center;text-align:left;padding:13px 15px;border:1px solid var(--line);border-radius:2px;background:var(--ivory);transition:all .18s}
+.lyr-stack button:hover{border-color:var(--accent-mid);transform:translateX(4px)}
+.lyr-stack button.on{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.lyr-stack button.on .lyr-i{color:rgba(255,255,255,.6)}
+.lyr-i{font-family:var(--mono);font-size:.65rem;color:var(--accent-mid)}
+.lyr-stack b{font-size:.94rem;font-weight:600}
+.lyr-dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.35}
+.lyr-panel{border:1px solid var(--line);border-radius:2px;padding:clamp(20px,3vw,30px);background:var(--ivory);min-height:280px}
+.lyr-panel h4{font-size:1.2rem;margin-bottom:10px;letter-spacing:-.02em}
+.lyr-panel>p{color:var(--graphite);max-width:54ch}
+.lyr-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.lyr-facts div b{display:block;font-family:var(--mono);font-size:1.3rem;color:var(--accent);letter-spacing:-.02em;font-weight:500}
+.lyr-facts div span{font-size:.78rem;color:var(--grey);line-height:1.45;display:block;margin-top:3px}
+
+/* boardroom */
+.board{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(24px,4vw,48px);align-items:start}
+.room{position:relative;aspect-ratio:5/4;background:linear-gradient(175deg,#1D2126,#12151A);border-radius:2px;overflow:hidden;perspective:900px;display:flex;align-items:center;justify-content:center}
+.room-floor{position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,rgba(195,205,214,.09) 0 1px,transparent 1px 34px),
+  repeating-linear-gradient(90deg,rgba(195,205,214,.09) 0 1px,transparent 1px 34px);
+  transform:rotateX(72deg) translateY(28%) scale(1.9);transform-origin:center bottom}
+.room-table{position:relative;width:56%;aspect-ratio:2/1;border-radius:50%;background:linear-gradient(160deg,rgba(195,205,214,.2),rgba(195,205,214,.05));border:1px solid rgba(195,205,214,.3);transform:rotateX(62deg);box-shadow:0 30px 50px -20px rgba(0,0,0,.7)}
+.seat{position:absolute;width:11px;height:11px;border-radius:50%;background:var(--accent-soft);opacity:.5;transition:opacity .3s,transform .3s}
+.seat.live{opacity:1;background:#D9C48A;transform:scale(1.35)}
+.room-cap{position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(237,234,228,.55)}
+.sim-scen{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+.sim-scen button{font-family:var(--mono);font-size:.655rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 13px;border:1px solid rgba(195,205,214,.3);border-radius:2px;color:#C6CBC6;transition:all .16s}
+.sim-scen button:hover{border-color:var(--accent-soft);color:#EDEAE4}
+.sim-scen button.on{background:var(--accent-soft);border-color:var(--accent-soft);color:var(--black)}
+.sim-paper{border-left:2px solid var(--accent-soft);padding-left:16px;margin-bottom:20px}
+.sim-paper .mono{display:block;margin-bottom:7px}
+.sim-paper p{margin:0;font-size:1.02rem;color:#DFDCD6;max-width:52ch}
+.sim-opts{display:flex;flex-direction:column;gap:9px}
+.sim-opt{text-align:left;padding:14px 16px;border:1px solid rgba(195,205,214,.24);border-radius:2px;color:#DFDCD6;font-size:.92rem;transition:all .18s;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start}
+.sim-opt:hover{border-color:var(--accent-soft);background:rgba(195,205,214,.07)}
+.sim-opt em{font-style:normal;font-family:var(--mono);font-size:.7rem;color:var(--accent-soft);padding-top:2px}
+.sim-opt.chosen{border-color:#D9C48A;background:rgba(217,196,138,.09)}
+.sim-fb{margin-top:18px;padding:18px;border:1px solid rgba(195,205,214,.24);border-radius:2px;background:rgba(195,205,214,.05)}
+.sim-fb h5{margin:0 0 9px;font-size:.95rem;font-weight:700;color:#EDEAE4}
+.sim-fb p{margin:0 0 12px;font-size:.9rem;color:#B4B9B3}
+.sim-comp{display:flex;flex-wrap:wrap;gap:7px}
+.sim-comp span{font-family:var(--mono);font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:#D9C48A;border:1px solid rgba(217,196,138,.35);padding:3px 8px;border-radius:2px}
+.sim-note{margin-top:16px;font-size:.8rem;color:#8D948F;font-style:italic}
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:1px;background:rgba(195,205,214,.2);border:1px solid rgba(195,205,214,.2);margin-top:26px}
+.statrow div{background:var(--black);padding:16px 14px}
+.statrow b{display:block;font-family:var(--mono);font-size:1.45rem;color:#D9C48A;font-weight:500;letter-spacing:-.02em}
+.statrow span{font-size:.735rem;color:#8D948F;line-height:1.4;display:block;margin-top:4px}
+
+/* ---------- capability matrix ---------- */
+.cap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,48px);align-items:start}
+.cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cap-cell{background:var(--paper);padding:20px 18px;text-align:left;min-height:126px;display:flex;flex-direction:column;gap:8px;transition:background .18s}
+.cap-cell:hover{background:var(--stone)}
+.cap-cell.on{background:var(--accent);color:var(--paper)}
+.cap-cell.on .cap-n,.cap-cell.on small{color:rgba(255,255,255,.62)}
+.cap-n{font-family:var(--mono);font-size:.63rem;letter-spacing:.09em;color:var(--accent-mid)}
+.cap-cell b{font-size:.98rem;font-weight:600;letter-spacing:-.015em;line-height:1.24}
+.cap-cell small{font-size:.775rem;color:var(--grey);line-height:1.45;margin-top:auto}
+.cap-panel{border:1px solid var(--line);background:var(--paper);border-radius:2px;padding:clamp(20px,3vw,30px);min-height:340px}
+.cap-panel h3{font-size:1.3rem;letter-spacing:-.025em;margin-bottom:8px}
+.cap-panel>p{color:var(--graphite);max-width:52ch}
+.cap-sec{margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.cap-sec h4{font-family:var(--mono);font-size:.655rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);font-weight:500;margin-bottom:10px}
+.cap-tags{display:flex;flex-wrap:wrap;gap:6px}
+.cap-tags span{font-size:.82rem;color:var(--graphite);border:1px solid var(--line);padding:4px 10px;border-radius:2px;background:var(--ivory)}
+.cap-links{display:flex;flex-wrap:wrap;gap:8px}
+.cap-links button{font-size:.83rem;font-weight:600;color:var(--accent);border-bottom:1px solid var(--accent-soft);padding:1px 0;border-radius:0}
+.cap-links button:hover{border-color:var(--accent)}
+
+/* ---------- AI duality ---------- */
+.duo{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(16px,3vw,34px);align-items:stretch}
+.duo-col{border:1px solid rgba(195,205,214,.22);border-radius:2px;padding:clamp(20px,3vw,30px);background:rgba(195,205,214,.04)}
+.duo-col .mono{color:var(--accent-soft);margin-bottom:12px;display:block}
+.duo-col h3{font-size:clamp(1.15rem,2.2vw,1.5rem);letter-spacing:-.025em;margin-bottom:12px;color:#EDEAE4}
+.duo-q{font-size:1.02rem;color:#D9C48A;margin-bottom:16px;font-weight:500}
+.duo-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+.duo-col li{font-size:.9rem;color:#B4B9B3;padding-left:16px;position:relative}
+.duo-col li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:1px;background:var(--accent-soft)}
+.duo-mid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-width:112px}
+.duo-mid i{width:1px;flex:1;background:linear-gradient(180deg,transparent,var(--accent-soft),transparent);display:block}
+.duo-mid b{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#D9C48A;text-align:center;line-height:1.5;border:1px solid rgba(217,196,138,.35);padding:11px 12px;border-radius:2px}
+.duo-work{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:rgba(195,205,214,.2);border:1px solid rgba(195,205,214,.2);margin-top:clamp(24px,4vw,42px)}
+.duo-work button,.duo-work div{background:var(--black);padding:18px;text-align:left;transition:background .18s}
+.duo-work button:hover{background:#1E2227}
+.duo-work b{display:block;font-size:.95rem;color:#EDEAE4;margin-bottom:5px;font-weight:600}
+.duo-work span{font-size:.8rem;color:#8D948F;line-height:1.45;display:block}
+
+/* ---------- radar ---------- */
+.rad{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:clamp(24px,4vw,52px);align-items:start}
+.rad-face{position:relative;aspect-ratio:1;width:100%}
+.rad-face svg{width:100%;height:100%;overflow:visible}
+.rad-face .grid-c{fill:none;stroke:var(--line);stroke-width:1}
+.rad-face .grid-x{stroke:var(--line);stroke-width:1}
+.rad-face .rlabel{font-family:var(--mono);font-size:6.6px;letter-spacing:.09em;fill:var(--grey);text-transform:uppercase}
+.rad-dot{cursor:pointer}
+.rad-dot circle.hit{fill:transparent;stroke:none}
+.rad-dot circle.pt{fill:var(--accent-mid);stroke:var(--paper);stroke-width:1.5;transition:r .2s,fill .2s}
+.rad-dot:hover circle.pt{r:7;fill:var(--accent)}
+.rad-dot.on circle.pt{r:7.5;fill:var(--accent)}
+.rad-dot.dim{opacity:.16}
+.rad-dot.on circle.ring{fill:none;stroke:var(--accent);stroke-width:1;opacity:.4}
+.chain{border-top:1px solid var(--line)}
+.chain-h{padding-bottom:18px}
+.chain-h .mono{display:block;margin-bottom:8px}
+.chain-h h3{font-size:1.25rem;letter-spacing:-.025em}
+.chain-h p{margin:8px 0 0;color:var(--graphite);font-size:.95rem;max-width:54ch}
+.chain-step{display:grid;grid-template-columns:150px minmax(0,1fr);gap:18px;padding:15px 0;border-top:1px solid var(--line-soft);align-items:start}
+.chain-step h4{font-family:var(--mono);font-size:.645rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-mid);font-weight:500;display:flex;align-items:center;gap:9px;padding-top:2px}
+.chain-step h4 i{width:14px;height:1px;background:var(--accent-soft);display:block;flex-shrink:0}
+.chain-step p{margin:0;font-size:.93rem;color:var(--graphite)}
+
+/* ---------- governance technology ---------- */
+.gt{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.gt-item{background:var(--paper);padding:22px 20px;text-align:left;display:flex;flex-direction:column;gap:10px;transition:background .2s}
+.gt-item:hover{background:var(--stone)}
+.gt-item[hidden]{display:none}
+.gt-top{display:flex;align-items:center;gap:9px;justify-content:space-between}
+.gt-item b{font-size:1rem;font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.gt-item .gt-what{font-size:.85rem;color:var(--graphite);line-height:1.5}
+.gt-psce{display:grid;gap:7px;margin-top:auto;padding-top:12px;border-top:1px dashed var(--line)}
+.gt-psce>span{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px;align-items:start}
+.gt-psce em{font-style:normal;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-mid);padding-top:2px}
+.gt-psce>span>span{font-size:.8rem;color:var(--grey);line-height:1.45}
+
+/* ---------- evidence / certifications ---------- */
+.ev{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(20px,3vw,36px)}
+.ev-col h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500;padding-bottom:11px;border-bottom:1px solid var(--ink);margin-bottom:4px}
+.ev-item{padding:14px 2px;border-bottom:1px solid var(--line-soft);display:grid;gap:4px}
+.ev-item b{font-size:.93rem;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.ev-item .who{font-size:.82rem;color:var(--grey)}
+.ev-item .when{font-family:var(--mono);font-size:.665rem;letter-spacing:.06em;color:var(--graphite)}
+.ev-item.fresh{background:rgba(63,86,107,.055);padding-left:12px;padding-right:12px;border-left:2px solid var(--accent)}
+.ev-item.fresh .when{color:var(--accent)}
+.ev-pending .when{color:var(--amber)}
+
+/* ---------- about + future ---------- */
+.abt{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr);gap:clamp(26px,4.5vw,60px);align-items:start}
+.abt-body p{font-size:1.03rem;color:var(--graphite);max-width:58ch}
+.abt-body p:first-child{font-size:clamp(1.1rem,1.9vw,1.28rem);color:var(--ink);font-weight:500;letter-spacing:-.02em;line-height:1.45}
+.abt-side{border-top:1px solid var(--ink)}
+.abt-side div{padding:15px 0;border-bottom:1px solid var(--line-soft)}
+.abt-side h4{font-family:var(--mono);font-size:.645rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);font-weight:500;margin-bottom:6px}
+.abt-side p{margin:0;font-size:.9rem;color:var(--graphite)}
+.abt-side .yr{font-family:var(--mono);font-size:.7rem;color:var(--accent-mid);display:block;margin-top:3px}
+
+.fut-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(195,205,214,.2);border:1px solid rgba(195,205,214,.2);margin-bottom:clamp(30px,4.5vw,50px)}
+.fut-steps div{background:var(--black);padding:22px 20px}
+.fut-steps .mono{display:block;margin-bottom:11px;color:var(--accent-soft)}
+.fut-steps p{margin:0;font-size:.93rem;color:#B4B9B3;line-height:1.55}
+.fut-close{font-size:clamp(1.35rem,3.4vw,2.3rem);font-weight:700;letter-spacing:-.032em;line-height:1.22;max-width:22ch;color:#EDEAE4}
+
+/* ---------- connect / footer ---------- */
+.cnt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(26px,4vw,56px);align-items:start}
+.cnt h2{font-size:clamp(1.7rem,3.6vw,2.6rem);letter-spacing:-.032em;margin-bottom:14px}
+.cnt p{color:var(--graphite);max-width:44ch}
+.cnt-list{border-top:1px solid var(--ink)}
+.cnt-list a,.cnt-list div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:15px 2px;border-bottom:1px solid var(--line-soft);text-decoration:none;align-items:center;transition:padding-left .18s,background .18s}
+.cnt-list a:hover{padding-left:10px;background:var(--paper)}
+.cnt-list em{font-style:normal;font-family:var(--mono);font-size:.645rem;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.cnt-list b{font-size:.94rem;font-weight:600;word-break:break-word}
+.foot{border-top:1px solid var(--line);padding:24px 0;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.foot p{margin:0;font-size:.8rem;color:var(--grey)}
+
+.tocheck{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:.83rem;color:var(--grey);max-width:56ch;line-height:1.5}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .reg-head,.reg-row{grid-template-columns:56px minmax(0,1fr) 150px 120px}
+}
+@media (max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .nav.open .nav-links{display:flex;position:absolute;top:62px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:10px var(--gut) 16px;gap:2px}
+  .nav.open .nav-links a{padding:11px 4px;font-size:.95rem}
+  .nav.open .nav-cta{display:inline-flex;position:absolute;top:calc(62px + 300px);left:var(--gut)}
+  .nav-burger{display:block}
+  .hero-grid,.jrn,.cyc,.lyr,.board,.cap,.rad,.abt,.cnt{grid-template-columns:minmax(0,1fr)}
+  .jrn-stage{position:static;order:-1}
+  .stage{height:300px}
+  .stack{width:210px;height:210px}
+  .xp-item{grid-template-columns:minmax(0,1fr);gap:14px}
+  .duo{grid-template-columns:minmax(0,1fr)}
+  .duo-mid{flex-direction:row;min-height:60px}
+  .duo-mid i{width:auto;height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--accent-soft),transparent)}
+  .reg-head{display:none}
+  .reg-row{grid-template-columns:minmax(0,1fr);gap:9px;padding:18px 6px}
+  .reg-row>.reg-id{order:1}.reg-row>.reg-t{order:2}.reg-row>.reg-cat{order:3}.reg-row>.reg-pv{order:4}
+  .dstep,.chain-step{grid-template-columns:minmax(0,1fr);gap:7px}
+  .cap-grid{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .stage{height:250px}
+  .stack{width:168px;height:168px}
+  .stack-legend{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;margin-top:8px}
+  .cnt-list a,.cnt-list div{grid-template-columns:minmax(0,1fr);gap:4px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .stack{transition:none!important}
+}
+@media print{.nav,.dossier{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="nav-mark" href="#top" aria-label="Victoria Ashaye, back to top">
+      <i aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+      Victoria Ashaye
+    </a>
+    <button class="nav-burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="nav-links" id="navlinks" aria-label="Sections">
+      <a href="#top">Home</a>
+      <a href="#journey">Journey</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#connect">Let's connect</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="hero-name">Victoria Ashaye</h1>
+      <div class="hero-disc">
+        <span>Technology Governance</span><span>GRC</span><span>Cybersecurity</span><span>AI Security &amp; Governance</span>
+      </div>
+      <p class="hero-h">I work where cybersecurity, governance, technology and AI intersect.</p>
+      <p class="hero-sub">I translate security, regulatory and governance requirements into practical frameworks, risk approaches and technology-enabled solutions.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="#journey"><i aria-hidden="true"></i>Explore my journey</a>
+        <a class="btn btn-ghost" href="#work">View my work</a>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="stack" id="stack" aria-hidden="true"></div>
+      <div class="stack-legend" id="stacklegend"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============ JOURNEY ============ -->
+<section class="sec sec--paper" id="journey">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>01</span><span>Career journey</span></div>
+      <h2>Four disciplines, built one on top of the other</h2>
+      <p class="sec-lede">Each stage kept what came before it. Select a layer to see the experience, skills and work that sit at that level.</p>
+    </div>
+
+    <div class="jrn">
+      <div class="jrn-stage">
+        <div class="stage" style="height:clamp(280px,36vw,400px)">
+          <div class="stack" id="stack2" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="jrn-panel" id="jrnPanel"></div>
+    </div>
+
+    <div class="jrn-quote">
+      <p>The progression wasn't from GRC to technology. It was <em>GRC evolving through technology.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>02</span><span>Experience</span></div>
+      <h2>Where the work has actually been done</h2>
+      <p class="sec-lede">Roles, responsibilities and selected achievements — separate from the products and projects that came out of them.</p>
+    </div>
+
+    <div class="xp">
+
+      <article class="xp-item">
+        <div class="xp-when">
+          <span class="d">May 2026 — Present</span>
+          <span class="org">CCC Group</span>
+          <span class="loc">Lagos, Nigeria · Nigerian &amp; UK financial services</span>
+        </div>
+        <div>
+          <h3>Technology Governance Analyst</h3>
+          <p class="xp-role-note"><i aria-hidden="true"></i>Progressed from Junior GRC &amp; Information Security Analyst after three months</p>
+          <p>Responsible for the firm's governance transformation, its technology governance framework, and the design of the governance technology used to operate and evidence both.</p>
+
+          <div class="xp-block">
+            <h4>Responsibilities</h4>
+            <ul class="xp-list">
+              <li>Governance transformation across the firm, from diagnostic through to an operating framework.</li>
+              <li>Technology governance: technology risk, accountability structures, assurance and decision-making.</li>
+              <li>AI governance — responsible AI, human oversight and emerging standards including ISO/IEC 42001.</li>
+              <li>Regulatory intelligence covering Nigerian and UK financial services regulation.</li>
+              <li>Design and development of governance technology, and the advisory and executive materials that go with it.</li>
+              <li>External engagement and commercialisation of the firm's governance solutions through product demonstrations, training sessions, pilot programmes and stakeholder feedback.</li>
+            </ul>
+          </div>
+
+          <div class="xp-block">
+            <h4>Selected achievements</h4>
+            <ul class="xp-list">
+              <li>Led and executed the Governance Transformation Project, developing a proportionate governance framework across 12 governance domains.</li>
+              <li>Designed the Governance Operating &amp; Assurance Platform to operationalise, monitor, evidence and continuously improve that framework.</li>
+              <li>Designed and developed 11 governance technology solutions spanning AI governance, cybersecurity, data sovereignty, financial crime, board effectiveness, regulatory readiness, assurance and decision-making — applied to the firm's own transformation and used by an external organisation to develop its governance framework.</li>
+              <li>Developed the Governance Decision Simulator, a facilitator-led boardroom training platform using realistic scenarios, role-based decision-making and behavioural scoring across 10 governance domains.</li>
+            </ul>
+          </div>
+
+          <div class="xp-chips">
+            <span>Governance transformation</span><span>Technology governance</span><span>Framework design</span><span>AI governance</span><span>Regulatory intelligence</span><span>Governance technology</span><span>Board reporting</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="xp-prog" aria-hidden="true">
+        <em>Progression</em><i></i><b>Junior GRC &amp; Information Security Analyst → Technology Governance Analyst</b>
+      </div>
+
+      <article class="xp-item">
+        <div class="xp-when">
+          <span class="d">Feb 2026 — May 2026</span>
+          <span class="org">CCC Group</span>
+          <span class="loc">Lagos, Nigeria</span>
+        </div>
+        <div>
+          <h3>Junior GRC &amp; Information Security Analyst</h3>
+          <p class="xp-role-note"><i aria-hidden="true"></i>The methodology and tooling built here became the foundation of the technology governance role</p>
+          <p>Built the firm's core GRC methodology from nothing, then began turning that methodology into working tools.</p>
+
+          <div class="xp-block">
+            <h4>Selected achievements</h4>
+            <ul class="xp-list">
+              <li>Designed and implemented the core compliance methodology from scratch — four integrated templates (Compliance Mapping, Risk Register, Gap Analysis with Remediation Tracker, and Framework Document) with cross-referenced IDs and real-time dashboards to support regulatory engagements and reporting.</li>
+              <li>Built and deployed a suite of governance and compliance tools including the Human Oversight System, GovernSight, the Board Skills Matrix Tool, the AI Governance Diagnostic and the Governance &amp; Regulatory Readiness Diagnostic — combining regulatory frameworks with interactive web technologies to automate assessments, generate audit trails and support governance decision-making.</li>
+              <li>Produced a body of regulatory intelligence across UK and Nigerian environments (CBN, FCA, PRA, FATF) covering AML, cyber risk governance, enforcement actions and AI governance — delivering board-level briefings, comparative analyses and thought leadership on AI accountability gaps, compliance limitations and governance risks.</li>
+              <li>Conducted a full mock compliance gap analysis for a dual-regulated financial institution, mapping obligations, identifying risks and prioritising remediation actions to validate the internally developed methodology.</li>
+              <li>Contributed to a structured GRC case study (Project Aegis), producing board-level risk reporting materials, governance stress test outputs and risk appetite analysis.</li>
+            </ul>
+          </div>
+
+          <div class="xp-chips">
+            <span>GRC methodology</span><span>Compliance mapping</span><span>Risk registers</span><span>Gap analysis</span><span>Regulatory research</span><span>Information security</span><span>Governance assessment</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="xp-item">
+        <div class="xp-when">
+          <span class="d">Sept 2025</span>
+          <span class="org">DLA Piper</span>
+          <span class="loc">Global Cyber job simulation, via Forage</span>
+        </div>
+        <div>
+          <h3>Data Privacy — Job Simulation</h3>
+          <p>A simulation with DLA Piper's Data Privacy and Cybersecurity team covering global data protection and cybersecurity practice.</p>
+          <div class="xp-block">
+            <ul class="xp-list">
+              <li>Analysed complex data breach scenarios to provide actionable legal advice on GDPR compliance, regulatory notification requirements and ransom payment risks.</li>
+              <li>Drafted a compliant and strategic media statement addressing public relations challenges, prioritising transparency and reputational risk.</li>
+              <li>Applied legal research, regulatory analysis and incident management practice.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="xp-item">
+        <div class="xp-when">
+          <span class="d">Jan 2025 — Feb 2025</span>
+          <span class="org">Insight7</span>
+          <span class="loc">AI-powered SaaS research platform</span>
+        </div>
+        <div>
+          <h3>Customer Success Specialist</h3>
+          <p>Close-range experience of how people actually adopt an AI product — which is the same problem governance technology has to solve.</p>
+          <div class="xp-block">
+            <ul class="xp-list">
+              <li>Supported customers using an AI-powered SaaS research platform, delivering product demonstrations, onboarding and workflow guidance.</li>
+              <li>Collaborated with product and engineering teams to communicate customer needs and improve the user experience.</li>
+              <li>Used product analytics and customer insights to support adoption and identify areas for improvement.</li>
+            </ul>
+          </div>
+          <div class="xp-chips"><span>AI product</span><span>User adoption</span><span>Demonstrations</span><span>Product feedback</span></div>
+        </div>
+      </article>
+
+      <article class="xp-item">
+        <div class="xp-when">
+          <span class="d">2024 — 2025</span>
+          <span class="org">Technical labs</span>
+          <span class="loc">Applied practice</span>
+        </div>
+        <div>
+          <h3>Security and compliance labs</h3>
+          <div class="xp-block">
+            <ul class="xp-list">
+              <li><b>AWS &amp; security labs</b> — IAM, EC2 and S3 security configurations, network monitoring and configuration using Wireshark, Snort and Cisco Packet Tracer.</li>
+              <li><b>Fintech compliance mapping</b> — mapped NDPR, PCI-DSS and CBN requirements to business operations, identifying gaps and recommending compliance controls.</li>
+              <li><b>Cybersecurity risk register lab</b> — built a risk register for a healthcare organisation, identifying critical assets, threats, vulnerabilities, risk ratings and mitigation strategies aligned to HIPAA and enterprise risk standards.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SELECTED WORK ============ -->
+<section class="sec sec--paper" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>03</span><span>Selected work</span></div>
+      <h2>A register of the work, and how far it went</h2>
+      <p class="sec-lede">Every entry is tagged by what it actually represents. Filter by discipline, or by the four things a portfolio should never blur together.</p>
+    </div>
+
+    <div class="pvkey">
+      <div><span class="pv pv-know">Know</span><p>Studied, certified or researched. Understanding, not delivery.</p></div>
+      <div><span class="pv pv-done">Done</span><p>Delivered in a professional role, with an owner and an audience.</p></div>
+      <div><span class="pv pv-built">Built</span><p>Designed and developed as working software, in use or in pilot.</p></div>
+      <div><span class="pv pv-dev">Developing</span><p>Actively being learned or extended. In progress, not finished.</p></div>
+    </div>
+
+    <div class="fbar" role="group" aria-label="Filter work">
+      <button class="on" data-fw="all">All</button>
+      <button data-fw="governance">Governance</button>
+      <button data-fw="cyber">Cybersecurity</button>
+      <button data-fw="ai">AI security &amp; governance</button>
+      <button data-fw="reg">Regulatory intelligence</button>
+      <button data-fw="tech">Governance technology</button>
+      <span class="sep" aria-hidden="true"></span>
+      <button data-fp="built">Built</button>
+      <button data-fp="done">Done</button>
+      <button data-fp="know">Know</button>
+      <button data-fp="dev">Developing</button>
+    </div>
+
+    <div class="reg">
+      <div class="reg-head" aria-hidden="true">
+        <span>Ref</span><span>Work</span><span>Category</span><span>Provenance</span>
+      </div>
+      <div id="regBody"></div>
+    </div>
+    <p class="tocheck">Selecting any entry opens the full case record: context, problem, my role, approach, solution, evidence and what it developed.</p>
+  </div>
+</section>
+
+<!-- ============ FEATURED 1 — GOVERNANCE TRANSFORMATION ============ -->
+<section class="sec" id="transformation">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>04</span><span>Featured case study — 01</span></div>
+      <h2>Governance transformation</h2>
+      <p class="sec-lede">A firm that advised others on governance had gaps in its own. I led the work to fix that, and then built the system that keeps it fixed.</p>
+    </div>
+
+    <div class="feat">
+      <div class="feat-top">
+        <div class="feat-eyebrow">
+          <span class="pv pv-done">Done</span>
+          <span class="mono">CCC Group · 12 governance domains</span>
+        </div>
+        <h3>From a governance failure to a governance operating cycle</h3>
+        <p>The trigger was a pitch call: the firm was asked whether it was registered with the data protection regulator, and it wasn't. Treated internally as a governance failure rather than an administrative oversight — because the pattern was the problem, not the single question. Policies hadn't been reviewed since they were written. There was no risk oversight, no assurance layer, no RACI, no escalation pathway, no compliance monitoring plan and no clear view of which regulations the firm was accountable to.</p>
+      </div>
+      <div class="feat-body">
+        <div class="cyc">
+          <div class="cyc-ring" id="cycRing">
+            <svg viewBox="0 0 220 220" role="img" aria-label="Eight-stage governance operating cycle"><g id="cycG"></g></svg>
+            <div class="cyc-mid"><b>8</b><span>stage governance cycle</span></div>
+          </div>
+          <div class="cyc-detail" id="cycDetail" aria-live="polite"></div>
+        </div>
+
+        <div class="dsteps" style="margin-top:34px">
+          <div class="dstep"><h4>My role</h4><div>
+            <p>Led and executed the transformation end to end: the diagnostic of the current state, the framework design across 12 domains, the technology governance framework, and the design of the platform that operationalises all of it.</p>
+          </div></div>
+          <div class="dstep"><h4>Approach</h4><div>
+            <ul>
+              <li>Diagnosed the actual current state rather than starting from a template — the existing documents were generic and hadn't kept pace with the business.</li>
+              <li>Made the framework proportionate to a four-person firm with one director, not a copy of a large-institution model.</li>
+              <li>Structured it across 12 domains: corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records.</li>
+              <li>Designed the technology arm's governance separately, since it became fully active in March 2026 and carries its own IP and product risk.</li>
+              <li>Built change detection into the design: when something material changes, the framework has to tell you which domains need reassessing.</li>
+            </ul>
+          </div></div>
+          <div class="dstep"><h4>Evidence</h4><div>
+            <ul>
+              <li>A proportionate governance framework across 12 domains, in use by the firm.</li>
+              <li>The Technology Governance Framework, which is currently the only governance coverage for the technology arm.</li>
+              <li>The Governance Operating &amp; Assurance Platform, built to run the framework rather than describe it.</li>
+              <li>Governance technology from this programme applied by an external organisation to develop its own governance framework.</li>
+            </ul>
+          </div></div>
+          <div class="dstep"><h4>What it developed</h4><div>
+            <p>How to build a framework that survives contact with a real organisation — one small enough that governance theatre is immediately visible. It also taught me that a framework nobody operates is not a framework, which is the reason the platform exists at all.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED 2 — GOAP ============ -->
+<section class="sec sec--paper" id="goap">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>05</span><span>Featured case study — 02</span></div>
+      <h2>Governance Operating &amp; Assurance Platform</h2>
+      <p class="sec-lede">Not a document library. A governance operating system that assesses, configures, monitors, alerts, evidences and reviews — with an audit trail underneath all of it.</p>
+    </div>
+
+    <div class="feat">
+      <div class="feat-top">
+        <div class="feat-eyebrow">
+          <span class="pv pv-built">Built</span>
+          <span class="mono">Single-file web application · Browser-local storage · No backend</span>
+        </div>
+        <h3>Explore the system by layer</h3>
+        <p>Configuration-driven so it can be set up for any organisation, including governance domains it doesn't ship with. Built as one self-contained file with local storage and clean layer separation, so a backend can replace the storage layer without rewriting the system.</p>
+      </div>
+      <div class="feat-body">
+        <div class="lyr">
+          <div class="lyr-stack" id="lyrStack" role="tablist" aria-label="Platform layers"></div>
+          <div class="lyr-panel" id="lyrPanel" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED 3 — SIMULATOR ============ -->
+<section class="sec sec--deep" id="simulator">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>06</span><span>Featured case study — 03</span></div>
+      <h2>Governance Decision Simulator</h2>
+      <p class="sec-lede">A facilitator-led boardroom training platform. Participants take board roles, read board papers and make decisions that carry into later ones. It scores how the decision was made, not whether it matched an answer key.</p>
+    </div>
+
+    <div class="board">
+      <div>
+        <div class="room" id="room" aria-hidden="true">
+          <div class="room-floor"></div>
+          <div class="room-table" id="roomTable"></div>
+          <div class="room-cap" id="roomCap">Select a scenario to convene the board</div>
+        </div>
+        <div class="statrow">
+          <div><b>101</b><span>board simulations</span></div>
+          <div><b>10</b><span>governance domains</span></div>
+          <div><b>12</b><span>scored competencies</span></div>
+          <div><b>26</b><span>countries supported</span></div>
+          <div><b>4</b><span>sector lenses</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sim-scen" id="simScen" role="group" aria-label="Choose a scenario"></div>
+        <div id="simStage" aria-live="polite"></div>
+        <p class="sim-note">This is a short preview of the decision mechanic. In the platform, a facilitator sets up a session with a country and sector lens, participants take board roles, and each simulation runs 8–12 board papers, unexpected events and emergency meetings over 45–90 minutes — with a read-only board minutes trail, because decisions can't be taken back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section class="sec" id="capabilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>07</span><span>Capabilities</span></div>
+      <h2>What sits behind each of these</h2>
+      <p class="sec-lede">Six capabilities, each separated into what I know, what I've done with it, and what I've built with it. Select one.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-grid" id="capGrid" role="tablist" aria-label="Capabilities"></div>
+      <div class="cap-panel" id="capPanel" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI SECURITY + AI GOVERNANCE ============ -->
+<section class="sec sec--deep" id="ai">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>08</span><span>AI security &amp; AI governance</span></div>
+      <h2>Two questions that have to be answered together</h2>
+      <p class="sec-lede">They are usually treated as separate disciplines. In practice, an AI system that fails either one fails both.</p>
+    </div>
+
+    <div class="duo">
+      <div class="duo-col">
+        <span class="mono">AI security</span>
+        <h3>AI security</h3>
+        <p class="duo-q">"Can we protect the system?"</p>
+        <ul>
+          <li>Security risks specific to AI systems — how models, data and pipelines are attacked rather than how conventional applications are.</li>
+          <li>Applying existing security foundations — controls, vulnerability thinking, information security management — to AI components.</li>
+          <li>Currently deepening this: the Introduction to AI Security certification is the most recent step.</li>
+        </ul>
+      </div>
+      <div class="duo-mid" aria-hidden="true">
+        <i></i><b>Trustworthy AI</b><i></i>
+      </div>
+      <div class="duo-col">
+        <span class="mono">AI governance</span>
+        <h3>AI governance</h3>
+        <p class="duo-q">"Should the system operate this way?"</p>
+        <ul>
+          <li>Responsible AI, accountability structures and who is answerable for an AI-influenced decision.</li>
+          <li>Human oversight as a designed control rather than a stated intention.</li>
+          <li>ISO/IEC 42001 and AI management systems, held alongside ISO/IEC 27001.</li>
+          <li>Emerging AI regulation and what it means for organisations before it binds them.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="duo-work" id="aiWork"></div>
+  </div>
+</section>
+
+<!-- ============ REGULATORY INTELLIGENCE ============ -->
+<section class="sec" id="regulatory">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>09</span><span>Regulatory intelligence</span></div>
+      <h2>A regulation is only interesting once you trace what it does</h2>
+      <p class="sec-lede">Select a point on the radar to follow it from the regulation itself through to the advisory response. Rings show how close it sits to work I've actually produced.</p>
+    </div>
+
+    <div class="fbar" role="group" aria-label="Filter regulatory topics">
+      <button class="on" data-fr="all">All</button>
+      <button data-fr="ng">Nigeria</button>
+      <button data-fr="uk">UK</button>
+      <button data-fr="ai">AI</button>
+      <button data-fr="da">Digital assets</button>
+      <button data-fr="cy">Cybersecurity</button>
+      <button data-fr="aml">AML</button>
+      <button data-fr="dp">Data</button>
+    </div>
+
+    <div class="rad">
+      <div class="rad-face">
+        <svg viewBox="0 0 260 260" role="img" aria-label="Regulatory radar"><g id="radG"></g></svg>
+      </div>
+      <div class="chain" id="chain" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOVERNANCE TECHNOLOGY ============ -->
+<section class="sec sec--paper" id="tech">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>10</span><span>Governance technology</span></div>
+      <h2>Eleven solutions, grouped by what they actually do</h2>
+      <p class="sec-lede">These came out of the governance work rather than replacing it. Each one started as a problem someone had, not as a product idea.</p>
+    </div>
+
+    <div class="fbar" role="group" aria-label="Filter governance technology">
+      <button class="on" data-ft="all">All</button>
+      <button data-ft="ai">AI</button>
+      <button data-ft="risk">Risk</button>
+      <button data-ft="data">Data</button>
+      <button data-ft="board">Board</button>
+      <button data-ft="fc">Financial crime</button>
+      <button data-ft="reg">Regulatory</button>
+    </div>
+
+    <div class="gt" id="gtGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EVIDENCE / CERTIFICATIONS ============ -->
+<section class="sec" id="evidence">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>11</span><span>Evidence</span></div>
+      <h2>Certifications and formal learning</h2>
+      <p class="sec-lede">Evidence supporting the capability, in the order the career needed it.</p>
+    </div>
+    <div class="ev" id="evGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec sec--paper" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>12</span><span>About</span></div>
+      <h2>About</h2>
+    </div>
+    <div class="abt">
+      <div class="abt-body">
+        <p>I'm a Technology Governance Analyst and GRC professional working across Nigerian and UK financial services environments.</p>
+        <p>I started in cybersecurity — a diploma, the security foundations, the labs, the certifications. That gave me the technical grounding, but what kept my attention was the layer above the controls: who decides, who is accountable, and how an organisation knows whether any of it is working. That took me into GRC, where I built compliance methodology, risk registers, gap analyses and regulatory research from first principles.</p>
+        <p>Technology governance is where those two ended up meeting. Governance frameworks fail in practice for an unglamorous reason: nobody operates them. So I started building the tools that make a framework operable — diagnostics, assurance platforms, decision-support systems, board training. Eleven of them so far. They're evidence of how I think about governance, not a separate career in software.</p>
+        <p>AI is where all of this is heading, and it's the reason the security background still matters. Governing an AI system means asking both whether it can be protected and whether it should be operating the way it does — and those questions need someone who can hold the security side and the governance side at the same time.</p>
+      </div>
+      <div class="abt-side">
+        <div>
+          <h4>Based in</h4>
+          <p>Lagos, Nigeria — working across Nigerian and UK regulatory environments</p>
+        </div>
+        <div>
+          <h4>Education</h4>
+          <p>Diploma in Cybersecurity, AltSchool Africa<span class="yr">2024 — 2025</span></p>
+        </div>
+        <div>
+          <h4></h4>
+          <p>B.A. History &amp; International Studies, University of Ilorin<span class="yr">2018 — 2023</span></p>
+        </div>
+        <div>
+          <h4>Working across</h4>
+          <p>Cybersecurity · GRC · Technology governance · AI security &amp; governance · Regulatory intelligence</p>
+        </div>
+        <div>
+          <h4>Currently developing</h4>
+          <p>AI security, and the OCEG Integrated AI Professional certification<span class="yr">In view</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUTURE DIRECTION ============ -->
+<section class="sec sec--deep" id="future">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num"><span>13</span><span>Future direction</span></div>
+      <h2>Where I'm going</h2>
+    </div>
+
+    <div class="fut-steps">
+      <div><span class="mono">Cybersecurity</span><p>Gave me the technical foundation.</p></div>
+      <div><span class="mono">GRC</span><p>Taught me to think in risk, controls and accountability.</p></div>
+      <div><span class="mono">Technology governance</span><p>Expanded that into systems, decision-making and organisational oversight.</p></div>
+      <div><span class="mono">AI security &amp; governance</span><p>Where those disciplines increasingly converge.</p></div>
+    </div>
+
+    <p class="fut-close">I'm interested in work where technology, security, regulation and governance have to operate together.</p>
+  </div>
+</section>
+
+<!-- ============ CONNECT ============ -->
+<section class="sec" id="connect">
+  <div class="wrap cnt">
+    <div>
+      <h2>Let's connect</h2>
+      <p>Open to conversations about technology governance, AI governance and security, regulatory intelligence, and governance technology.</p>
+    </div>
+    <div class="cnt-list">
+      <a href="mailto:ashayevictoria7@gmail.com"><em>Email</em><b>ashayevictoria7@gmail.com</b></a>
+      <a href="tel:+2348165097016"><em>Phone</em><b>+234 816 509 7016</b></a>
+      <a href="https://www.linkedin.com/in/victoria-ashaye/" target="_blank" rel="noopener"><em>LinkedIn</em><b>linkedin.com/in/victoria-ashaye</b></a>
+      <a href="https://drive.google.com/drive/folders/1iQIqqquJoOvL95V-CGZfmcN7mNiA6v_Z?usp=drive_link" target="_blank" rel="noopener"><em>Portfolio</em><b>Work samples and documentation</b></a>
+      <div><em>Location</em><b>Lagos, Nigeria</b></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="foot">
+      <p>© <span id="yr"></span> Victoria Ashaye. Technology Governance · GRC · Cybersecurity · AI Security &amp; Governance.</p>
+      <p>Built as a single self-contained page.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ DOSSIER ============ -->
+<div class="dossier" id="dossier" role="dialog" aria-modal="true" aria-labelledby="dossierTitle">
+  <div class="dossier-scrim" data-close></div>
+  <div class="dossier-panel" id="dossierPanel" tabindex="-1">
+    <div class="dossier-top">
+      <span class="mono" id="dossierRef"></span>
+      <button class="dossier-x" data-close aria-label="Close case record">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <div class="dossier-in" id="dossierIn"></div>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* =========================================================
+   JOURNEY LAYERS
+   ========================================================= */
+var LAYERS = [
+  { key:"cyber", short:"Cybersecurity", lvl:"L1", title:"Cybersecurity",
+    blurb:"The technical foundation. A diploma in cybersecurity, the ISC2 and Cisco certifications, and hands-on labs — IAM and S3 configurations, packet capture, network monitoring. This is the layer that means I can read a technical control and know whether it does what the policy claims it does.",
+    cols:[
+      {h:"Experience", i:["Diploma in Cybersecurity, AltSchool Africa","AWS and security labs — IAM, EC2, S3, Wireshark, Snort, Packet Tracer","Information security work within the GRC role"]},
+      {h:"Skills", i:["Security foundations and controls","Vulnerability thinking","Network monitoring and configuration","Windows and Linux"]},
+      {h:"Evidence", i:["ISC2 Certified in Cybersecurity","Cisco Introduction to Cybersecurity","Cybersecurity Risk Register lab"]}
+    ]},
+  { key:"grc", short:"GRC", lvl:"L2", title:"Governance, risk and compliance",
+    blurb:"Where the security foundation became a way of thinking. Compliance methodology built from scratch, risk registers, gap analysis, and regulatory research across two jurisdictions. This layer taught me to ask who is accountable and how anyone would know.",
+    cols:[
+      {h:"Experience", i:["Junior GRC & Information Security Analyst, CCC Group","Core compliance methodology designed from scratch","Mock compliance gap analysis for a dual-regulated institution"]},
+      {h:"Skills", i:["Compliance mapping","Risk registers and risk appetite","Gap analysis and remediation tracking","Maturity assessment","Regulatory research"]},
+      {h:"Evidence", i:["ISO/IEC 27001 Lead Auditor","ISO/IEC 27001 & ISO 42001 Lead Implementer","GRCP — OCEG","Project Aegis GRC case study"]}
+    ]},
+  { key:"techgov", short:"Technology governance", lvl:"L3", title:"Technology governance",
+    blurb:"GRC applied to systems and to organisational decision-making. Governance transformation across 12 domains, a technology governance framework, and the operating platform that runs it. This is the layer where governance stopped being documentation and became something an organisation actually operates.",
+    cols:[
+      {h:"Experience", i:["Technology Governance Analyst, CCC Group","Led and executed the Governance Transformation Project","Technology Governance Framework for the firm's technology arm"]},
+      {h:"Skills", i:["Governance framework design","Technology risk","Operating models and accountability","Assurance and evidence","Board and executive reporting"]},
+      {h:"Evidence", i:["12-domain governance framework in use","Governance Operating & Assurance Platform","Governance Decision Simulator","11 governance technology solutions"]}
+    ]},
+  { key:"ai", short:"AI security & governance", lvl:"L4", title:"AI security and AI governance",
+    blurb:"The current direction, and the reason the security layer still matters. AI governance diagnostics, human oversight designed as a control rather than stated as an intention, and AI security as the discipline that asks whether the system can be protected at all.",
+    cols:[
+      {h:"Experience", i:["AI governance within the technology governance role","AI Governance Diagnostic and AI Governance Operating System","Human Oversight System, with a gap analysis against EU AI Act Article 14","Regulatory intelligence on AI accountability gaps"]},
+      {h:"Skills", i:["Responsible AI and human oversight","AI governance diagnostics","AI management systems (ISO/IEC 42001)","AI security fundamentals","Emerging AI regulation"]},
+      {h:"Evidence", i:["Introduction to AI Security","ISO/IEC 42001 Lead Implementer","Integrated AI Professional — OCEG, in view"]}
+    ]}
+];
+
+/* =========================================================
+   SELECTED WORK — register + full case records
+   ========================================================= */
+var WORK = [
+  {
+    id:"W-01", t:"Governance Transformation Project", cat:"Governance", f:["governance"], pv:"done",
+    sub:"A 12-domain governance framework built for the firm that had to live with it.",
+    ctx:"CCC Group advises regulated organisations on governance. During a pitch call it was asked whether it was registered with the data protection regulator. It wasn't. Internally that was treated as a governance failure rather than an administrative gap, because the same pattern showed up everywhere once anyone looked.",
+    prb:["Policies hadn't been reviewed since they were written.","No internal risk oversight, no assurance layer, no risk committee, no oversight structure.","No RACI, no escalation or conflict resolution pathway.","No compliance monitoring plan and no defined approach to recording, retaining and archiving data.","No clarity on which regulations the firm was accountable to or should be registered under.","Existing governance documents were generic — not specific to the firm's realities, and not evolving at the pace of the business."],
+    role:"Led and executed the project end to end, working as the firm's governance advisor: current-state diagnostic, framework design, the technology governance framework, and the design of the platform that operationalises it.",
+    app:["Started from the actual current state rather than a template, because the template approach was what produced the generic documents in the first place.","Made it proportionate — a four-person firm with a single director needs a different framework from a bank, and pretending otherwise guarantees it won't be operated.","Structured it across 12 domains covering corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records.","Designed for a ten-year horizon: it has to grow with the business and stand up to client and investor scrutiny.","Built change detection in from the start — when something material changes, the framework should identify which domains need reassessing rather than waiting for an annual review."],
+    sol:"A proportionate governance framework across 12 domains, a separate Technology Governance Framework for the technology arm that became fully active in March 2026, and the Governance Operating & Assurance Platform to run and evidence both.",
+    out:["The 12-domain framework, in use by the firm.","The Technology Governance Framework — currently the only governance coverage for the technology arm and its IP.","Governance technology from this programme applied by an external organisation to develop its own governance framework.","Executive deliverables produced for the CEO in an accessible format for a non-specialist audience."],
+    lrn:"That a governance framework nobody operates is not a framework. That insight is the reason the operating platform exists — the framework document was never going to be enough on its own."
+  },
+  {
+    id:"W-02", t:"Technology Governance Framework", cat:"Governance", f:["governance","tech"], pv:"done",
+    sub:"Governance for a technology arm that went live with none.",
+    ctx:"The firm's technology arm became fully active in March 2026 — registered, with IP protection in place — and was producing software products carrying real client and commercial exposure.",
+    prb:["The technology arm had no governance coverage of its own.","Product, IP and application security risk had no framework sitting over them.","The corporate governance model didn't extend cleanly to building and shipping software."],
+    role:"Designed the framework. It remains the only governance coverage for the technology arm.",
+    app:["Treated technology as its own governance domain rather than a subheading under operations.","Covered technology risk, application security, IP, and the accountability structures around building and releasing products.","Kept it consistent with the wider 12-domain framework so the two don't diverge."],
+    sol:"A Technology Governance Framework covering the technology arm's risk, accountability and assurance.",
+    out:["In use as the technology arm's governance framework.","Application security captured as a tracked risk category rather than an assumption."],
+    lrn:"How different technology risk is when you are the one shipping the product — governance written from the outside misses most of what actually goes wrong."
+  },
+  {
+    id:"W-03", t:"Governance Operating & Assurance Platform", cat:"Governance technology", f:["governance","tech"], pv:"built",
+    sub:"The governance operating system built to run the framework, not describe it.",
+    feat:"#goap",
+    ctx:"Once the 12-domain framework existed, the real risk was the familiar one: a framework that is written, filed and never operated again.",
+    prb:["No single place showing what governance work was due, overdue or complete.","No audit trail of who changed, deleted or updated what.","No way to evidence governance activity without hunting through folders.","No mechanism to detect when a change should trigger reassessment."],
+    role:"Designed the full specification and built it: information architecture, the rule engine, the scoring logic, and the entire interface.",
+    app:["Framed the product as an operating cycle — assess, configure, monitor, alert, act, evidence, review, improve — rather than as a document repository.","Made it configuration-driven so it can be set up for other organisations, including governance domains it doesn't ship with.","Kept the governance health score transparent and rule-based, because a score nobody can explain won't survive a board question.","Chose to make the tool an evidence index rather than a document repository — records point at files or links, so it doesn't try to be a document management system.","Built it as one self-contained file with browser-local storage and clean layer separation, so a backend can replace storage later without rewriting the system."],
+    sol:"A configuration-driven governance operating platform: dashboard with a rule-based governance health score, governance calendar with RAG status, 5×5 risk register with per-risk appetite ceilings, compliance and policy registers, an AI governance suite, meetings, training, succession, RACI, assurance, action tracker, notification centre, global search and exports. Named users with roles, automatic attribution on every action, and a dedicated audit trail holding previous and new values. Nothing is destructively deleted — records move to archived or superseded.",
+    out:["In use for the firm's own governance framework.","Change-detection diagnostic that maps a stated change to the domains needing reassessment, with rules an administrator can configure — including for custom domains.","Rules-based document scanning that reads PDF and DOCX files for review and expiry dates and flags configured keywords, always as a suggestion requiring explicit confirmation before it writes to a record.","Product brief and user guide produced as supporting documentation."],
+    lrn:"That the hard part of governance software isn't the registers — it's the accountability model. Attribution, audit trail and non-destructive change are what make the tool defensible when someone asks who decided what."
+  },
+  {
+    id:"W-04", t:"Core compliance methodology", cat:"Governance", f:["governance","reg"], pv:"done",
+    sub:"Four integrated templates with cross-referenced IDs, built from nothing.",
+    ctx:"The firm was taking on regulatory engagements without a consistent internal methodology for running them.",
+    prb:["No standard approach to mapping obligations, recording risk, tracking gaps or documenting a framework.","Outputs varied between engagements, which made them hard to review and harder to reuse."],
+    role:"Designed and implemented the methodology from scratch.",
+    app:["Built four templates that reference each other rather than four standalone documents: Compliance Mapping, Risk Register, Gap Analysis with Remediation Tracker, and Framework Document.","Used cross-referenced IDs so an obligation traces to a risk, to a gap, to a remediation action.","Added real-time dashboards so the state of an engagement is visible without reading the whole workbook."],
+    sol:"An integrated compliance methodology supporting regulatory engagements and reporting.",
+    out:["Adopted as the firm's core compliance methodology.","Validated through a full mock gap analysis on a dual-regulated financial institution.","The structure carried forward into the governance technology built afterwards."],
+    lrn:"That cross-referencing is what turns four documents into a methodology. It's also the idea the register-based tools were built on."
+  },
+  {
+    id:"W-05", t:"Mock compliance gap analysis — dual-regulated institution", cat:"Regulatory intelligence", f:["reg","governance"], pv:"done",
+    sub:"A full gap analysis run to test whether the methodology held up.",
+    ctx:"A methodology that hasn't been run against a realistic case is an assumption.",
+    prb:["The new compliance methodology needed validation against a genuinely complex subject — an institution answering to more than one regulator."],
+    role:"Ran the full analysis end to end.",
+    app:["Mapped the institution's obligations across both regulatory regimes.","Identified risks arising from the gaps rather than listing the gaps alone.","Prioritised remediation actions so the output was decision-ready."],
+    sol:"A complete mock gap analysis with mapped obligations, identified risks and prioritised remediation.",
+    out:["Validated the internally developed compliance methodology.","Surfaced structural improvements that fed back into the templates."],
+    lrn:"Dual regulation is not two compliance exercises side by side — the overlaps and the conflicts are where the real work is."
+  },
+  {
+    id:"W-06", t:"Governance Decision Simulator", cat:"Governance technology", f:["governance","tech"], pv:"built",
+    sub:"101 board simulations across 10 governance domains, 26 countries and 4 sector lenses.",
+    feat:"#simulator",
+    ctx:"Governance training generally tests whether someone can recall a principle. It rarely tests whether they can make a defensible decision with incomplete information and a board watching.",
+    prb:["Existing training formats are quiz-shaped: there is a right answer and you either know it or you don't.","Board decisions don't work that way — the quality is in the reasoning, the challenge and the record, not in matching a key.","Training content built for one jurisdiction doesn't transfer."],
+    role:"Developed the platform: the product concept, the simulation structure, the behavioural scoring model, the jurisdiction adaptation layer, and the build.",
+    app:["Designed it as facilitator-led rather than self-serve — a facilitator creates the session, sets the country and sector lens, distributes links and reviews reports.","Made participants take board roles, so the perspective changes what they see.","Scored across 12 governance competency categories behaviourally, with no correct answers and no question-count language anywhere in the interface.","Made earlier decisions influence later ones, and made them irreversible — the pressure to think carefully disappears if you can go back.","Added a read-only board minutes trail so participants can review what they decided and what followed, without being able to change it.","Gave Nigeria and the UK full bespoke regulatory grounding, and ran the remaining countries through an adaptation layer with an on-screen note that specifics are illustrative outside those two."],
+    sol:"A facilitator-led boardroom training platform: 101 playable simulations across 10 governance domains, each with an organisation profile, board agenda, 8–12 board papers, decision points, unexpected events and emergency board meetings, running 45–90 minutes and ending in a governance debrief, performance report and certificate.",
+    out:["All 101 simulations fully playable with bespoke content.","26 countries grouped by region, 4 sector lenses (banking, insurance, fintech, corporate).","Verified across thousands of automated playthrough combinations covering every simulation against every jurisdiction.","User guide and product brief produced as supporting documentation."],
+    lrn:"That scoring behaviour rather than answers changes the entire design. Once you remove the answer key you have to be able to articulate what good governance reasoning actually looks like — twelve times over."
+  },
+  {
+    id:"W-07", t:"Human Oversight System", cat:"AI security & governance", f:["ai","tech"], pv:"built",
+    sub:"Human oversight of AI decision output, designed as a control rather than stated as an intention.",
+    ctx:"Organisations increasingly state that a human reviews AI-influenced decisions. Very few can evidence what that review consisted of.",
+    prb:["\"A human is in the loop\" is a claim, not a control.","Without structure, review collapses into approval — the reviewer confirms the output because there is nothing prompting them to interrogate it.","No record of the reasoning means no accountability afterwards."],
+    role:"Designed and built the system, and produced its gap analysis against EU AI Act Article 14.",
+    app:["Structured the review as five explicit lenses — plausibility, risk identification, regulatory alignment, data completeness and proportionality — so the reviewer has to engage with the output on five separate grounds.","Gave the reviewer five real decisions rather than approve or reject: approve, approve with conditions, override, escalate, suspend.","Deliberately excluded a proposed-decision mode, because pre-filling the answer defeats the purpose of the review.","Kept regulatory article references out of the user-facing interface so reviewers engage with the substance rather than the citation.","Made the audit trail archive rather than delete."],
+    sol:"A five-step review instrument: configure, receive the AI assessment output, apply the five-lens review, record the decision, complete — with a full audit trail behind it.",
+    out:["Built and deployed as part of the governance and compliance tool suite.","Gap analysis produced against EU AI Act Article 14.","The only tool in the suite with a live AI integration — the rest run local intelligence engines with no external AI dependency."],
+    lrn:"That designing oversight means designing friction. Every shortcut you remove from the reviewer's path is the point of the control."
+  },
+  {
+    id:"W-08", t:"AI Governance Diagnostic & AI Governance Operating System", cat:"AI security & governance", f:["ai","tech"], pv:"built",
+    sub:"A diagnostic that grew into a ten-module AI governance operating system.",
+    ctx:"Organisations adopting AI were asking how mature their AI governance was, with no proportionate way to answer.",
+    prb:["Maturity questions were being answered by opinion rather than assessment.","A single maturity score hides whether the weakness is in governance, in security and control, or in capability.","Requirements vary by country and sector, and a generic diagnostic can't reflect that."],
+    role:"Designed and built the diagnostic, then rebuilt it into the modular platform.",
+    app:["Rebuilt the underlying framework from a single pillar to three — governance, security and control, and capability — weighted so that neither strong tooling nor strong policy alone can carry a score.","Added a governance floor rule, so an organisation can't reach a high maturity band on capability while governance is absent.","Made it country and sector aware, covering a wide regulatory map, thirteen sectors and five organisation sizes.","Extended it from a single diagnostic into a ten-module governance journey."],
+    sol:"A modular AI Governance Operating System: AI governance maturity, ISO/IEC 42001 readiness, AI risk register, AI impact assessment, AI inventory, governance structure and accountability, policy and documentation, audit and assurance readiness, AI skills and capability, and an AI management system design and implementation planner.",
+    out:["Ten modules delivered as a single self-contained application.","45-question maturity assessment across three weighted pillars with a governance floor.","Country-aware regulatory mapping across more than 50 jurisdictions.","Product brief produced as supporting documentation."],
+    lrn:"That a weighted, three-pillar model with a floor rule tells an organisation something a single score never will — specifically, which of the three is holding them back."
+  },
+  {
+    id:"W-09", t:"Regulatory intelligence — UK and Nigeria", cat:"Regulatory intelligence", f:["reg","ai","cyber"], pv:"done",
+    sub:"Board-level briefings, comparative analyses and thought leadership across two regulatory environments.",
+    ctx:"The firm operates across Nigerian and UK financial services, and clients need to understand regulatory developments before they bind them.",
+    prb:["Regulatory developments arrive as text. Boards need the governance implication, not the text.","Two jurisdictions moving at different speeds on the same underlying issues.","AI regulation in particular is emerging faster than most organisations' governance can absorb."],
+    role:"Produced the body of regulatory intelligence, including the board-level briefings and the comparative analyses.",
+    app:["Covered CBN, FCA, PRA and FATF across AML, cyber risk governance, enforcement actions and AI governance.","Wrote comparative analyses rather than jurisdiction-by-jurisdiction summaries, because the differences are the useful part.","Traced each development through to its governance implication and its risk, rather than stopping at the requirement."],
+    sol:"A continuing body of regulatory intelligence delivered as board-level briefings, comparative analyses and thought leadership.",
+    out:["Board-level briefings delivered.","Comparative analyses across UK and Nigerian environments.","Thought leadership on AI accountability gaps, compliance limitations and governance risks."],
+    lrn:"That translating regulation is the whole job. A requirement restated is not intelligence — the value is in what it implies for who decides what, and what evidence they'll need."
+  },
+  {
+    id:"W-10", t:"Project Aegis — structured GRC case study", cat:"Governance", f:["governance","reg"], pv:"done",
+    sub:"Board-level risk reporting, stress test outputs and risk appetite analysis.",
+    ctx:"A structured GRC case study used to produce and refine executive-level governance outputs.",
+    prb:["Risk material that is technically correct and executively unusable is a recurring failure in GRC.","Risk appetite is frequently stated and rarely analysed against actual exposure."],
+    role:"Contributed the board-level risk reporting materials, governance stress test outputs and risk appetite analysis, and refined them for clarity and executive usability.",
+    app:["Wrote for the board's decision rather than for completeness.","Ran governance stress test outputs to show where the framework would fail under pressure rather than in principle.","Analysed risk appetite as a ceiling to test exposure against, not a statement to file."],
+    sol:"Board-level risk reporting materials, governance stress test outputs and risk appetite analysis.",
+    out:["Outputs refined for executive-level usability.","The risk appetite thinking carried into the per-risk appetite ceilings built into the assurance platform."],
+    lrn:"That an executive audience will not extract the decision from your document. If it isn't decision-ready, it isn't finished."
+  },
+  {
+    id:"W-11", t:"Governance and compliance tool suite", cat:"Governance technology", f:["tech","governance","board"], pv:"built",
+    sub:"GovernSight, Board Skills Matrix, Governance & Regulatory Readiness Diagnostic and the rest of the deployed suite.",
+    ctx:"The methodology work produced repeated assessment patterns that were being run manually each time.",
+    prb:["The same assessments were being rebuilt by hand for each engagement.","Manual assessments produce no audit trail and no consistent output.","Tools that are useful commercially need access control and IP protection, not just working logic."],
+    role:"Built and deployed the suite, combining regulatory frameworks with interactive web technologies.",
+    app:["Built each tool as a self-contained application with its own local intelligence engine and no external AI dependency.","Gave each an access gate backed by a live access list, so codes can be issued and revoked without rebuilding the tool.","Added privacy notices covering UK GDPR and Nigeria's data protection regime, feedback routes and guided walkthroughs as a common pattern across the suite.","Applied code obfuscation as a second layer of IP protection alongside private source control."],
+    sol:"A deployed suite including GovernSight, the Board Skills Matrix Tool, the Governance & Regulatory Readiness Diagnostic and the AI Governance Diagnostic — automating assessments, generating audit trails and supporting governance decision-making.",
+    out:["Suite built and deployed.","Product briefs produced for the tools as formatted documentation.","A strategic product assessment run across five of the tools to prioritise which merited further investment."],
+    lrn:"That distribution and access control are part of the product. A governance tool that can't have its access revoked isn't ready to be given to anyone."
+  },
+  {
+    id:"W-12", t:"AEGIS — Financial Crime Governance Operating System", cat:"Governance technology", f:["tech","reg","governance"], pv:"built",
+    sub:"Diagnostic-first financial crime governance across 7 domains and 10 operational views.",
+    ctx:"Financial crime compliance is usually delivered as a checklist against an obligation list, which tells an organisation what it lacks but not what to do on Monday.",
+    prb:["Obligation checklists don't produce a working programme.","Financial crime obligations span multiple regulators and jurisdictions simultaneously.","When an actual event occurs — a sanctions match, a suspected laundering case — the framework rarely tells anyone what to do next."],
+    role:"Designed and built the system.",
+    app:["Made it diagnostic-first: a single assessment generates the risks, obligations, control gaps, policy gaps, prioritised actions and domain scores rather than the user populating them.","Covered seven financial crime domains and surfaced them through ten operational views instead of one report.","Built five response playbooks, with incident response as the overarching framework the four specific playbooks operate inside.","Grouped the obligation tracker by jurisdiction, covering Nigerian, UK, US, EU and international regimes.","Set explicit posture bands so a score maps to a stated position rather than a number."],
+    sol:"A financial crime governance operating system: 35-question diagnostic, 7 domains, 10 operational views, 5 response playbooks and a jurisdiction-grouped obligation tracker with a full audit trail.",
+    out:["Built and delivered, with product brief documentation covering all domains, views, playbooks and posture bands.","Regulatory knowledge bases extended across additional African jurisdictions and international standards."],
+    lrn:"That a diagnostic which generates the workspace is a fundamentally different product from one that scores you. The output has to be the starting point for work, not the end of an assessment."
+  },
+  {
+    id:"W-13", t:"Governance Stress Testing Platform", cat:"Governance technology", f:["tech","risk","governance"], pv:"built",
+    sub:"Rebuilt from the ground up after establishing that the original was a maturity quiz.",
+    ctx:"An existing tool was positioned as governance stress testing. On review it was a governance maturity quiz.",
+    prb:["Maturity assessment tells you what exists. Stress testing tells you what happens when it's tested — these are different questions.","Organisations were being assessed against calm-conditions governance.","Third-party and stakeholder responses risked contaminating an organisation's own scores."],
+    role:"Identified the gap, rebuilt the platform, and designed the survey and third-party assessment model.",
+    app:["Replaced the maturity questions with five crisis scenario modules — board oversight, risk management, crisis response, regulatory compliance, and culture and ethics — each carrying six realistic crisis scenarios.","Calibrated scenarios against a detailed governance intake profile so the crisis fits the organisation.","Separated assessment scope into self, internal stakeholder and third-party, keeping survey results out of the organisation's own dashboard metrics entirely.","Built expiring, single-assessment survey links, and gave respondents a locked results view with no route into the wider platform — closing a real access bypass."],
+    sol:"A governance stress testing platform producing an executive summary with score ring and RAG status, pillar breakdown, scenario-by-scenario analysis, a governance risk register and priority recommendations.",
+    out:["Rebuilt platform with 30 crisis scenarios across 5 modules.","Three-tab assessment history separating self-assessment, multi-stakeholder and third-party register.","Access codes revalidated hourly against a live list, with revocation taking effect mid-session while preserving in-progress work."],
+    lrn:"That naming a product correctly matters. Calling a maturity quiz a stress test isn't a marketing decision — it changes what the customer believes they've tested."
+  },
+  {
+    id:"W-14", t:"Data Governance & Sovereignty Diagnostic", cat:"Governance technology", f:["tech","data","reg"], pv:"built",
+    sub:"Board-level data governance and residency assurance across 10 domains and 15 jurisdictions.",
+    ctx:"Data localisation requirements in Nigeria raised a question most organisations couldn't answer: where does our data actually sit, and under whose law?",
+    prb:["Data residency is usually assumed rather than declared and evidenced.","Tying a product to one directive's compliance deadline makes it obsolete the day the deadline passes.","Enterprise data management platforms answer a different question and cost accordingly."],
+    role:"Designed and built the diagnostic, and rebuilt its information architecture after user testing.",
+    app:["Positioned it as board-level assurance, not a compliance checker and not an enterprise data management platform.","Folded the originating directive in as one jurisdiction pack among many, with no deadline dates shown, so the tool stays relevant afterwards.","Anchored the ten domains to established data management and governance standards without naming frameworks in the product itself.","Rebuilt navigation from output-shaped to task-based after user testing showed the original was confusing, and made an interactive world map the primary navigation and the residency map at once.","Replaced a one-shot walkthrough with a spotlight tour that points at the live element the user needs to act on next."],
+    sol:"A jurisdiction-aware data governance and sovereignty platform: 10-domain assessment, governance score, maturity by domain, jurisdiction exposure register, declared residency map, recommended actions and a board report with an auto-generated executive summary.",
+    out:["Built across 15 jurisdictions at launch with real-geometry world map navigation.","Access codes served from a live list with hourly revalidation, preserving in-progress work through a forced re-authentication."],
+    lrn:"That user testing beats internal logic. The original navigation was organised the way the outputs were organised, which made sense to me and to nobody else."
+  },
+  {
+    id:"W-15", t:"Regulatory Exposure & Governance Diagnostic", cat:"Regulatory intelligence", f:["reg","tech"], pv:"built",
+    sub:"Exposure assessment across Nigerian financial sector regulators.",
+    ctx:"Organisations in the Nigerian financial sector are frequently accountable to several regulators at once and unclear on their combined exposure.",
+    prb:["Obligations from different regulators overlap and compound, and assessing them separately understates the exposure.","A simple weighted score misses the combinations that actually create risk."],
+    role:"Designed and built the tool and its intelligence engine.",
+    app:["Covered obligations across the central bank, the financial intelligence unit, the data protection commission, the securities regulator and the insurance regulator.","Built cross-question combination rules so specific answer patterns escalate the result — exposure that only exists when two conditions are both true.","Applied weighted scoring with automatic risk band uplift rather than a flat total.","Used a two-layer access model with a live access list and named credentials."],
+    sol:"A regulatory exposure and governance diagnostic producing response-differentiated insight rather than a generic score.",
+    out:["Built and delivered, with product brief documentation.","Included in the strategic product assessment across the tool portfolio."],
+    lrn:"That combination rules are where a diagnostic becomes intelligent. Any tool can add up weights; the value is in recognising which pairs of answers matter together."
+  },
+  {
+    id:"W-16", t:"Security foundations and technical labs", cat:"Cybersecurity", f:["cyber"], pv:"done",
+    sub:"IAM, S3, network monitoring, packet capture, and a healthcare risk register.",
+    ctx:"The technical grounding underneath everything above — a diploma in cybersecurity and applied practice.",
+    prb:["Governance advice about technical controls is worth very little if you've never configured one."],
+    role:"Completed the labs and produced the outputs.",
+    app:["AWS and security labs: IAM, EC2 and S3 security configurations, plus network monitoring and configuration using Wireshark, Snort and Cisco Packet Tracer.","Fintech compliance mapping: mapped NDPR, PCI-DSS and CBN requirements to business operations, identifying gaps and recommending compliance controls.","Cybersecurity risk register lab: built a full risk register for a healthcare organisation covering critical assets, threats, vulnerabilities, risk ratings and mitigation, aligned to HIPAA and enterprise risk standards."],
+    sol:"Applied security practice across cloud configuration, network monitoring, compliance mapping and risk register construction.",
+    out:["Diploma in Cybersecurity, AltSchool Africa.","ISC2 Certified in Cybersecurity; Cisco Introduction to Cybersecurity.","Risk register and compliance mapping outputs produced."],
+    lrn:"Enough hands-on exposure to know when a control is described accurately and when it isn't — which is most of what makes technical governance credible."
+  },
+  {
+    id:"W-17", t:"AI security", cat:"AI security & governance", f:["ai","cyber"], pv:"dev",
+    sub:"Actively developing — the security half of trustworthy AI.",
+    ctx:"AI governance answers whether a system should operate a given way. AI security answers whether it can be protected at all. I hold the governance side already; this is the side I'm building out.",
+    prb:["AI systems fail in ways conventional application security doesn't anticipate — the model, the data and the pipeline are all attack surface.","Governance recommendations about AI security are only as good as the underlying understanding of the threat."],
+    role:"Learning and applying, deliberately, alongside the governance work.",
+    app:["Introduction to AI Security, the most recent certification.","Applying existing security foundations — controls, vulnerability thinking, information security management — to AI components rather than treating AI security as a separate discipline.","Working it into the AI governance tools, where security and control is one of the three weighted pillars of the maturity model."],
+    sol:"An in-progress capability, stated as in progress.",
+    out:["Introduction to AI Security certification.","AI security represented as a weighted pillar within the AI governance maturity framework."],
+    lrn:"Still developing. This entry is here because the distinction between what I've built and what I'm still learning is the point of this register."
+  },
+  {
+    id:"W-18", t:"Data privacy and cyber incident simulation — DLA Piper", cat:"Regulatory intelligence", f:["reg","cyber"], pv:"know",
+    sub:"Breach response, GDPR notification and ransom risk, in a legal practice context.",
+    ctx:"A job simulation with DLA Piper's Data Privacy and Cybersecurity team, completed through Forage in September 2025.",
+    prb:["Breach response sits between legal obligation, regulatory notification, security incident management and public communication — and organisations tend to be strong in one of the four."],
+    role:"Completed the simulation.",
+    app:["Analysed complex data breach scenarios and produced actionable advice on GDPR compliance, regulatory notification requirements and ransom payment risks.","Drafted a compliant and strategic media statement addressing the public relations dimension while prioritising transparency and reputational risk."],
+    sol:"Simulation outputs covering breach analysis, regulatory advice and external communication.",
+    out:["Simulation completed.","Applied legal research, regulatory analysis and incident management practice."],
+    lrn:"How much of incident response is a communications problem, and how early the regulatory clock starts running."
+  }
+];
+
+/* =========================================================
+   GOVERNANCE OPERATING CYCLE
+   ========================================================= */
+var CYCLE = [
+  {n:"Assess", d:"Establish where governance actually stands, by domain, rather than assuming the documented position is the real one.", p:"A baseline diagnostic on first configuration, scored transparently by rule."},
+  {n:"Configure", d:"Set the framework to the organisation — its domains, its owners, its proportionality. A large-institution model imposed on a small firm will not be operated.", p:"Configuration-driven onboarding, with the ability to add governance domains the platform doesn't ship with."},
+  {n:"Monitor", d:"Keep the position visible between reviews, so governance state isn't rediscovered annually.", p:"Governance calendar with RAG status, dashboard health score, global search across records."},
+  {n:"Alert", d:"Surface what needs attention before it becomes an overdue item or a breach.", p:"Notification centre separating overdue work, approaching deadlines and risk appetite breaches, so each reads as what it is."},
+  {n:"Act", d:"Assign the work to a named person with a date, because governance without an owner is a statement of intent.", p:"Action tracker, RACI, named owners with free-text entry so accountability isn't limited to platform account holders."},
+  {n:"Evidence", d:"Be able to show it happened. Most governance failures at audit are evidence failures, not control failures.", p:"Evidence index pointing at uploaded files or document links, with automatic attribution and a full audit trail holding previous and new values."},
+  {n:"Review", d:"Check the framework against reality on a cycle, and check whether anything material has changed since the last look.", p:"Change-detection diagnostic mapping stated changes to the domains that need reassessing, with configurable rules."},
+  {n:"Improve", d:"Feed what the review found back into the framework, so it moves with the organisation rather than ageing against it.", p:"Non-destructive record states — active, archived, superseded — so the framework's history stays readable."}
+];
+
+/* =========================================================
+   GOAP LAYERS
+   ========================================================= */
+var GLAYERS = [
+  {n:"Governance domains", d:"Twelve domains covering corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records. Organisations can add domains the platform doesn't ship with, and the rule engine applies to those too.", f:[["12","standard domains"],["+","custom domains supported"]]},
+  {n:"Governance maturity", d:"A governance health score calculated by transparent rule rather than a black box, because a score that can't be explained won't survive its first board question.", f:[["Rule","based scoring"],["Open","calculation logic"]]},
+  {n:"Risk", d:"A 5×5 risk register with a clickable heat map, a register-level risk appetite statement, and a separate appetite ceiling on each individual risk. Residual score is compared against that ceiling and flagged as within, at, or above appetite.", f:[["5×5","risk matrix"],["Per-risk","appetite ceilings"]]},
+  {n:"Governance calendar", d:"Everything due, with RAG status — red for overdue, amber approaching, green complete — so the governance year is visible rather than remembered.", f:[["RAG","status model"]]},
+  {n:"Evidence", d:"The platform is the evidence index, not the document repository. Records point at uploaded files or at links in existing document stores, which keeps it from competing with systems the organisation already has.", f:[["Index","not repository"],["PDF/DOCX","scanning supported"]]},
+  {n:"Assurance", d:"An assurance module and action tracker connecting what was found to who is fixing it and by when.", f:[["Named","owners"],["Tracked","actions"]]},
+  {n:"Audit trail", d:"Automatic user attribution on every action, in a dedicated trail holding previous and new values. Nothing is destructively deleted — records move to archived or superseded, so the history stays readable.", f:[["Every","action attributed"],["No","destructive deletion"]]},
+  {n:"Monitoring & change detection", d:"A change-detection diagnostic asking what has changed, with a rule engine mapping each change to the domains needing reassessment. The rules are transparent and administrator-configurable, including for custom domains.", f:[["Configurable","rule engine"]]},
+  {n:"Board reporting", d:"An executive summary reflecting the current state of the framework, plus CSV and PDF exports, so the board conversation starts from the system rather than from a separately maintained deck.", f:[["CSV + PDF","exports"],["Live","executive summary"]]}
+];
+
+/* =========================================================
+   SIMULATOR PREVIEW
+   ========================================================= */
+var SIMS = [
+  { k:"AI governance", paper:"The executive team has deployed an AI tool into a customer-facing process without an impact assessment. It is already influencing decisions. The board has been informed after the fact.",
+    opts:[
+      {t:"Suspend the tool immediately pending a full impact assessment.", fb:"Decisive and defensible, and it stops the exposure. The competency question is whether you established the actual risk before acting — suspending a tool that turns out to be low-risk teaches the executive to route around the board next time. Note the reasoning in the minutes either way.", c:["Decisiveness","Risk judgement","Board authority"]},
+      {t:"Allow it to continue under conditions, with human oversight and a deadline for the assessment.", fb:"Proportionate, and it keeps the board in control rather than in opposition. It only holds if the conditions are specific and someone is named against them — 'with oversight' is not a condition, it's a hope. The deadline is what makes this defensible.", c:["Proportionality","Accountability","Oversight design"]},
+      {t:"Note the deployment and commission a review of how it bypassed governance.", fb:"Correctly identifies that the process failure matters more than this one tool. But it leaves the live exposure running while you investigate the cause, and a board that only studies the breach has not addressed it. Most boards need to do both.", c:["Root cause thinking","Risk tolerance","Escalation"]}
+    ]},
+  { k:"Technology risk", paper:"A material technology risk has been identified in a system the business depends on. Remediation would take the service offline during a peak period. The board must decide how to respond.",
+    opts:[
+      {t:"Remediate now and accept the service interruption.", fb:"Puts risk ahead of revenue, which is the right instinct and the harder call. The competency test is whether you interrogated the severity first — a board that always chooses the safe option isn't exercising judgement, it's avoiding it.", c:["Risk appetite","Decisiveness"]},
+      {t:"Accept the risk formally for the peak period, with compensating controls and a fixed remediation date.", fb:"This is a real governance decision rather than a deferral, provided three things are recorded: who accepted it, what the compensating controls are, and the date it stops being acceptable. Without those, it's a deferral wearing a governance label.", c:["Risk acceptance","Documentation","Compensating controls"]},
+      {t:"Refer it back to management for options before deciding.", fb:"Appropriate if the board genuinely lacks the information to decide, and evasive if it doesn't. The distinction is whether you specified what information you need and by when. An open-ended referral is how material risks age quietly.", c:["Information sufficiency","Escalation","Board discipline"]}
+    ]},
+  { k:"Regulatory change", paper:"A regulator has issued new requirements affecting a core part of the business. The compliance date is inside the current financial year. Management's assessment is that the firm is broadly compliant already.",
+    opts:[
+      {t:"Accept management's assessment and monitor to the deadline.", fb:"'Broadly compliant' is the phrase that shows up in most enforcement post-mortems. The competency being tested is challenge — the board's job here is to ask what 'broadly' is doing in that sentence and what evidence sits behind it.", c:["Challenge","Assurance","Regulatory awareness"]},
+      {t:"Commission an independent gap analysis against the new requirements.", fb:"Buys assurance rather than assuming it, and produces evidence you can show the regulator. Worth pairing with a view on proportionality — an independent review of every regulatory change is not sustainable, so record why this one warranted it.", c:["Assurance","Evidence","Proportionality"]},
+      {t:"Require management to map the requirements to controls and report back with gaps identified.", fb:"Keeps ownership where it belongs and produces a traceable artefact. It relies on management's objectivity about its own controls, so the board should specify the format and set a date — otherwise you receive a reassurance rather than a mapping.", c:["Accountability","Traceability","Board direction"]}
+    ]},
+  { k:"Operational resilience", paper:"A third-party provider supporting a critical service has suffered an incident. Service is degraded but running. The provider has not yet confirmed whether data was affected.",
+    opts:[
+      {t:"Invoke the continuity plan and move to the alternative arrangement.", fb:"Tests whether the continuity plan is real. If the alternative arrangement has never been exercised, invoking it under live conditions is itself a risk — which is a finding the board should record regardless of what it decides today.", c:["Continuity","Third-party risk","Preparedness"]},
+      {t:"Hold, escalate to the provider, and set a decision point for later today.", fb:"Reasonable under uncertainty, and setting an explicit decision point is what separates holding from drifting. The regulatory clock may already be running on the data question, so the notification assessment shouldn't wait for the provider's confirmation.", c:["Escalation","Regulatory timing","Decision discipline"]},
+      {t:"Treat it as a potential data incident now and begin the notification assessment in parallel.", fb:"Recognises that notification timelines don't pause for a supplier's investigation. The trade-off is that premature assessment consumes scarce capacity during a live incident — worth naming who is doing which of the two workstreams.", c:["Regulatory timing","Data protection","Parallel response"]}
+    ]}
+];
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+var CAPS = [
+  { n:"Cybersecurity", tag:"Foundation",
+    d:"Where the career started, and the reason the governance work stays technically credible.",
+    know:["Security foundations and controls","Vulnerability assessment","Technical security tooling","Cybersecurity governance","Windows and Linux","AWS, Wireshark, Snort, Cisco Packet Tracer"],
+    done:["Information security work within the GRC role","Cyber risk governance regulatory intelligence","AWS and security labs, network monitoring and configuration"],
+    work:["W-16","W-18","W-09"] },
+  { n:"GRC", tag:"Core",
+    d:"Governance frameworks, risk, compliance, controls, maturity assessment and assurance — built from first principles rather than inherited.",
+    know:["ISO 27001","ISO 42001","NIST CSF","NIST AI RMF","COSO ERM","FCA/PRA","CBN guidelines","FATF"],
+    done:["Core compliance methodology designed from scratch","Compliance mapping, risk registers, gap analysis and remediation tracking","Mock gap analysis for a dual-regulated institution","Board-level risk reporting and risk appetite analysis"],
+    work:["W-04","W-05","W-10"] },
+  { n:"Technology governance", tag:"Current",
+    d:"Technology risk, governance frameworks, operating models, accountability, assurance and decision-making.",
+    know:["Governance framework design","Technology risk","Operating models","Assurance design","Governance reporting"],
+    done:["Led and executed a 12-domain governance transformation","Technology Governance Framework for an active technology arm","Governance Operating & Assurance Platform","Governance Decision Simulator"],
+    work:["W-01","W-02","W-03","W-06"] },
+  { n:"AI security", tag:"Developing",
+    d:"Security risks specific to AI systems, and how existing security foundations apply to them. Stated as developing, because that is what it is.",
+    know:["AI security fundamentals","Security risks associated with AI systems","Applying security controls to AI components"],
+    done:["Introduction to AI Security certification","Security and control built in as a weighted pillar of the AI governance maturity model"],
+    work:["W-17","W-08"] },
+  { n:"AI governance", tag:"Current",
+    d:"Responsible AI, human oversight, AI governance diagnostics, governance controls and emerging standards.",
+    know:["ISO/IEC 42001 and AI management systems","Responsible AI","Human oversight as a designed control","EU AI Act Article 14","Emerging AI regulation"],
+    done:["Human Oversight System, with an Article 14 gap analysis","AI Governance Diagnostic rebuilt into a ten-module operating system","Thought leadership on AI accountability gaps"],
+    work:["W-07","W-08","W-09"] },
+  { n:"Regulatory intelligence", tag:"Core",
+    d:"Regulatory monitoring and analysis, and translating regulatory developments into governance implications.",
+    know:["CBN, NDPC, SEC Nigeria, NFIU, NAICOM","FCA, PRA, ICO","FATF and international standards","UK GDPR, DPA 2018, NDPA"],
+    done:["Board-level briefings and comparative analyses across UK and Nigeria","Regulatory Exposure & Governance Diagnostic","Fintech compliance mapping across NDPR, PCI-DSS and CBN"],
+    work:["W-09","W-15","W-05"] }
+];
+
+/* =========================================================
+   AI WORK STRIP
+   ========================================================= */
+var AIWORK = [
+  {t:"Human Oversight System", d:"Five-lens structured human review of AI decision output, with a full audit trail.", w:"W-07"},
+  {t:"AI Governance Diagnostic", d:"Three-pillar maturity model — governance, security and control, capability — with a governance floor rule.", w:"W-08"},
+  {t:"AI Governance Operating System", d:"Ten modules from maturity through ISO/IEC 42001 readiness to an AI management system planner.", w:"W-08"},
+  {t:"AI regulatory intelligence", d:"Board-level analysis of AI accountability gaps, compliance limitations and governance risks.", w:"W-09"},
+  {t:"AI security", d:"In development. Introduction to AI Security is the most recent step.", w:"W-17"},
+  {t:"GovernSight", d:"Adjacent security governance — oversight and self-assessment tooling built around cybersecurity self-assessment requirements.", w:"W-11"}
+];
+
+/* =========================================================
+   REGULATORY RADAR
+   ========================================================= */
+var RADAR = [
+  { n:"NDPA 2023 / NDPC registration", j:"Nigeria", tags:["ng","dp"], a:-72, r:46,
+    note:"The requirement that surfaced the firm's own governance gap, and the reason the transformation project started.",
+    ch:["Nigeria's data protection regime requires data controllers of major importance to register with the regulator and demonstrate an accountable processing position.","Someone must own data protection as a named domain, with a lawful basis position, retention rules and a defined approach to recording and archiving data.","Unregistered or undocumented processing is both an enforcement exposure and a commercial one — it now comes up in client due diligence and in pitch calls.","Data residency and retention become configuration questions in every system holding personal data, not policy statements sitting outside them.","Data protection built in as one of the 12 governance framework domains, and a Data Governance & Sovereignty Diagnostic that treats residency as something declared and evidenced rather than assumed."] },
+  { n:"CBN cybersecurity expectations", j:"Nigeria", tags:["ng","cy"], a:20, r:52,
+    note:"Self-assessment against supervisory cybersecurity expectations is a recurring obligation for regulated institutions.",
+    ch:["Supervisory cybersecurity frameworks require regulated institutions to self-assess against a defined control set and report the result.","Self-assessment has to be evidenced, repeatable and owned — a spreadsheet completed once a year does not survive supervisory challenge.","The risk is not failing the assessment, it is being unable to show how the answer was reached or who stood behind it.","Assessment needs tooling that produces an audit trail as a by-product of being used, rather than requiring a separate documentation exercise.","GovernSight, built specifically around cybersecurity self-assessment compliance, and the wider suite pattern of generating audit trails automatically."] },
+  { n:"CBN AML/CFT obligations", j:"Nigeria", tags:["ng","aml"], a:-28, r:88,
+    note:"Covered in the regulatory intelligence work and built into the AEGIS obligation tracker.",
+    ch:["Central bank AML/CFT requirements sit alongside financial intelligence unit reporting obligations, and both apply simultaneously.","Financial crime needs its own governance structure — domain ownership, risk assessment, control testing and board visibility — not a compliance sub-task.","Obligations from multiple regulators overlap and compound; assessing them separately understates the exposure.","Obligation tracking has to be grouped by jurisdiction and kept live, because the obligation set moves.","AEGIS, with a jurisdiction-grouped obligation tracker and five response playbooks for when an actual event occurs."] },
+  { n:"SEC Nigeria — digital assets", j:"Nigeria", tags:["ng","da"], a:64, r:98,
+    note:"Digital asset regulation covered within the Nigerian regulatory intelligence work.",
+    ch:["Securities regulation has extended to digital assets, bringing a class of business inside a perimeter it previously sat outside.","Firms need a defensible position on whether their product is in scope before the regulator forms one for them.","Perimeter risk is the sharp end: operating outside a licence you were assumed not to need is a different order of exposure from a control gap.","Product and technology decisions become regulatory decisions — what the system does determines which regime applies to it.","Securities regulator obligations included in the Regulatory Exposure & Governance Diagnostic's multi-regulator assessment."] },
+  { n:"FATF standards", j:"International", tags:["aml"], a:142, r:112,
+    note:"The international layer underneath both jurisdictions' financial crime regimes.",
+    ch:["FATF standards set the international baseline that national AML/CFT regimes implement, with country evaluations driving domestic tightening.","National requirements should be read as an implementation of the standard, which makes changes more predictable than they look.","A jurisdiction's evaluation outcome is a leading indicator of regulatory pressure on institutions operating there.","Controls built to a national minimum may need rework when the national regime moves toward the standard.","FATF included in the regulatory intelligence coverage and in the AEGIS obligation tracker alongside national regimes."] },
+  { n:"FCA / PRA and UK MLR 2017", j:"United Kingdom", tags:["uk","aml"], a:-152, r:80,
+    note:"Covered in the UK-side regulatory intelligence and in the dual-regulated gap analysis.",
+    ch:["Dual regulation means conduct and prudential expectations apply at once, with money laundering regulations layered across both.","Accountability has to be individual and traceable — the UK model is built around named responsibility rather than committee ownership.","Dual-regulated firms carry compounding risk where the two regimes' expectations interact, which is exactly where mapping exercises tend to stop.","Systems must produce individually attributable records, because collective attribution doesn't satisfy an individual accountability regime.","The mock gap analysis for a dual-regulated institution, and named-user attribution built into the assurance platform's audit trail."] },
+  { n:"EU AI Act — Article 14 human oversight", j:"European Union", tags:["ai"], a:108, r:32,
+    note:"The Human Oversight System was gap-analysed directly against this article.",
+    ch:["Article 14 requires that high-risk AI systems be designed so they can be effectively overseen by humans during use.","Stating that a human reviews the output is not oversight. The oversight has to be designed, structured and evidenced.","Automation bias is the live risk — an unstructured reviewer confirms the AI's output because nothing in the process requires them to challenge it.","Review interfaces need designed friction: separate assessment grounds, real decision options, and a record of the reasoning.","The Human Oversight System — five review lenses, five decision types, no proposed-decision mode, full audit trail — with a gap analysis produced against the article itself."] },
+  { n:"ISO/IEC 42001", j:"International standard", tags:["ai"], a:-118, r:44,
+    note:"Held as a Lead Implementer certification alongside ISO/IEC 27001.",
+    ch:["ISO/IEC 42001 sets out an AI management system, structured to sit alongside an existing information security management system.","AI governance becomes a management system with defined ownership, documentation, internal audit and continual improvement — not a policy statement.","Organisations adopting AI without a management system have no repeatable way to demonstrate control to a customer, an auditor or a regulator.","Readiness needs assessing before certification is attempted, and the gaps are usually documentation and internal audit rather than technology.","An ISO/IEC 42001 readiness module inside the AI Governance Operating System, and the AI management system design and implementation planner."] },
+  { n:"UK GDPR, DPA 2018 and ICO expectations", j:"United Kingdom", tags:["uk","dp"], a:-96, r:104,
+    note:"Applied in the breach simulation work and in the privacy design of the tool suite.",
+    ch:["UK data protection law sets notification timelines that begin at awareness, not at the end of the investigation.","Breach response has to run legal, regulatory, security and communications workstreams in parallel, with named owners for each.","Waiting for a third party's confirmation before assessing notification is a common and expensive failure mode.","Systems handling personal data need a documented position on residency, retention and lawful basis before an incident, not during one.","Breach and notification analysis in the DLA Piper simulation, and privacy notices covering both UK and Nigerian regimes built as a standard pattern across the tool suite."] },
+  { n:"ISO/IEC 27001", j:"International standard", tags:["cy"], a:-56, r:70,
+    note:"Held as both Lead Auditor and Lead Implementer.",
+    ch:["ISO/IEC 27001 sets the information security management system baseline most client and supervisory expectations reduce to.","Security becomes a governed system with risk assessment, control selection, internal audit and management review — with cybersecurity as a first-class governance domain.","The common failure is control implementation without the management system around it, which leaves an organisation secure but unable to demonstrate it.","Control evidence has to be produced continuously rather than assembled before an audit.","Cybersecurity as one of the 12 governance framework domains, and the evidence index and audit trail in the assurance platform designed to produce evidence as a by-product of use."] },
+  { n:"NDPR, PCI-DSS and CBN — fintech mapping", j:"Nigeria", tags:["ng","dp","cy"], a:45, r:64,
+    note:"A compliance mapping project across three overlapping requirement sets.",
+    ch:["A Nigerian fintech handling card data sits under data protection rules, card industry standards and central bank guidelines simultaneously.","One operational process can carry obligations from three sources, and each source assumes it is the only one being read.","Mapping requirement-by-requirement in isolation misses the conflicts and the double-counting between the three.","Controls need mapping to business operations rather than to requirement lists, so a single control can be shown to satisfy several obligations.","The fintech compliance mapping project — requirements mapped to operations, gaps identified and controls recommended — and the cross-referenced ID structure later built into the compliance methodology."] },
+  { n:"NAICOM and NFIU obligations", j:"Nigeria", tags:["ng","aml"], a:172, r:92,
+    note:"Included in the multi-regulator exposure assessment.",
+    ch:["Insurance supervision and financial intelligence reporting add further regulators to an already crowded Nigerian perimeter.","Multi-regulator exposure needs assessing as a whole, because obligations compound where regimes overlap.","Firms frequently cannot state which regulators they are accountable to — which was true of the firm's own starting position.","Exposure assessment needs combination logic, since specific pairs of answers create risk that neither creates alone.","The Regulatory Exposure & Governance Diagnostic, with cross-question combination rules and automatic risk band uplift across five Nigerian regulators."] }
+];
+
+/* =========================================================
+   GOVERNANCE TECHNOLOGY — 11 SOLUTIONS
+   ========================================================= */
+var TOOLS = [
+  {n:"Governance Operating & Assurance Platform", g:["risk","board"], w:"W-03",
+   what:"The governance operating system for the 12-domain framework — calendar, registers, evidence, assurance and audit trail.",
+   p:"A written framework nobody operates.", s:"An operating cycle with named owners, RAG-tracked deadlines and an audit trail.", c:"Governance operating models, assurance design", e:"In use for the firm's framework; product brief and user guide produced."},
+  {n:"Governance Stress Testing Platform", g:["risk"], w:"W-13",
+   what:"Five crisis scenario modules testing governance under pressure rather than in calm conditions.",
+   p:"Maturity assessment tells you what exists, not what holds.", s:"30 crisis scenarios calibrated to a governance intake profile.", c:"Scenario design, resilience assessment", e:"Rebuilt platform with self, stakeholder and third-party assessment scopes."},
+  {n:"Data Governance & Sovereignty Diagnostic", g:["data","reg"], w:"W-14",
+   what:"Board-level data governance and residency assurance across 10 domains and 15 jurisdictions.",
+   p:"Organisations assume where their data sits.", s:"Declared residency mapped, with a jurisdiction exposure register.", c:"Data governance, jurisdiction analysis", e:"Built with real-geometry world map navigation and a board report."},
+  {n:"AI Governance Diagnostic", g:["ai"], w:"W-08",
+   what:"Three-pillar AI governance maturity — governance, security and control, capability — rebuilt into a ten-module AI governance operating system.",
+   p:"A single AI maturity score hides which of the three pillars is failing, and diagnosing maturity doesn't tell an organisation how to build the thing it lacks.", s:"Weighted three-pillar scoring with a governance floor rule, extended into a modular governance journey through ISO/IEC 42001 readiness, inventory, risk, impact, policy, audit and skills.", c:"AI governance, maturity modelling, AI management systems", e:"45 questions, 13 sectors, regulatory mapping across 50+ jurisdictions; ten modules delivered as one self-contained application."},
+  {n:"Governance Decision Simulator", g:["board"], w:"W-06",
+   what:"Facilitator-led boardroom training — 101 simulations, 10 domains, 12 scored competencies, 26 countries, 4 sector lenses.",
+   p:"Governance training tests recall, not decision-making.", s:"Behavioural scoring across 12 competencies, with no answer key.", c:"Board effectiveness, experiential training design", e:"All 101 simulations playable; verified across thousands of playthrough combinations."},
+  {n:"Human Oversight System", g:["ai","risk"], w:"W-07",
+   what:"Structured five-lens human review of AI decision output, with five decision types and a full audit trail.",
+   p:"'A human is in the loop' is a claim, not a control.", s:"Designed friction — five separate review grounds before any decision.", c:"Human oversight, AI accountability", e:"Deployed; gap analysis produced against EU AI Act Article 14."},
+  {n:"GovernSight", g:["reg","risk"], w:"W-11",
+   what:"Governance oversight and self-assessment tooling built around cybersecurity self-assessment compliance requirements.",
+   p:"Supervisory self-assessment done in spreadsheets leaves no defensible record.", s:"Structured assessment that produces its audit trail as a by-product.", c:"Cybersecurity governance, supervisory reporting", e:"Deployed; product brief produced; identified as a portfolio priority in the strategic product assessment."},
+  {n:"Governance & Regulatory Readiness Diagnostic", g:["reg"], w:"W-11",
+   what:"Readiness assessment across governance and regulatory obligations, with a separate survey and results flow.",
+   p:"Organisations discover they aren't ready at the point of being asked.", s:"A structured readiness assessment run before the question arrives.", c:"Readiness assessment, regulatory analysis", e:"Deployed as a multi-file tool with survey and results flows."},
+  {n:"AEGIS — Financial Crime Governance Operating System", g:["fc","risk"], w:"W-12",
+   what:"Diagnostic-first financial crime governance: 7 domains, 10 operational views, 5 response playbooks.",
+   p:"Obligation checklists don't produce a working programme.", s:"A single diagnostic that generates the risks, gaps, actions and workspace.", c:"Financial crime governance, playbook design", e:"Built with a jurisdiction-grouped obligation tracker; full product brief produced."},
+  {n:"Board Skills Matrix", g:["board"], w:"W-11",
+   what:"Board composition and skills assessment supporting board effectiveness review.",
+   p:"Board composition gaps are usually noticed after they matter.", s:"A structured skills matrix making the gap visible in advance.", c:"Board effectiveness, governance structure", e:"Deployed with access control; product brief produced."},
+  {n:"Regulatory Exposure & Governance Diagnostic", g:["reg"], w:"W-15",
+   what:"Multi-regulator exposure assessment across five Nigerian financial sector regulators.",
+   p:"Overlapping regulators are assessed separately, which understates exposure.", s:"Cross-question combination rules and automatic risk band uplift.", c:"Regulatory analysis, exposure modelling", e:"Deployed with a two-layer access model; product brief produced."}
+];
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+var CERTS = [
+  { g:"Governance", items:[
+    {n:"GRCP — Governance, Risk Management and Compliance Professional", w:"OCEG", d:"May 2026"},
+    {n:"ISO/IEC 27001 Lead Auditor", w:"Information security management systems", d:"August 2025"},
+    {n:"ISO/IEC 27001 & ISO 42001 Lead Implementer", w:"International Cybersecurity and Digital Forensics Academy", d:"December 2025"}
+  ]},
+  { g:"Security", items:[
+    {n:"Certified in Cybersecurity (CC)", w:"ISC2", d:"May 2024"},
+    {n:"Introduction to Cybersecurity", w:"Cisco Networking Academy", d:"February 2024"},
+    {n:"Diploma in Cybersecurity", w:"AltSchool Africa", d:"2024 — 2025"}
+  ]},
+  { g:"AI", items:[
+    {n:"Introduction to AI Security", w:"Newly earned — AI security fundamentals", d:"Latest", fresh:true},
+    {n:"ISO 42001 Lead Implementer", w:"AI management systems, held with ISO 27001", d:"December 2025"},
+    {n:"Integrated AI Professional (IAIP)", w:"OCEG", d:"In view", pending:true}
+  ]},
+  { g:"Professional development", items:[
+    {n:"AI Career Essentials", w:"ALX", d:"November 2024"},
+    {n:"Web Development", w:"Code Lagos", d:"September 2018"},
+    {n:"B.A. History & International Studies", w:"University of Ilorin", d:"2018 — 2023"}
+  ]}
+];
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+function $(s,c){return (c||document).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));}
+function esc(t){return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+var PVL={built:"Built",done:"Done",know:"Know",dev:"Developing"};
+
+/* =========================================================
+   ISOMETRIC LAYER STACK
+   ========================================================= */
+var NODEPOS=[[18,22],[52,14],[80,42],[36,58],[66,74],[14,80],[90,88],[44,90]];
+function buildStack(el,spread){
+  if(!el) return;
+  var h="";
+  for(var i=0;i<4;i++){
+    var z=i*spread;
+    h+='<div class="slab" data-i="'+i+'" style="transform:translateZ('+z+'px)">';
+    h+='<div class="slab-face"></div>';
+    for(var n=0;n<NODEPOS.length;n++){
+      h+='<span class="node" style="left:'+NODEPOS[n][0]+'%;top:'+NODEPOS[n][1]+'%"></span>';
+    }
+    h+='</div>';
+  }
+  el.innerHTML=h;
+}
+function setActive(el,idx){
+  $$(".slab",el).forEach(function(s){
+    s.classList.toggle("act",parseInt(s.dataset.i,10)===idx);
+  });
+}
+var stack=$("#stack"), stack2=$("#stack2"), stage=$("#stage");
+buildStack(stack,26);
+buildStack(stack2,30);
+
+/* legend */
+(function(){
+  var lg=$("#stacklegend"); if(!lg) return;
+  lg.innerHTML=LAYERS.map(function(l,i){
+    return '<button type="button" data-i="'+i+'"><em aria-hidden="true"></em>'+esc(l.short)+'</button>';
+  }).join("");
+  $$("button",lg).forEach(function(b){
+    function on(){ setActive(stack,parseInt(b.dataset.i,10)); $$("button",lg).forEach(function(x){x.classList.toggle("on",x===b);}); }
+    function off(){ setActive(stack,-1); b.classList.remove("on"); }
+    b.addEventListener("mouseenter",on); b.addEventListener("focus",on);
+    b.addEventListener("mouseleave",off); b.addEventListener("blur",off);
+    b.addEventListener("click",function(){
+      var t=document.getElementById("journey"); if(t) t.scrollIntoView({behavior:RM?"auto":"smooth"});
+      openJourney(parseInt(b.dataset.i,10));
+    });
+  });
+})();
+
+/* pointer tilt + scroll drift */
+(function(){
+  if(RM||!stage||!stack) return;
+  var tx=0,ty=0,cx=0,cy=0,raf=null,sp=0;
+  function loop(){
+    cx+=(tx-cx)*.09; cy+=(ty-cy)*.09;
+    stack.style.transform="rotateX("+(60+cy*7)+"deg) rotateZ("+(-40+cx*12)+"deg)";
+    $$(".slab",stack).forEach(function(s){
+      var i=parseInt(s.dataset.i,10);
+      s.style.transform="translateZ("+(i*(26+sp))+"px)";
+    });
+    if(Math.abs(tx-cx)>.001||Math.abs(ty-cy)>.001){raf=requestAnimationFrame(loop);} else {raf=null;}
+  }
+  function kick(){ if(!raf) raf=requestAnimationFrame(loop); }
+  stage.addEventListener("pointermove",function(e){
+    var r=stage.getBoundingClientRect();
+    tx=((e.clientX-r.left)/r.width-.5)*2; ty=((e.clientY-r.top)/r.height-.5)*2; kick();
+  });
+  stage.addEventListener("pointerleave",function(){ tx=0;ty=0;kick(); });
+  window.addEventListener("scroll",function(){
+    var r=stage.getBoundingClientRect();
+    var prog=Math.min(1,Math.max(0,1-(r.bottom/(window.innerHeight+r.height))));
+    sp=prog*16; kick();
+  },{passive:true});
+})();
+
+/* =========================================================
+   JOURNEY ACCORDION
+   ========================================================= */
+var jrnPanel=$("#jrnPanel");
+jrnPanel.innerHTML=LAYERS.map(function(l,i){
+  return '<div class="jrn-step" data-i="'+i+'">'
+    +'<button class="jrn-btn" type="button" aria-expanded="false">'
+    +'<span class="lvl">'+l.lvl+'</span><h3>'+esc(l.title)+'</h3>'
+    +'<span class="chev" aria-hidden="true"></span></button>'
+    +'<div class="jrn-body"><p>'+esc(l.blurb)+'</p><div class="jrn-meta">'
+    + l.cols.map(function(c){
+        return '<div><h4>'+esc(c.h)+'</h4><ul>'+c.i.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div>';
+      }).join("")
+    +'</div></div></div>';
+}).join("");
+
+function openJourney(i){
+  $$(".jrn-step",jrnPanel).forEach(function(s){
+    var on=parseInt(s.dataset.i,10)===i;
+    s.classList.toggle("open",on);
+    $(".jrn-btn",s).setAttribute("aria-expanded",on?"true":"false");
+  });
+  setActive(stack2,i);
+  if(stack2) stack2.style.transform="rotateX(58deg) rotateZ("+(-40+i*4)+"deg)";
+}
+$$(".jrn-btn",jrnPanel).forEach(function(b){
+  b.addEventListener("click",function(){
+    var st=b.parentNode, i=parseInt(st.dataset.i,10);
+    openJourney(st.classList.contains("open")?-1:i);
+  });
+});
+openJourney(0);
+
+/* =========================================================
+   WORK REGISTER
+   ========================================================= */
+var regBody=$("#regBody");
+function renderReg(){
+  regBody.innerHTML=WORK.map(function(w){
+    return '<button class="reg-row" type="button" data-id="'+w.id+'" data-f="'+w.f.join(" ")+'" data-p="'+w.pv+'">'
+      +'<span class="reg-id">'+w.id+'</span>'
+      +'<span class="reg-t"><b>'+esc(w.t)+'</b><span>'+esc(w.sub)+'</span></span>'
+      +'<span class="reg-cat">'+esc(w.cat)+'</span>'
+      +'<span class="reg-pv"><span class="pv pv-'+w.pv+'">'+PVL[w.pv]+'</span></span>'
+      +'</button>';
+  }).join("")+'<div class="reg-empty" id="regEmpty" hidden>No entries match both filters. Clear one to see the rest.</div>';
+  $$(".reg-row",regBody).forEach(function(r){
+    r.addEventListener("click",function(){ openDossier(r.dataset.id,r); });
+  });
+}
+renderReg();
+
+var fw="all", fp=null;
+function applyWorkFilter(){
+  var n=0;
+  $$(".reg-row",regBody).forEach(function(r){
+    var okC = fw==="all" || r.dataset.f.split(" ").indexOf(fw)>-1;
+    var okP = !fp || r.dataset.p===fp;
+    var show = okC&&okP;
+    r.hidden=!show; if(show)n++;
+  });
+  $("#regEmpty").hidden = n>0;
+}
+$$("[data-fw],[data-fp]").forEach(function(b){
+  b.addEventListener("click",function(){
+    if(b.dataset.fw){
+      fw=b.dataset.fw;
+      $$("[data-fw]").forEach(function(x){x.classList.toggle("on",x===b);});
+    } else {
+      fp = (fp===b.dataset.fp)?null:b.dataset.fp;
+      $$("[data-fp]").forEach(function(x){x.classList.toggle("on",x.dataset.fp===fp);});
+    }
+    applyWorkFilter();
+  });
+});
+
+/* =========================================================
+   DOSSIER
+   ========================================================= */
+var dossier=$("#dossier"), dPanel=$("#dossierPanel"), dIn=$("#dossierIn"), dRef=$("#dossierRef");
+var lastFocus=null;
+function block(h,body){ return '<div class="dstep"><h4>'+h+'</h4><div>'+body+'</div></div>'; }
+function ul(a){ return '<ul>'+a.map(function(x){return '<li>'+x+'</li>';}).join("")+'</ul>'; }
+function openDossier(id,from){
+  var w=null; for(var i=0;i<WORK.length;i++){ if(WORK[i].id===id) w=WORK[i]; }
+  if(!w) return;
+  lastFocus=from||document.activeElement;
+  dRef.textContent=w.id+" · "+w.cat;
+  var h='<h3 id="dossierTitle">'+esc(w.t)+'</h3>';
+  h+='<div class="feat-eyebrow" style="margin-bottom:16px"><span class="pv pv-'+w.pv+'">'+PVL[w.pv]+'</span></div>';
+  h+='<p class="dossier-sub">'+esc(w.sub)+'</p>';
+  h+='<div class="dsteps">';
+  h+=block("Context","<p>"+esc(w.ctx)+"</p>");
+  h+=block("Problem",ul(w.prb.map(esc)));
+  h+=block("My role","<p>"+esc(w.role)+"</p>");
+  h+=block("Approach",ul(w.app.map(esc)));
+  h+=block("Solution","<p>"+esc(w.sol)+"</p>");
+  h+=block("Outcome / evidence",ul(w.out.map(esc)));
+  h+=block("What I learned","<p>"+esc(w.lrn)+"</p>");
+  h+='</div>';
+  if(w.feat) h+='<p style="margin-top:24px"><a class="btn btn-ghost" href="'+w.feat+'" data-close>Open the full case study</a></p>';
+  dIn.innerHTML=h;
+  dossier.classList.add("open");
+  document.body.style.overflow="hidden";
+  dPanel.scrollTop=0;
+  dPanel.focus();
+}
+function closeDossier(){
+  dossier.classList.remove("open");
+  document.body.style.overflow="";
+  if(lastFocus&&lastFocus.focus) lastFocus.focus();
+}
+dossier.addEventListener("click",function(e){ if(e.target.closest("[data-close]")) closeDossier(); });
+document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&dossier.classList.contains("open")) closeDossier(); });
+
+/* =========================================================
+   GOVERNANCE CYCLE RING
+   ========================================================= */
+(function(){
+  var g=$("#cycG"), det=$("#cycDetail"); if(!g) return;
+  var cx=110,cy=110,R=84,h="";
+  h+='<circle class="arc" cx="110" cy="110" r="84"/>';
+  CYCLE.forEach(function(s,i){
+    var a=(-90+i*45)*Math.PI/180;
+    var x=cx+R*Math.cos(a), y=cy+R*Math.sin(a);
+    h+='<g class="cyc-node" data-i="'+i+'" tabindex="0" role="button" aria-label="'+esc(s.n)+'">'
+      +'<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="24"/>'
+      +'<text x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'">'+esc(s.n)+'</text></g>';
+  });
+  g.innerHTML=h;
+  function pick(i){
+    var s=CYCLE[i];
+    $$(".cyc-node",g).forEach(function(n){ n.classList.toggle("on",parseInt(n.dataset.i,10)===i); });
+    det.innerHTML='<span class="mono">Stage '+(i+1)+' of 8</span><h4>'+esc(s.n)+'</h4><p>'+esc(s.d)+'</p>'
+      +'<p class="inplat"><strong>In the platform:</strong> '+esc(s.p)+'</p>';
+  }
+  $$(".cyc-node",g).forEach(function(n){
+    n.addEventListener("click",function(){ pick(parseInt(n.dataset.i,10)); });
+    n.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); pick(parseInt(n.dataset.i,10)); }});
+  });
+  pick(0);
+})();
+
+/* =========================================================
+   GOAP LAYER EXPLORER
+   ========================================================= */
+(function(){
+  var st=$("#lyrStack"), pn=$("#lyrPanel"); if(!st) return;
+  st.innerHTML=GLAYERS.map(function(l,i){
+    return '<button type="button" role="tab" data-i="'+i+'" aria-selected="false">'
+      +'<span class="lyr-i">'+("0"+(i+1)).slice(-2)+'</span><b>'+esc(l.n)+'</b>'
+      +'<span class="lyr-dot" aria-hidden="true"></span></button>';
+  }).join("");
+  function pick(i){
+    var l=GLAYERS[i];
+    $$("button",st).forEach(function(b){
+      var on=parseInt(b.dataset.i,10)===i;
+      b.classList.toggle("on",on); b.setAttribute("aria-selected",on?"true":"false");
+    });
+    pn.innerHTML='<h4>'+esc(l.n)+'</h4><p>'+esc(l.d)+'</p>'
+      +(l.f?'<div class="lyr-facts">'+l.f.map(function(f){return '<div><b>'+esc(f[0])+'</b><span>'+esc(f[1])+'</span></div>';}).join("")+'</div>':'');
+  }
+  $$("button",st).forEach(function(b){ b.addEventListener("click",function(){ pick(parseInt(b.dataset.i,10)); }); });
+  pick(0);
+})();
+
+/* =========================================================
+   BOARDROOM SIMULATOR PREVIEW
+   ========================================================= */
+(function(){
+  var sc=$("#simScen"), stg=$("#simStage"), tbl=$("#roomTable"), cap=$("#roomCap"); if(!sc) return;
+  for(var s=0;s<9;s++){
+    var a=(s/9)*Math.PI*2, d=document.createElement("span");
+    d.className="seat";
+    d.style.left="calc("+(50+44*Math.cos(a))+"% - 5.5px)";
+    d.style.top="calc("+(50+44*Math.sin(a))+"% - 5.5px)";
+    tbl.appendChild(d);
+  }
+  var seats=$$(".seat",tbl);
+  sc.innerHTML=SIMS.map(function(x,i){ return '<button type="button" data-i="'+i+'">'+esc(x.k)+'</button>'; }).join("");
+  function pick(i){
+    var m=SIMS[i];
+    $$("button",sc).forEach(function(b){ b.classList.toggle("on",parseInt(b.dataset.i,10)===i); });
+    seats.forEach(function(sn,n){ sn.classList.toggle("live",n<5); });
+    cap.textContent="Board convened · "+m.k;
+    stg.innerHTML='<div class="sim-paper"><span class="mono">Board paper</span><p>'+esc(m.paper)+'</p></div>'
+      +'<div class="sim-opts">'+m.opts.map(function(o,j){
+        return '<button class="sim-opt" type="button" data-j="'+j+'"><em>'+String.fromCharCode(65+j)+'</em><span>'+esc(o.t)+'</span></button>';
+      }).join("")+'</div><div id="simFb"></div>';
+    $$(".sim-opt",stg).forEach(function(b){
+      b.addEventListener("click",function(){
+        var j=parseInt(b.dataset.j,10), o=m.opts[j];
+        $$(".sim-opt",stg).forEach(function(x){ x.classList.toggle("chosen",x===b); });
+        $("#simFb").innerHTML='<div class="sim-fb"><h5>Governance assessment</h5><p>'+esc(o.fb)+'</p>'
+          +'<div class="sim-comp">'+o.c.map(function(c){return '<span>'+esc(c)+'</span>';}).join("")+'</div></div>';
+        cap.textContent="Decision recorded · minuted, and not reversible";
+      });
+    });
+  }
+  $$("button",sc).forEach(function(b){ b.addEventListener("click",function(){ pick(parseInt(b.dataset.i,10)); }); });
+  stg.innerHTML='<p style="color:#8D948F;font-size:.95rem;margin:0">Choose a scenario above to see how a single decision point works.</p>';
+})();
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+(function(){
+  var gr=$("#capGrid"), pn=$("#capPanel"); if(!gr) return;
+  gr.innerHTML=CAPS.map(function(c,i){
+    return '<button class="cap-cell" type="button" role="tab" aria-selected="false" data-i="'+i+'">'
+      +'<span class="cap-n">'+("0"+(i+1)).slice(-2)+' · '+esc(c.tag)+'</span>'
+      +'<b>'+esc(c.n)+'</b><small>'+esc(c.d.length>72?c.d.slice(0,70)+"…":c.d)+'</small></button>';
+  }).join("");
+  function pick(i){
+    var c=CAPS[i];
+    $$(".cap-cell",gr).forEach(function(b){
+      var on=parseInt(b.dataset.i,10)===i;
+      b.classList.toggle("on",on); b.setAttribute("aria-selected",on?"true":"false");
+    });
+    var links=c.work.map(function(id){
+      var w=null; for(var k=0;k<WORK.length;k++){ if(WORK[k].id===id) w=WORK[k]; }
+      return w?'<button type="button" data-open="'+w.id+'">'+esc(w.t)+'</button>':'';
+    }).join("");
+    pn.innerHTML='<h3>'+esc(c.n)+'</h3><p>'+esc(c.d)+'</p>'
+      +'<div class="cap-sec"><h4>What I know</h4><div class="cap-tags">'+c.know.map(function(x){return '<span>'+esc(x)+'</span>';}).join("")+'</div></div>'
+      +'<div class="cap-sec"><h4>What I have done with it</h4><ul class="xp-list">'+c.done.map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div>'
+      +'<div class="cap-sec"><h4>Related case records</h4><div class="cap-links">'+links+'</div></div>';
+    $$("[data-open]",pn).forEach(function(b){ b.addEventListener("click",function(){ openDossier(b.dataset.open,b); }); });
+  }
+  $$(".cap-cell",gr).forEach(function(b){ b.addEventListener("click",function(){ pick(parseInt(b.dataset.i,10)); }); });
+  pick(2);
+})();
+
+/* =========================================================
+   AI WORK STRIP
+   ========================================================= */
+(function(){
+  var el=$("#aiWork"); if(!el) return;
+  el.innerHTML=AIWORK.map(function(a){
+    return '<button type="button" data-open="'+a.w+'"><b>'+esc(a.t)+'</b><span>'+esc(a.d)+'</span></button>';
+  }).join("");
+  $$("[data-open]",el).forEach(function(b){ b.addEventListener("click",function(){ openDossier(b.dataset.open,b); }); });
+})();
+
+/* =========================================================
+   REGULATORY RADAR
+   ========================================================= */
+(function(){
+  var g=$("#radG"), ch=$("#chain"); if(!g) return;
+  var cx=130,cy=130, rings=[34,66,98,124], rlab=["Built into a tool","Applied in delivery","Analysed in briefings","Monitored"];
+  var h="";
+  rings.forEach(function(r){ h+='<circle class="grid-c" cx="130" cy="130" r="'+r+'"/>'; });
+  h+='<line class="grid-x" x1="130" y1="4" x2="130" y2="256"/><line class="grid-x" x1="4" y1="130" x2="256" y2="130"/>';
+  rings.forEach(function(r,i){ h+='<text class="rlabel" x="134" y="'+(130-r+9)+'">'+esc(rlab[i])+'</text>'; });
+  RADAR.forEach(function(d,i){
+    var a=d.a*Math.PI/180, x=cx+d.r*Math.cos(a), y=cy+d.r*Math.sin(a);
+    h+='<g class="rad-dot" data-i="'+i+'" data-t="'+d.tags.join(" ")+'" tabindex="0" role="button" aria-label="'+esc(d.n)+'">'
+      +'<circle class="ring" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="13"/>'
+      +'<circle class="hit" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="14"/>'
+      +'<circle class="pt" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5.5"/></g>';
+  });
+  g.innerHTML=h;
+  var STEPS=["Regulation","Governance implication","Risk","Technology implication","Advisory response"];
+  function pick(i){
+    var d=RADAR[i];
+    $$(".rad-dot",g).forEach(function(n){ n.classList.toggle("on",parseInt(n.dataset.i,10)===i); });
+    ch.innerHTML='<div class="chain-h"><span class="mono">'+esc(d.j)+'</span><h3>'+esc(d.n)+'</h3><p>'+esc(d.note)+'</p></div>'
+      + d.ch.map(function(t,k){
+          return '<div class="chain-step"><h4><i aria-hidden="true"></i>'+STEPS[k]+'</h4><p>'+esc(t)+'</p></div>';
+        }).join("");
+  }
+  $$(".rad-dot",g).forEach(function(n){
+    n.addEventListener("click",function(){ pick(parseInt(n.dataset.i,10)); });
+    n.addEventListener("keydown",function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); pick(parseInt(n.dataset.i,10)); }});
+  });
+  $$("[data-fr]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var f=b.dataset.fr;
+      $$("[data-fr]").forEach(function(x){ x.classList.toggle("on",x===b); });
+      $$(".rad-dot",g).forEach(function(n){
+        n.classList.toggle("dim", f!=="all" && n.dataset.t.split(" ").indexOf(f)<0);
+      });
+    });
+  });
+  pick(6);
+})();
+
+/* =========================================================
+   GOVERNANCE TECHNOLOGY GRID
+   ========================================================= */
+(function(){
+  var gr=$("#gtGrid"); if(!gr) return;
+  gr.innerHTML=TOOLS.map(function(t){
+    return '<button class="gt-item" type="button" data-g="'+t.g.join(" ")+'" data-open="'+t.w+'">'
+      +'<span class="gt-top"><b>'+esc(t.n)+'</b><span class="pv pv-built">Built</span></span>'
+      +'<span class="gt-what">'+esc(t.what)+'</span>'
+      +'<span class="gt-psce">'
+        +'<span><em>Problem</em><span>'+esc(t.p)+'</span></span>'
+        +'<span><em>Solution</em><span>'+esc(t.s)+'</span></span>'
+        +'<span><em>Capability</em><span>'+esc(t.c)+'</span></span>'
+        +'<span><em>Evidence</em><span>'+esc(t.e)+'</span></span>'
+      +'</span></button>';
+  }).join("");
+  $$(".gt-item",gr).forEach(function(b){ b.addEventListener("click",function(){ openDossier(b.dataset.open,b); }); });
+  $$("[data-ft]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var f=b.dataset.ft;
+      $$("[data-ft]").forEach(function(x){ x.classList.toggle("on",x===b); });
+      $$(".gt-item",gr).forEach(function(it){
+        it.hidden = f!=="all" && it.dataset.g.split(" ").indexOf(f)<0;
+      });
+    });
+  });
+})();
+
+/* =========================================================
+   CERTIFICATIONS
+   ========================================================= */
+(function(){
+  var el=$("#evGrid"); if(!el) return;
+  el.innerHTML=CERTS.map(function(c){
+    return '<div class="ev-col"><h3>'+esc(c.g)+'</h3>'
+      + c.items.map(function(x){
+          return '<div class="ev-item'+(x.fresh?" fresh":"")+(x.pending?" ev-pending":"")+'">'
+            +'<b>'+esc(x.n)+'</b><span class="who">'+esc(x.w)+'</span><span class="when">'+esc(x.d)+'</span></div>';
+        }).join("")
+      +'</div>';
+  }).join("");
+})();
+
+/* =========================================================
+   NAV
+   ========================================================= */
+(function(){
+  var nav=$("#nav"), burger=$("#burger");
+  burger.addEventListener("click",function(){
+    var open=nav.classList.toggle("open");
+    burger.setAttribute("aria-expanded",open?"true":"false");
+  });
+  $$("#navlinks a").forEach(function(a){
+    a.addEventListener("click",function(){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); });
+  });
+  var ids=["top","journey","experience","work","capabilities","about"];
+  var links={}; $$("#navlinks a").forEach(function(a){ links[a.getAttribute("href").slice(1)]=a; });
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          for(var k in links) links[k].classList.remove("on");
+          if(links[e.target.id]) links[e.target.id].classList.add("on");
+        }
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    ids.forEach(function(i){ var el=document.getElementById(i); if(el) io.observe(el); });
+  }
+})();
+
+$("#yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
