@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Victoria Ashaye — Technology Governance, GRC, Cybersecurity, AI Security &amp; Governance</title>
+<title>Victoria Ashaye · Technology Governance, GRC, Cybersecurity, AI Security &amp; Governance</title>
 <meta name="description" content="Victoria Ashaye is a Technology Governance Analyst and GRC professional working where cybersecurity, governance, technology and AI intersect.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
 /* ============================================================
-   Victoria Ashaye — Governance Command Centre
+   Victoria Ashaye · Governance Command Centre
    Palette: deep navy base, glass surfaces, cobalt/cyan trust,
    violet for AI, emerald for assurance, amber/coral for risk.
    ============================================================ */
@@ -25,7 +25,7 @@
   --emerald:#10B981; --amber:#F59E0B; --coral:#EF4444;
   --sans:'Manrope',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
-  --gut:clamp(18px,4vw,56px); --maxw:1280px; --r:14px;
+  --gut:clamp(18px,3.4vw,64px); --maxw:1800px; --r:14px;
   --shadow:0 24px 60px -30px rgba(0,0,0,.85);
 }
 *{box-sizing:border-box}
@@ -64,19 +64,40 @@ img{max-width:100%;display:block}
 
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:70;background:rgba(11,19,43,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line-2)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);height:66px;display:flex;align-items:center;gap:22px}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut);height:70px;display:flex;align-items:center;gap:22px}
 .mark{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;letter-spacing:-.03em;font-size:.98rem;flex-shrink:0}
 .mark-badge{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(145deg,var(--cobalt),var(--cyan));font-family:var(--mono);font-size:.72rem;font-weight:500;color:#031024;letter-spacing:.02em;box-shadow:0 8px 20px -8px rgba(37,99,235,.9)}
 .mark small{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text-3);font-weight:400;margin-top:1px}
-.nav-links{display:flex;gap:2px;margin-left:auto;align-items:center}
-.nav-links a{font-size:.855rem;font-weight:500;text-decoration:none;color:var(--text-2);padding:8px 12px;border-radius:8px;transition:background .16s,color .16s}
-.nav-links a:hover{background:var(--glass);color:var(--text)}
-.nav-links a.on{color:var(--text);background:var(--glass-2);box-shadow:inset 0 -2px 0 var(--cyan)}
-.nav-cta{margin-left:12px;font-size:.83rem;font-weight:700;text-decoration:none;padding:10px 17px;border-radius:9px;
-  background:linear-gradient(140deg,var(--cobalt),var(--cyan));color:#03101F;white-space:nowrap;
-  box-shadow:0 10px 26px -12px rgba(6,182,212,.85);transition:transform .18s,box-shadow .18s}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 14px 32px -12px rgba(6,182,212,1)}
-.burger{display:none;margin-left:auto;padding:9px;border:1px solid var(--line);border-radius:9px;line-height:0;background:var(--glass)}
+.nav-links{display:none}
+.burger{display:flex;align-items:center;gap:11px;margin-left:auto;padding:9px 14px 9px 16px;
+  border:1px solid var(--line);border-radius:999px;background:var(--glass);transition:border-color .2s,background .2s}
+.burger:hover{border-color:var(--cyan);background:var(--glass-2)}
+.burger span.lbl{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2)}
+.burger-lines{display:block;width:20px}
+.burger-lines i{display:block;height:2px;background:var(--text);border-radius:2px;margin:4.5px 0;transition:transform .28s cubic-bezier(.4,0,.2,1),opacity .18s}
+.nav.open .burger-lines i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav.open .burger-lines i:nth-child(2){opacity:0}
+.nav.open .burger-lines i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav.open .burger{border-color:var(--cyan)}
+
+.nav-panel{display:none;max-height:calc(100vh - 70px);overflow-y:auto;-webkit-overflow-scrolling:touch;border-top:1px solid var(--line-2);background:rgba(9,16,36,.97);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.nav.open .nav-panel{display:block;animation:panelin .26s cubic-bezier(.22,.8,.3,1)}
+@keyframes panelin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.nav-panel-in{max-width:var(--maxw);margin:0 auto;padding:22px var(--gut) 26px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.nav-panel a{display:block;padding:16px 18px;border:1px solid var(--line-2);border-radius:12px;
+  text-decoration:none;background:var(--glass);transition:transform .2s,border-color .2s,background .2s}
+.nav-panel a:hover{transform:translateY(-3px);border-color:var(--cyan);background:var(--glass-2)}
+.nav-panel a em{font-style:normal;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--cyan);display:block;margin-bottom:7px}
+.nav-panel a b{display:block;font-size:1.04rem;font-weight:700;letter-spacing:-.02em;margin-bottom:5px}
+.nav-panel a span{display:block;font-size:.82rem;color:var(--text-3);line-height:1.45}
+.nav-panel a.on{border-color:var(--cyan);background:linear-gradient(150deg,rgba(37,99,235,.30),rgba(6,182,212,.14))}
+.nav-panel .nav-cta{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;
+  margin:6px 0 0;padding:16px;border-radius:12px;font-size:.95rem;font-weight:700;
+  background:linear-gradient(140deg,var(--cobalt),var(--cyan));color:#03101F;text-decoration:none;
+  box-shadow:0 14px 34px -16px rgba(6,182,212,.9)}
+.nav-panel .nav-cta:hover{transform:translateY(-2px)}
 
 /* ---------- section frame ---------- */
 .sec{padding:clamp(52px,7.5vw,104px) 0;position:relative}
@@ -224,10 +245,10 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 
 /* ---------- carousel ---------- */
 .car{position:relative}
-.car-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
-.car-track::-webkit-scrollbar{height:6px}
-.car-track::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
-.car-item{flex:0 0 min(560px,84%);scroll-snap-align:start}
+.car-track{display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none;-ms-overflow-style:none}
+.car-track::-webkit-scrollbar{display:none}
+.car-item{flex:0 0 min(560px,84%)}
+.car-item .shot{height:100%}
 .car-nav{display:flex;gap:8px;margin-top:14px;align-items:center}
 .car-count{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--text-3);margin-left:auto}
 
@@ -468,11 +489,6 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
   .reg-head,.reg-row{grid-template-columns:56px minmax(0,1fr) 150px 118px}
 }
 @media (max-width:900px){
-  .nav-links,.nav-cta{display:none}
-  .nav.open .nav-links{display:flex;position:absolute;top:66px;left:0;right:0;background:rgba(11,19,43,.98);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);flex-direction:column;padding:12px var(--gut) 18px;gap:3px}
-  .nav.open .nav-links a{padding:12px 6px;font-size:.98rem;width:100%}
-  .nav.open .nav-cta{display:inline-flex;margin:8px 0 0}
-  .burger{display:block}
   .hero-grid,.jrn,.cyc,.lyr,.board,.cap,.rad,.abt,.cnt,.xp-grid{grid-template-columns:minmax(0,1fr)}
   .jrn-stage{position:static;order:-1}
   .stage{height:290px}.stack{width:200px;height:200px}
@@ -486,6 +502,12 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
   .car-item{flex:0 0 88%}
 }
 @media (max-width:560px){
+  .burger span.lbl{display:none}
+  .nav-panel-in{padding:14px var(--gut) 20px;gap:8px}
+  .nav-panel a{padding:13px 15px}
+  .nav-panel a b{font-size:.98rem;margin-bottom:3px}
+  .nav-panel a span{font-size:.78rem}
+  .nav-panel .nav-cta{padding:14px}
   .bento>*,.b-4,.b-5,.b-6,.b-7,.b-8{grid-column:span 12!important}
   .stage{height:246px}.stack{width:164px;height:164px}
   .stack-legend{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center}
@@ -509,17 +531,22 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <span class="mark-badge" aria-hidden="true">VA</span>
       <span>Victoria Ashaye<small>Technology Governance</small></span>
     </a>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" data-ic="menu"></button>
-    <nav class="nav-links" id="navlinks" aria-label="Sections">
-      <a href="#/home" data-view="home">Home</a>
-      <a href="#/journey" data-view="journey">Journey</a>
-      <a href="#/experience" data-view="experience">Experience</a>
-      <a href="#/work" data-view="work">Work</a>
-      <a href="#/tools" data-view="tools">Tools</a>
-      <a href="#/capabilities" data-view="capabilities">Capabilities</a>
-      <a href="#/about" data-view="about">About</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <span class="lbl">Menu</span>
+      <span class="burger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+  <div class="nav-panel" id="navlinks">
+    <div class="nav-panel-in">
+      <a href="#/home" data-view="home"><em>01</em><b>Home</b><span>The position at a glance</span></a>
+      <a href="#/journey" data-view="journey"><em>02</em><b>Journey</b><span>Cybersecurity → GRC → technology governance → AI</span></a>
+      <a href="#/experience" data-view="experience"><em>03</em><b>Experience</b><span>Roles, responsibilities and achievements</span></a>
+      <a href="#/work" data-view="work"><em>04</em><b>Work</b><span>The register, tagged by what each entry is</span></a>
+      <a href="#/tools" data-view="tools"><em>05</em><b>Tools</b><span>Eleven governance intelligence tools</span></a>
+      <a href="#/capabilities" data-view="capabilities"><em>06</em><b>Capabilities</b><span>What sits behind each capability</span></a>
+      <a href="#/about" data-view="about"><em>07</em><b>About</b><span>Biography, certifications and contact</span></a>
       <a class="nav-cta" href="#/about/connect">Let's connect</a>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -560,7 +587,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <a class="glass tile b-5" href="#/experience">
         <span class="tile-ico c" data-ic="layers"></span>
         <h3>Technology Governance Analyst</h3>
-        <p>CCC Advisory, United Kingdom — since May 2026, progressed from Junior GRC &amp; Information Security Analyst after three months.</p>
+        <p>CCC Advisory, United Kingdom. In post since May 2026, after three months as Junior GRC &amp; Information Security Analyst.</p>
         <span class="go">Full experience <span data-ic="arrow"></span></span>
       </a>
 
@@ -598,7 +625,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <a class="glass tile b-6" href="#/tools">
         <span class="tile-ico" data-ic="chart"></span>
         <h3>Governance intelligence tools</h3>
-        <p>Eleven solutions across AI governance, cybersecurity, data sovereignty, financial crime, board effectiveness, regulatory readiness, assurance and decision-making — with screenshots of each.</p>
+        <p>Eleven solutions across AI governance, cybersecurity, data sovereignty, financial crime, board effectiveness, regulatory readiness, assurance and decision-making, with screenshots of each.</p>
         <span class="go">Open the suite <span data-ic="arrow"></span></span>
       </a>
 
@@ -612,14 +639,14 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <div class="glass tile b-6">
         <span class="tile-ico e" data-ic="spark"></span>
         <h3>Most recent evidence</h3>
-        <p><strong>Introduction to AI Security</strong> — the security half of trustworthy AI, held alongside ISO/IEC 42001 Lead Implementer and GRCP.</p>
+        <p><strong>Introduction to AI Security</strong>, the security half of trustworthy AI, held alongside ISO/IEC 42001 Lead Implementer and GRCP.</p>
         <span class="go"><a href="#/about/evidence" style="color:inherit;text-decoration:none">All certifications <span data-ic="arrow"></span></a></span>
       </div>
 
       <a class="glass tile b-6" href="#/about">
         <span class="tile-ico" data-ic="doc"></span>
         <h3>Where I'm going</h3>
-        <p>Work where technology, security, regulation and governance have to operate together — and where someone has to hold all four at once.</p>
+        <p>Work where technology, security, regulation and governance have to operate together, and where someone has to hold all four at once.</p>
         <span class="go">Read the story <span data-ic="arrow"></span></span>
       </a>
     </div>
@@ -672,7 +699,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
     <a class="glass tile b-6" href="#/experience">
       <span class="tile-ico c" data-ic="layers"></span>
       <h3>Where each stage was done</h3>
-      <p>Roles, responsibilities and selected achievements — separate from the products that came out of them.</p>
+      <p>Roles, responsibilities and selected achievements, kept separate from the products that came out of them.</p>
       <span class="go">Experience <span data-ic="arrow"></span></span>
     </a>
     <a class="glass tile b-6" href="#/capabilities">
@@ -691,14 +718,14 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 <section class="phead"><div class="wrap">
   <span class="eyebrow"><i></i>Experience</span>
   <h1>Where the work has actually been done</h1>
-  <p class="lede">Roles, responsibilities and selected achievements — kept separate from the products and projects that came out of them.</p>
+  <p class="lede">Roles, responsibilities and selected achievements, kept separate from the products and projects that came out of them.</p>
 </div></section>
 
 <section class="sec" style="padding-top:clamp(24px,3vw,44px)"><div class="wrap">
 
   <article class="glass xp-item"><div class="xp-grid">
     <div class="xp-when">
-      <span class="d">May 2026 — Present</span>
+      <span class="d">May 2026 to present</span>
       <span class="org">CCC Advisory</span>
       <span class="loc">United Kingdom · working across UK and Nigerian financial services</span>
     </div>
@@ -711,7 +738,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
         <ul class="xp-list">
           <li>Governance transformation across the firm, from diagnostic through to an operating framework.</li>
           <li>Technology governance: technology risk, accountability structures, assurance and decision-making.</li>
-          <li>AI governance — responsible AI, human oversight and emerging standards including ISO/IEC 42001.</li>
+          <li>AI governance, covering responsible AI, human oversight and emerging standards including ISO/IEC 42001.</li>
           <li>Regulatory intelligence: board briefings, comparative analysis, consultation responses and regulatory interpretation across UK and Nigerian financial services.</li>
           <li>Design and development of governance intelligence tools, and the advisory and executive materials that go with them.</li>
           <li>External engagement and commercialisation of the firm's governance solutions through product demonstrations, training sessions, pilot programmes and stakeholder feedback.</li>
@@ -722,7 +749,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
         <ul class="xp-list">
           <li>Led and executed the Governance Transformation Project, developing a proportionate governance framework across 12 governance domains.</li>
           <li>Designed the Governance Operating &amp; Assurance Platform to operationalise, monitor, evidence and continuously improve that framework.</li>
-          <li>Designed and developed 11 governance intelligence solutions spanning AI governance, cybersecurity, data sovereignty, financial crime, board effectiveness, regulatory readiness, assurance and decision-making — applied to the firm's own transformation, and used by an external organisation to assess its governance health across different areas and get visibility into its gaps, so it could build a sustainable framework of its own.</li>
+          <li>Designed and developed 11 governance intelligence solutions spanning AI governance, cybersecurity, data sovereignty, financial crime, board effectiveness, regulatory readiness, assurance and decision-making. These were applied to the firm's own transformation, and used by an external organisation to assess its governance health across different areas and get visibility into its gaps, so it could build a sustainable framework of its own.</li>
           <li>Developed the Governance Decision Simulator, a facilitator-led boardroom training platform using realistic scenarios, role-based decision-making and behavioural scoring across 10 governance domains.</li>
         </ul>
       </div>
@@ -739,7 +766,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 
   <article class="glass xp-item"><div class="xp-grid">
     <div class="xp-when">
-      <span class="d">Feb 2026 — May 2026</span>
+      <span class="d">Feb 2026 to May 2026</span>
       <span class="org">CCC Advisory</span>
       <span class="loc">United Kingdom</span>
     </div>
@@ -750,10 +777,10 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 
       <div class="xp-block"><h4>Selected achievements</h4>
         <ul class="xp-list">
-          <li>Designed and implemented the core compliance methodology from scratch — four integrated templates (Compliance Mapping, Risk Register, Gap Analysis with Remediation Tracker, and Framework Document) with cross-referenced IDs and real-time dashboards to support regulatory engagements and reporting.</li>
+          <li>Designed and implemented the core compliance methodology from scratch, building four integrated templates (Compliance Mapping, Risk Register, Gap Analysis with Remediation Tracker, and Framework Document) with cross-referenced IDs and real-time dashboards to support regulatory engagements and reporting.</li>
           <li>Produced a PCI DSS project charter and a cybersecurity governance framework.</li>
-          <li>Built and deployed a suite of governance intelligence tools including the Human Oversight System, GovernSight, the Board Skills Matrix, the AI Governance Diagnostic and the Governance &amp; Regulatory Readiness Diagnostic — combining regulatory frameworks with interactive web technologies to automate assessments, generate audit trails and support governance decision-making.</li>
-          <li>Produced regulatory intelligence across UK and Nigerian environments (CBN, FCA, PRA, FATF) covering AML, cyber risk governance, enforcement actions and AI governance — delivering board briefings, comparative analyses, consultation responses and thought leadership on AI accountability gaps, compliance limitations and governance risks.</li>
+          <li>Built and deployed a suite of governance intelligence tools including the Human Oversight System, GovernSight, the Board Skills Matrix, the AI Governance Diagnostic and the Governance &amp; Regulatory Readiness Diagnostic. These combine regulatory frameworks with interactive web technologies to automate assessments, generate audit trails and support governance decision-making.</li>
+          <li>Produced regulatory intelligence across UK and Nigerian environments (CBN, FCA, PRA, FATF) covering AML, cyber risk governance, enforcement actions and AI governance, delivering board briefings, comparative analyses, consultation responses and thought leadership on AI accountability gaps, compliance limitations and governance risks.</li>
           <li>Conducted a full mock compliance gap analysis for a dual-regulated financial institution, mapping obligations, identifying risks and prioritising remediation actions to validate the internally developed methodology.</li>
           <li>Contributed to a structured GRC case study (Project Aegis), producing board-level risk reporting materials, governance stress test outputs and risk appetite analysis.</li>
         </ul>
@@ -772,7 +799,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <span class="loc">Global Cyber job simulation, via Forage</span>
     </div>
     <div>
-      <h3>Data Privacy — Job Simulation</h3>
+      <h3>Data Privacy Job Simulation</h3>
       <p style="color:var(--text-2)">A simulation with DLA Piper's Data Privacy and Cybersecurity team covering global data protection and cybersecurity practice.</p>
       <div class="xp-block"><ul class="xp-list">
         <li>Analysed complex data breach scenarios to provide actionable legal advice on GDPR compliance, regulatory notification requirements and ransom payment risks.</li>
@@ -784,13 +811,13 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 
   <article class="glass xp-item"><div class="xp-grid">
     <div class="xp-when">
-      <span class="d">Jan 2025 — Feb 2025</span>
+      <span class="d">Jan 2025 to Feb 2025</span>
       <span class="org">Insight7</span>
       <span class="loc">AI-powered call intelligence and coaching platform</span>
     </div>
     <div>
       <h3>Customer Success Specialist</h3>
-      <p style="color:var(--text-2)">Close-range experience of how people actually adopt an AI product — the same problem a governance intelligence tool has to solve.</p>
+      <p style="color:var(--text-2)">Close-range experience of how people actually adopt an AI product, which is the same problem a governance intelligence tool has to solve.</p>
       <div class="xp-block"><ul class="xp-list">
         <li>Supported customers using an AI-powered call intelligence and coaching platform, delivering product demonstrations, onboarding and workflow guidance.</li>
         <li>Collaborated with product and engineering teams to communicate customer needs and improve the user experience.</li>
@@ -802,16 +829,16 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 
   <article class="glass xp-item"><div class="xp-grid">
     <div class="xp-when">
-      <span class="d">2024 — 2025</span>
+      <span class="d">2024 to 2025</span>
       <span class="org">Technical labs</span>
       <span class="loc">Applied practice</span>
     </div>
     <div>
       <h3>Security and compliance labs</h3>
       <div class="xp-block"><ul class="xp-list">
-        <li><b>AWS &amp; security labs</b> — IAM, EC2 and S3 security configurations, network monitoring and configuration using Wireshark, Snort and Cisco Packet Tracer.</li>
-        <li><b>Fintech compliance mapping</b> — mapped NDPR, PCI-DSS and CBN requirements to business operations, identifying gaps and recommending compliance controls.</li>
-        <li><b>Cybersecurity risk register lab</b> — built a risk register for a healthcare organisation, identifying critical assets, threats, vulnerabilities, risk ratings and mitigation strategies aligned to HIPAA and enterprise risk standards.</li>
+        <li><b>AWS &amp; security labs.</b> IAM, EC2 and S3 security configurations, network monitoring and configuration using Wireshark, Snort and Cisco Packet Tracer.</li>
+        <li><b>Fintech compliance mapping.</b> Mapped NDPR, PCI-DSS and CBN requirements to business operations, identifying gaps and recommending compliance controls.</li>
+        <li><b>Cybersecurity risk register lab.</b> Built a risk register for a healthcare organisation, identifying critical assets, threats, vulnerabilities, risk ratings and mitigation strategies aligned to HIPAA and enterprise risk standards.</li>
       </ul></div>
     </div>
   </div></article>
@@ -860,7 +887,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
   <div class="sec-head">
     <span class="eyebrow"><i></i>Featured case study 01</span>
     <h2>Governance transformation</h2>
-    <p class="lede">A 12-domain governance framework designed for a five-person advisory firm — and the operating platform built to keep it running.</p>
+    <p class="lede">A 12-domain governance framework designed for a five-person advisory firm, and the operating platform built to keep it running.</p>
   </div>
 
   <div class="glass feat">
@@ -893,7 +920,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
           <li>The Governance Operating &amp; Assurance Platform, built to run the framework rather than describe it.</li>
           <li>The governance intelligence tools have been used by an external organisation to assess its governance health across different areas and get visibility into its gaps, so it could build a sustainable framework of its own.</li>
         </ul></div></div>
-        <div class="dstep"><h4>What it developed</h4><div><p>How to build a framework that survives contact with a real organisation — one small enough that governance theatre is immediately visible. It also taught me that a framework nobody operates is not a framework, which is the reason the platform exists at all.</p></div></div>
+        <div class="dstep"><h4>What it developed</h4><div><p>How to build a framework that survives contact with a real organisation, one small enough that governance theatre is immediately visible. It also taught me that a framework nobody operates is not a framework, which is the reason the platform exists at all.</p></div></div>
       </div>
     </div>
   </div>
@@ -903,14 +930,14 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
   <div class="sec-head">
     <span class="eyebrow"><i></i>Featured case study 02</span>
     <h2>Governance Operating &amp; Assurance Platform</h2>
-    <p class="lede">Not a document library. A governance operating system that assesses, configures, monitors, alerts, evidences and reviews — with an audit trail underneath all of it.</p>
+    <p class="lede">Not a document library. A governance operating system that assesses, configures, monitors, alerts, evidences and reviews, with an audit trail underneath all of it.</p>
   </div>
 
   <div class="glass feat">
     <div class="feat-top">
       <div class="feat-eyebrow"><span class="pv pv-built">Built</span><span class="mono">Configuration-driven · Named users · Full audit trail</span></div>
       <h3>Explore the system by layer</h3>
-      <p>Configuration-driven, so it can be set up for any organisation — including governance domains it does not ship with.</p>
+      <p>Configuration-driven, so it can be set up for any organisation, including governance domains it does not ship with.</p>
     </div>
     <div class="feat-body">
       <div class="lyr">
@@ -949,7 +976,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
     <div>
       <div class="fbar" id="simScen" role="group" aria-label="Choose a scenario"></div>
       <div id="simStage" aria-live="polite"></div>
-      <p class="sim-note">This is a short preview of the decision mechanic. In the platform, a facilitator sets up a session with a country and sector lens, participants take board roles, and each simulation runs 8–12 board papers, unexpected events and emergency meetings over 45–90 minutes — with a read-only board minutes trail, because decisions cannot be taken back.</p>
+      <p class="sim-note">This is a short preview of the decision mechanic. In the platform, a facilitator sets up a session with a country and sector lens, participants take board roles, and each simulation runs 8–12 board papers, unexpected events and emergency meetings over 45–90 minutes, with a read-only board minutes trail, because decisions cannot be taken back.</p>
     </div>
   </div>
 
@@ -1028,8 +1055,8 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
       <h3>AI security</h3>
       <p class="duo-q">"Can we protect the system?"</p>
       <ul>
-        <li>Security risks specific to AI systems — how models, data and pipelines are attacked rather than how conventional applications are.</li>
-        <li>Applying existing security foundations — controls, vulnerability thinking, information security management — to AI components.</li>
+        <li>Security risks specific to AI systems: how models, data and pipelines are attacked rather than how conventional applications are.</li>
+        <li>Applying existing security foundations (controls, vulnerability thinking, information security management) to AI components.</li>
         <li>Introduction to AI Security certification, applied to the security and control pillar of the AI governance maturity model.</li>
       </ul>
     </div>
@@ -1088,16 +1115,16 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 <section class="sec" style="padding-top:clamp(22px,3vw,40px)"><div class="wrap">
   <div class="abt">
     <div class="abt-body">
-      <p>I work where cybersecurity, governance, technology and AI intersect — and the reason I ended up there is that each of those disciplines kept pointing at the next one.</p>
-      <p>I started in cybersecurity: a diploma, the security foundations, the labs, the certifications. That gave me the technical grounding, but what kept my attention was the layer above the controls — who decides, who is accountable, and how an organisation knows whether any of it is working. That took me into GRC, where I built compliance methodology, risk registers, gap analyses, a PCI DSS project charter, a cybersecurity governance framework and regulatory research from first principles.</p>
-      <p>Technology governance is where those two met. Governance frameworks fail in practice for an unglamorous reason: nobody operates them. So I started building the tools that make a framework operable — diagnostics, assurance platforms, decision-support systems, board training. Eleven of them so far. They are evidence of how I think about governance, not a separate career in software.</p>
-      <p>AI is where all of this is heading, and it is the reason the security background still matters. Governing an AI system means asking both whether it can be protected and whether it should be operating the way it does — and those questions need someone who can hold the security side and the governance side at the same time.</p>
+      <p>I work where cybersecurity, governance, technology and AI intersect. I ended up there because each of those disciplines kept pointing at the next one.</p>
+      <p>I started in cybersecurity: a diploma, the security foundations, the labs, the certifications. That gave me the technical grounding, but what kept my attention was the layer above the controls: who decides, who is accountable, and how an organisation knows whether any of it is working. That took me into GRC, where I built compliance methodology, risk registers, gap analyses, a PCI DSS project charter, a cybersecurity governance framework and regulatory research from first principles.</p>
+      <p>Technology governance is where those two met. Governance frameworks fail in practice for an unglamorous reason: nobody operates them. So I started building the tools that make a framework operable: diagnostics, assurance platforms, decision-support systems, board training. Eleven of them so far. They are evidence of how I think about governance, not a separate career in software.</p>
+      <p>AI is where all of this is heading, and it is the reason the security background still matters. Governing an AI system means asking both whether it can be protected and whether it should be operating the way it does. Those questions need someone who can hold the security side and the governance side at the same time.</p>
     </div>
     <div class="glass abt-side">
-      <div><h4>Based in</h4><p>Lagos, Nigeria — working across UK and Nigerian regulatory environments</p></div>
+      <div><h4>Based in</h4><p>Lagos, Nigeria. Working across UK and Nigerian regulatory environments</p></div>
       <div><h4>Current role</h4><p>Technology Governance Analyst, CCC Advisory (United Kingdom)<span class="yr">Since May 2026</span></p></div>
-      <div><h4>Education</h4><p>Diploma in Cybersecurity, AltSchool Africa<span class="yr">2024 — 2025</span></p></div>
-      <div><h4></h4><p>B.A. History &amp; International Studies, University of Ilorin<span class="yr">2018 — 2023</span></p></div>
+      <div><h4>Education</h4><p>Diploma in Cybersecurity, AltSchool Africa<span class="yr">2024 to 2025</span></p></div>
+      <div><h4></h4><p>B.A. History &amp; International Studies, University of Ilorin<span class="yr">2018 to 2023</span></p></div>
       <div><h4>Working across</h4><p>Cybersecurity · GRC · Technology governance · AI security &amp; governance · Regulatory intelligence</p></div>
     </div>
   </div>
@@ -1150,7 +1177,7 @@ button.shot:hover{transform:translateY(-3px);border-color:var(--cyan)}
 <footer class="site-foot">
   <div class="wrap">
     <p>© <span id="yr"></span> Victoria Ashaye · Technology Governance · GRC · Cybersecurity · AI Security &amp; Governance</p>
-    <p>Lagos, Nigeria — working across UK and Nigerian financial services</p>
+    <p>Lagos, Nigeria. Working across UK and Nigerian financial services</p>
   </div>
 </footer>
 
@@ -1179,31 +1206,31 @@ var IMG={"goap-dashboard": "<svg class=\"mock\" viewBox=\"0 0 1200 690\" xmlns=\
    ============================================================ */
 
 var SHOTS = {
-  'goap-dashboard'      : 'Governance Operating & Assurance Platform — dashboard with the transparent, rule-based governance health calculation',
-  'goap-exec-summary'   : 'Governance Operating & Assurance Platform — live executive summary generated from the current state of every register',
-  'agd-dashboard'       : 'AI Governance Diagnostic — AI governance operating system dashboard, score, ISO/IEC 42001 readiness and risk exposure',
-  'agd-dimensions'      : 'AI Governance Diagnostic — maturity strength across the three weighted pillars',
-  'agd-radar'           : 'AI Governance Diagnostic — governance radar across governance, security and control, and capability',
-  'sim-landing'         : 'Governance Decision Simulator — participant and facilitator entry points',
-  'sim-roles'           : 'Governance Decision Simulator — board role selection; the role shapes the perspective, briefings and pressures',
-  'sim-debrief'         : 'Governance Decision Simulator — governance debrief that closes the simulation and frames the facilitated group discussion',
-  'sim-report'          : 'Governance Decision Simulator — competency assessment across the twelve scored governance behaviours',
-  'sim-behaviour'       : 'Governance Decision Simulator — behaviour profile, strengths, development areas and the decision timeline',
-  'sim-recommendations' : 'Governance Decision Simulator — recommendations and executive summary of the governance decision report',
-  'gstp-welcome'        : 'Governance Stress Testing Platform — onboarding: find governance gaps before regulators, incidents or crises do',
-  'dgsd-dashboard'      : 'Data Governance & Sovereignty Diagnostic — the world map is both the navigation and the declared residency map',
-  'hos-dashboard'       : 'Human Oversight System — governance dashboard across completed reviews, challenge rate and lens averages',
-  'governsight-domains' : 'GovernSight — domain scores and maturity radar across the cybersecurity self-assessment domains',
-  'governsight-gaps'    : 'GovernSight — gap summary by domain with maturity, gaps identified and remediation priority',
-  'bsm-gaps'            : 'Board Skills Matrix — gap analysis identifying critical gaps and single points of failure on a board'
+  'goap-dashboard'      : 'Governance Operating & Assurance Platform · dashboard with the transparent, rule-based governance health calculation',
+  'goap-exec-summary'   : 'Governance Operating & Assurance Platform · live executive summary generated from the current state of every register',
+  'agd-dashboard'       : 'AI Governance Diagnostic · AI governance operating system dashboard, score, ISO/IEC 42001 readiness and risk exposure',
+  'agd-dimensions'      : 'AI Governance Diagnostic · maturity strength across the three weighted pillars',
+  'agd-radar'           : 'AI Governance Diagnostic · governance radar across governance, security and control, and capability',
+  'sim-landing'         : 'Governance Decision Simulator · participant and facilitator entry points',
+  'sim-roles'           : 'Governance Decision Simulator · board role selection; the role shapes the perspective, briefings and pressures',
+  'sim-debrief'         : 'Governance Decision Simulator · governance debrief that closes the simulation and frames the facilitated group discussion',
+  'sim-report'          : 'Governance Decision Simulator · competency assessment across the twelve scored governance behaviours',
+  'sim-behaviour'       : 'Governance Decision Simulator · behaviour profile, strengths, development areas and the decision timeline',
+  'sim-recommendations' : 'Governance Decision Simulator · recommendations and executive summary of the governance decision report',
+  'gstp-welcome'        : 'Governance Stress Testing Platform · onboarding: find governance gaps before regulators, incidents or crises do',
+  'dgsd-dashboard'      : 'Data Governance & Sovereignty Diagnostic · the world map is both the navigation and the declared residency map',
+  'hos-dashboard'       : 'Human Oversight System · governance dashboard across completed reviews, challenge rate and lens averages',
+  'governsight-domains' : 'GovernSight · domain scores and maturity radar across the cybersecurity self-assessment domains',
+  'governsight-gaps'    : 'GovernSight · gap summary by domain with maturity, gaps identified and remediation priority',
+  'bsm-gaps'            : 'Board Skills Matrix · gap analysis identifying critical gaps and single points of failure on a board'
 };
 
 /* ---------------- career layers ---------------- */
 var LAYERS = [
   { key:"cyber", short:"Cybersecurity", lvl:"L1", title:"Cybersecurity",
-    blurb:"The technical foundation. A diploma in cybersecurity, the ISC2 and Cisco certifications, and hands-on labs — IAM and S3 configurations, packet capture, network monitoring. This is the layer that means I can read a technical control and know whether it does what the policy claims it does.",
+    blurb:"The technical foundation. A diploma in cybersecurity, the ISC2 and Cisco certifications, and hands-on labs covering IAM and S3 configurations, packet capture and network monitoring. This is the layer that means I can read a technical control and know whether it does what the policy claims it does.",
     cols:[
-      {h:"Experience", i:["Diploma in Cybersecurity, AltSchool Africa","AWS and security labs — IAM, EC2, S3, Wireshark, Snort, Packet Tracer","Information security work within the GRC role"]},
+      {h:"Experience", i:["Diploma in Cybersecurity, AltSchool Africa","AWS and security labs: IAM, EC2, S3, Wireshark, Snort, Packet Tracer","Information security work within the GRC role"]},
       {h:"Skills", i:["Security foundations and controls","Vulnerability thinking","Network monitoring and configuration","Windows and Linux"]},
       {h:"Evidence", i:["ISC2 Certified in Cybersecurity","Cisco Introduction to Cybersecurity","Cybersecurity Risk Register lab"]}
     ]},
@@ -1212,7 +1239,7 @@ var LAYERS = [
     cols:[
       {h:"Experience", i:["Junior GRC & Information Security Analyst, CCC Advisory","Core compliance methodology designed from scratch","PCI DSS project charter and cybersecurity governance framework","Mock compliance gap analysis for a dual-regulated institution"]},
       {h:"Skills", i:["Compliance mapping","Risk registers and risk appetite","Gap analysis and remediation tracking","Maturity assessment","Regulatory research"]},
-      {h:"Evidence", i:["ISO/IEC 27001 Lead Auditor","ISO/IEC 27001 & ISO 42001 Lead Implementer","GRCP — OCEG","Project Aegis GRC case study"]}
+      {h:"Evidence", i:["ISO/IEC 27001 Lead Auditor","ISO/IEC 27001 & ISO 42001 Lead Implementer","GRCP (OCEG)","Project Aegis GRC case study"]}
     ]},
   { key:"techgov", short:"Technology governance", lvl:"L3", title:"Technology governance",
     blurb:"GRC applied to systems and to organisational decision-making. Governance transformation across 12 domains, a technology governance framework, and the operating platform that runs it. This is the layer where governance stopped being documentation and became something an organisation actually operates.",
@@ -1222,11 +1249,11 @@ var LAYERS = [
       {h:"Evidence", i:["12-domain governance framework in use","Governance Operating & Assurance Platform","Governance Decision Simulator","11 governance intelligence solutions"]}
     ]},
   { key:"ai", short:"AI security & governance", lvl:"L4", title:"AI security and AI governance",
-    blurb:"Where the security foundation and the governance discipline meet. AI governance diagnostics, human oversight designed as a control rather than stated as an intention, and AI security — the discipline that asks whether the system can be protected at all.",
+    blurb:"Where the security foundation and the governance discipline meet. AI governance diagnostics, human oversight designed as a control rather than stated as an intention, and AI security, the discipline that asks whether the system can be protected at all.",
     cols:[
       {h:"Experience", i:["AI governance within the technology governance role","AI Governance Diagnostic and AI governance operating system","Human Oversight System, with a gap analysis against EU AI Act Article 14","Regulatory intelligence on AI accountability gaps"]},
       {h:"Skills", i:["Responsible AI and human oversight","AI governance diagnostics","AI management systems (ISO/IEC 42001)","AI security fundamentals","Emerging AI regulation"]},
-      {h:"Evidence", i:["Introduction to AI Security","ISO/IEC 42001 Lead Implementer","Integrated AI Professional — OCEG, in view"]}
+      {h:"Evidence", i:["Introduction to AI Security","ISO/IEC 42001 Lead Implementer","Integrated AI Professional (OCEG), in view"]}
     ]}
 ];
 
@@ -1238,22 +1265,22 @@ var WORK = [
     ctx:"CCC Advisory advises regulated organisations on governance. The transformation programme was commissioned so the firm holds itself to the standard it sets for clients, with a framework proportionate to a five-person firm including the founder and managing director.",
     prb:["The firm needed a governance framework built around its own realities rather than a generic model.","Governance activity needed named owners, deadlines and evidence, not statements of intent.","The framework had to grow with the business, stay relevant over a ten-year horizon, and stand up to client and investor scrutiny."],
     role:"Led and executed the project end to end as the firm's governance advisor: the current-state diagnostic, the framework design across 12 domains, the technology governance framework, and the design of the platform that operationalises it.",
-    app:["Started from the actual current state rather than a template, because the template approach is what produces generic frameworks nobody uses.","Made it proportionate — a five-person firm needs a different framework from a large institution, and pretending otherwise guarantees it will not be operated.","Structured it across 12 domains: corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records.","Designed the technology arm's governance separately, since it became fully active in March 2026 and carries its own IP and product risk.","Built change detection into the design: when something material changes, the framework has to identify which domains need reassessing."],
+    app:["Started from the actual current state rather than a template, because the template approach is what produces generic frameworks nobody uses.","Made it proportionate. A five-person firm needs a different framework from a large institution, and pretending otherwise guarantees it will not be operated.","Structured it across 12 domains: corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records.","Designed the technology arm's governance separately, since it became fully active in March 2026 and carries its own IP and product risk.","Built change detection into the design: when something material changes, the framework has to identify which domains need reassessing."],
     sol:"A proportionate governance framework across 12 domains, a separate Technology Governance Framework for the technology arm, and the Governance Operating & Assurance Platform to run and evidence both.",
-    out:["A proportionate governance framework across 12 domains, in use by the firm.","The Technology Governance Framework — currently the only governance coverage for the technology arm.","The Governance Operating & Assurance Platform, built to run the framework rather than describe it.","The governance intelligence tools I have built have been used by an external organisation to assess its governance health across different areas and get visibility into its gaps, so it could build a sustainable framework of its own."],
-    lrn:"That a governance framework nobody operates is not a framework. That is the reason the operating platform exists — the framework document was never going to be enough on its own.",
+    out:["A proportionate governance framework across 12 domains, in use by the firm.","The Technology Governance Framework, currently the only governance coverage for the technology arm.","The Governance Operating & Assurance Platform, built to run the framework rather than describe it.","The governance intelligence tools I have built have been used by an external organisation to assess its governance health across different areas and get visibility into its gaps, so it could build a sustainable framework of its own."],
+    lrn:"A governance framework nobody operates is not really a framework, and that is why the operating platform exists. The framework document was never going to be enough on its own.",
     shots:["goap-dashboard"]
   },
   {
     id:"W-02", t:"Technology Governance Framework", cat:"Governance", f:["governance"], pv:"done",
     sub:"Governance for a technology arm that went live without any.",
-    ctx:"The firm's technology arm became fully active in March 2026 — registered, with IP protection in place — and was producing software products carrying real client and commercial exposure.",
+    ctx:"The firm's technology arm became fully active in March 2026, registered and with IP protection in place, and was producing software products carrying real client and commercial exposure.",
     prb:["The technology arm had no governance coverage of its own.","Product, IP and application security risk had no framework sitting over them.","The corporate governance model did not extend cleanly to building and shipping software."],
     role:"Designed the framework. It remains the only governance coverage for the technology arm.",
     app:["Treated technology as its own governance domain rather than a subheading under operations.","Covered technology risk, application security, IP, and the accountability structures around building and releasing products.","Kept it consistent with the wider 12-domain framework so the two do not diverge."],
     sol:"A Technology Governance Framework covering the technology arm's risk, accountability and assurance.",
     out:["In use as the technology arm's governance framework.","Application security captured as a tracked risk category rather than an assumption."],
-    lrn:"How different technology risk looks when you are the one shipping the product. Governance written from the outside misses most of what actually goes wrong."
+    lrn:"Technology risk looks very different when you are the one shipping the product. Governance written from the outside misses most of what actually goes wrong."
   },
   {
     id:"W-03", t:"Governance Operating & Assurance Platform", cat:"Governance intelligence", f:["governance","gi"], pv:"built",
@@ -1262,10 +1289,10 @@ var WORK = [
     ctx:"Once the 12-domain framework existed, the real risk was the familiar one: a framework that is written, filed and never operated again.",
     prb:["No single place showing what governance work was due, overdue or complete.","No audit trail of who changed, deleted or updated what.","No way to evidence governance activity without hunting through folders.","No mechanism to detect when a change should trigger reassessment."],
     role:"Designed the full specification and built it: the information architecture, the rule engine, the scoring logic and the entire interface.",
-    app:["Framed the product as an operating cycle — assess, configure, monitor, alert, act, evidence, review, improve — rather than as a document repository.","Made it configuration-driven so it can be set up for other organisations, including governance domains it does not ship with.","Kept the governance health score transparent and rule-based, because a score nobody can explain will not survive a board question.","Made the platform an evidence index rather than a document repository — records point at files or links, so it does not try to replace systems the organisation already has."],
-    sol:"A configuration-driven governance operating platform: dashboard with a rule-based governance health score, governance calendar with RAG status, 5×5 risk register with per-risk appetite ceilings, compliance and policy registers, an AI governance suite, meetings, training, succession, RACI, assurance, action tracker, notification centre, global search and exports. Named users with roles, automatic attribution on every action, and a dedicated audit trail holding previous and new values. Nothing is destructively deleted — records move to archived or superseded.",
-    out:["In use for the firm's own governance framework.","Change-detection diagnostic that maps a stated change to the domains needing reassessment, with rules an administrator can configure — including for custom domains.","Rules-based document scanning that reads PDF and DOCX files for review and expiry dates and flags configured keywords, always as a suggestion requiring explicit confirmation before it writes to a record.","Product brief and user guide produced as supporting documentation."],
-    lrn:"That the hard part of governance software is not the registers — it is the accountability model. Attribution, audit trail and non-destructive change are what make the tool defensible when someone asks who decided what.",
+    app:["Framed the product as an operating cycle (assess, configure, monitor, alert, act, evidence, review, improve) rather than as a document repository.","Made it configuration-driven so it can be set up for other organisations, including governance domains it does not ship with.","Kept the governance health score transparent and rule-based, because a score nobody can explain will not survive a board question.","Made the platform an evidence index rather than a document repository. Records point at files or links, so it does not try to replace systems the organisation already has."],
+    sol:"A configuration-driven governance operating platform: dashboard with a rule-based governance health score, governance calendar with RAG status, 5×5 risk register with per-risk appetite ceilings, compliance and policy registers, an AI governance suite, meetings, training, succession, RACI, assurance, action tracker, notification centre, global search and exports. Named users with roles, automatic attribution on every action, and a dedicated audit trail holding previous and new values. Nothing is destructively deleted. Records move to archived or superseded.",
+    out:["In use for the firm's own governance framework.","Change-detection diagnostic that maps a stated change to the domains needing reassessment, with rules an administrator can configure, including for custom domains.","Rules-based document scanning that reads PDF and DOCX files for review and expiry dates and flags configured keywords, always as a suggestion requiring explicit confirmation before it writes to a record.","Product brief and user guide produced as supporting documentation."],
+    lrn:"The hard part of governance software is not the registers. It is the accountability model. Attribution, audit trail and non-destructive change are what make the tool defensible when someone asks who decided what.",
     shots:["goap-dashboard","goap-exec-summary"]
   },
   {
@@ -1277,42 +1304,42 @@ var WORK = [
     app:["Built four templates that reference each other rather than four standalone documents: Compliance Mapping, Risk Register, Gap Analysis with Remediation Tracker, and Framework Document.","Used cross-referenced IDs so an obligation traces to a risk, to a gap, to a remediation action.","Added real-time dashboards so the state of an engagement is visible without reading the whole workbook."],
     sol:"An integrated compliance methodology supporting regulatory engagements and reporting.",
     out:["Adopted as the firm's core compliance methodology.","Validated through a full mock gap analysis on a dual-regulated financial institution.","The cross-referencing structure carried forward into the tools built afterwards."],
-    lrn:"That cross-referencing is what turns four documents into a methodology."
+    lrn:"Cross-referencing is what turns four documents into a methodology."
   },
   {
-    id:"W-05", t:"Mock compliance gap analysis — dual-regulated institution", cat:"Regulatory intelligence", f:["reg","governance"], pv:"done",
+    id:"W-05", t:"Mock compliance gap analysis for a dual-regulated institution", cat:"Regulatory intelligence", f:["reg","governance"], pv:"done",
     sub:"A full gap analysis run to test whether the methodology held up.",
     ctx:"A methodology that has not been run against a realistic case is an assumption.",
-    prb:["The new compliance methodology needed validation against a genuinely complex subject — an institution answering to more than one regulator."],
+    prb:["The new compliance methodology needed validation against a genuinely complex subject: an institution answering to more than one regulator."],
     role:"Ran the full analysis end to end.",
     app:["Mapped the institution's obligations across both regulatory regimes.","Identified risks arising from the gaps rather than listing the gaps alone.","Prioritised remediation actions so the output was decision-ready."],
     sol:"A complete mock gap analysis with mapped obligations, identified risks and prioritised remediation.",
     out:["Validated the internally developed compliance methodology.","Surfaced structural improvements that fed back into the templates."],
-    lrn:"Dual regulation is not two compliance exercises side by side — the overlaps and the conflicts are where the real work is."
+    lrn:"Dual regulation is not two compliance exercises side by side. The overlaps and the conflicts are where the real work is."
   },
   {
     id:"W-06", t:"Governance Decision Simulator", cat:"Governance intelligence", f:["governance","gi"], pv:"built",
     sub:"101 board simulations across 10 governance domains, 26 countries and 4 sector lenses.",
     feat:"work.html#simulator",
     ctx:"Governance training generally tests whether someone can recall a principle. It rarely tests whether they can make a defensible decision with incomplete information and a board watching.",
-    prb:["Existing training formats are quiz-shaped: there is a right answer and you either know it or you do not.","Board decisions do not work that way — the quality is in the reasoning, the challenge and the record, not in matching a key.","Training content built for one jurisdiction does not transfer."],
+    prb:["Existing training formats are quiz-shaped: there is a right answer and you either know it or you do not.","Board decisions do not work that way. The quality is in the reasoning, the challenge and the record, not in matching a key.","Training content built for one jurisdiction does not transfer."],
     role:"Developed the platform: the product concept, the simulation structure, the behavioural scoring model, the jurisdiction adaptation layer, and the build.",
-    app:["Designed it as facilitator-led rather than self-serve — a facilitator creates the session, sets the country and sector lens, distributes links and reviews reports.","Made participants take board roles, so the perspective changes what they see.","Scored across 12 governance competency categories behaviourally, with no correct answers and no question-count language anywhere in the interface.","Made earlier decisions influence later ones, and made them irreversible — the pressure to think carefully disappears if you can go back.","Added a read-only board minutes trail so participants can review what they decided and what followed, without being able to change it.","Gave Nigeria and the UK full bespoke regulatory grounding, and ran the remaining countries through an adaptation layer with an on-screen note that specifics are illustrative outside those two."],
+    app:["Designed it as facilitator-led rather than self-serve. A facilitator creates the session, sets the country and sector lens, distributes links and reviews reports.","Made participants take board roles, so the perspective changes what they see.","Scored across 12 governance competency categories behaviourally, with no correct answers and no question-count language anywhere in the interface.","Made earlier decisions influence later ones, and made them irreversible. The pressure to think carefully disappears if you can go back.","Added a read-only board minutes trail so participants can review what they decided and what followed, without being able to change it.","Gave Nigeria and the UK full bespoke regulatory grounding, and ran the remaining countries through an adaptation layer with an on-screen note that specifics are illustrative outside those two."],
     sol:"A facilitator-led boardroom training platform: 101 playable simulations across 10 governance domains, each with an organisation profile, board agenda, 8–12 board papers, decision points, unexpected events and emergency board meetings, running 45–90 minutes and ending in a governance debrief, performance report and certificate.",
     out:["All 101 simulations fully playable with bespoke content.","26 countries grouped by region, 4 sector lenses (banking, insurance, fintech, corporate).","Verified across thousands of automated playthrough combinations covering every simulation against every jurisdiction.","User guide and product brief produced as supporting documentation."],
-    lrn:"That scoring behaviour rather than answers changes the entire design. Once you remove the answer key you have to be able to articulate what good governance reasoning actually looks like — twelve times over.",
+    lrn:"Scoring behaviour rather than answers changes the entire design. Once you remove the answer key you have to be able to articulate what good governance reasoning actually looks like, twelve times over.",
     shots:["sim-landing","sim-roles","sim-debrief","sim-report","sim-behaviour","sim-recommendations"]
   },
   {
     id:"W-07", t:"Human Oversight System", cat:"AI security & governance", f:["ai","gi"], pv:"built",
     sub:"Human oversight of AI decision output, designed as a control rather than stated as an intention.",
     ctx:"Organisations increasingly state that a human reviews AI-influenced decisions. Very few can evidence what that review consisted of.",
-    prb:["\"A human is in the loop\" is a claim, not a control.","Without structure, review collapses into approval — the reviewer confirms the output because nothing prompts them to interrogate it.","No record of the reasoning means no accountability afterwards."],
+    prb:["\"A human is in the loop\" is a claim, not a control.","Without structure, review collapses into approval. The reviewer confirms the output because nothing prompts them to interrogate it.","No record of the reasoning means no accountability afterwards."],
     role:"Designed and built the system, and produced its gap analysis against EU AI Act Article 14.",
-    app:["Structured the review as five explicit lenses — plausibility, risk identification, regulatory alignment, data completeness and proportionality — so the reviewer has to engage with the output on five separate grounds.","Gave the reviewer five real decisions rather than approve or reject: approve, approve with conditions, override, escalate, suspend.","Deliberately excluded a proposed-decision mode, because pre-filling the answer defeats the purpose of the review.","Kept regulatory article references out of the user-facing interface so reviewers engage with the substance rather than the citation.","Made the audit trail archive rather than delete."],
-    sol:"A five-step review instrument: configure, receive the AI assessment output, apply the five-lens review, record the decision, complete — with a full audit trail behind it and a governance dashboard across completed reviews.",
-    out:["Built and deployed within the governance intelligence suite.","Gap analysis produced against EU AI Act Article 14.","The only tool in the suite with a live AI integration — the rest run local intelligence engines with no external AI dependency."],
-    lrn:"That designing oversight means designing friction. Every shortcut you remove from the reviewer's path is the point of the control.",
+    app:["Structured the review as five explicit lenses (plausibility, risk identification, regulatory alignment, data completeness and proportionality) so the reviewer has to engage with the output on five separate grounds.","Gave the reviewer five real decisions rather than approve or reject: approve, approve with conditions, override, escalate, suspend.","Deliberately excluded a proposed-decision mode, because pre-filling the answer defeats the purpose of the review.","Kept regulatory article references out of the user-facing interface so reviewers engage with the substance rather than the citation.","Made the audit trail archive rather than delete."],
+    sol:"A five-step review instrument: configure, receive the AI assessment output, apply the five-lens review, record the decision, complete, with a full audit trail behind it and a governance dashboard across completed reviews.",
+    out:["Built and deployed within the governance intelligence suite.","Gap analysis produced against EU AI Act Article 14.","The only tool in the suite with a live AI integration. The rest run local intelligence engines with no external AI dependency."],
+    lrn:"Designing oversight means designing friction. Every shortcut you remove from the reviewer's path is the point of the control.",
     shots:["hos-dashboard"]
   },
   {
@@ -1321,14 +1348,14 @@ var WORK = [
     ctx:"Organisations adopting AI were asking how mature their AI governance was, with no proportionate way to answer.",
     prb:["Maturity questions were being answered by opinion rather than assessment.","A single maturity score hides whether the weakness is in governance, in security and control, or in capability.","Requirements vary by country and sector, and a generic diagnostic cannot reflect that."],
     role:"Designed and built the diagnostic, then rebuilt it into the modular platform.",
-    app:["Rebuilt the underlying framework from a single pillar to three — governance, security and control, and capability — weighted so that neither strong tooling nor strong policy alone can carry a score.","Added a governance floor rule, so an organisation cannot reach a high maturity band on capability while governance is absent.","Made it country and sector aware, covering a wide regulatory map, thirteen sectors and five organisation sizes.","Extended it from a single diagnostic into a ten-module governance journey."],
+    app:["Rebuilt the underlying framework from a single pillar to three (governance, security and control, and capability), weighted so that neither strong tooling nor strong policy alone can carry a score.","Added a governance floor rule, so an organisation cannot reach a high maturity band on capability while governance is absent.","Made it country and sector aware, covering a wide regulatory map, thirteen sectors and five organisation sizes.","Extended it from a single diagnostic into a ten-module governance journey."],
     sol:"A modular AI governance operating system: AI governance maturity, ISO/IEC 42001 readiness, AI risk register, AI impact assessment, AI inventory, governance structure and accountability, policy and documentation, audit and assurance readiness, AI skills and capability, and an AI management system design and implementation planner.",
     out:["Ten modules delivered in one platform.","45-question maturity assessment across three weighted pillars with a governance floor.","Country-aware regulatory mapping across more than 50 jurisdictions.","Product brief produced as supporting documentation."],
-    lrn:"That a weighted, three-pillar model with a floor rule tells an organisation something a single score never will — specifically, which of the three is holding them back.",
+    lrn:"A weighted, three-pillar model with a floor rule tells an organisation something a single score never will: which of the three is holding them back.",
     shots:["agd-dashboard","agd-dimensions","agd-radar"]
   },
   {
-    id:"W-09", t:"Regulatory intelligence — UK and Nigeria", cat:"Regulatory intelligence", f:["reg","ai","cyber"], pv:"done",
+    id:"W-09", t:"Regulatory intelligence across UK and Nigeria", cat:"Regulatory intelligence", f:["reg","ai","cyber"], pv:"done",
     sub:"Board briefings, comparative analysis, consultation responses and regulatory interpretation.",
     ctx:"The firm operates across UK and Nigerian financial services, and clients need to understand what a regulatory development means for them before it binds them.",
     prb:["Regulatory developments arrive as text. Boards need the interpretation and the governance implication, not the text.","Two jurisdictions moving at different speeds on the same underlying issues.","AI regulation in particular is emerging faster than most organisations' governance can absorb."],
@@ -1336,10 +1363,10 @@ var WORK = [
     app:["Covered CBN, FCA, PRA and FATF across AML, cyber risk governance, enforcement actions and AI governance.","Wrote comparative analyses rather than jurisdiction-by-jurisdiction summaries, because the differences are the useful part.","Interpreted each development through to its governance implication and its risk, rather than stopping at the requirement.","Responded to consultations, which forces a position rather than a summary."],
     sol:"A continuing body of regulatory intelligence delivered as board briefings, comparative analyses, consultation responses and interpretation.",
     out:["Board-level briefings delivered.","Comparative analyses across UK and Nigerian environments.","Consultation responses and regulatory interpretation.","Thought leadership on AI accountability gaps, compliance limitations and governance risks."],
-    lrn:"That interpretation is the whole job. A requirement restated is not intelligence — the value is in what it implies for who decides what, and what evidence they will need."
+    lrn:"Interpretation is the whole job. A requirement restated is not intelligence. The value is in what it implies for who decides what, and what evidence they will need."
   },
   {
-    id:"W-10", t:"Project Aegis — structured GRC case study", cat:"Governance", f:["governance","reg"], pv:"done",
+    id:"W-10", t:"Project Aegis, a structured GRC case study", cat:"Governance", f:["governance","reg"], pv:"done",
     sub:"Board-level risk reporting, stress test outputs and risk appetite analysis.",
     ctx:"A structured GRC case study used to produce and refine executive-level governance outputs.",
     prb:["Risk material that is technically correct and executively unusable is a recurring failure in GRC.","Risk appetite is frequently stated and rarely analysed against actual exposure."],
@@ -1347,30 +1374,30 @@ var WORK = [
     app:["Wrote for the board's decision rather than for completeness.","Produced governance stress test outputs showing where the framework would fail under pressure rather than in principle.","Analysed risk appetite as a ceiling to test exposure against, not a statement to file."],
     sol:"Board-level risk reporting materials, governance stress test outputs and risk appetite analysis.",
     out:["Outputs refined for executive-level usability.","The risk appetite thinking carried into the per-risk appetite ceilings built into the assurance platform."],
-    lrn:"That an executive audience will not extract the decision from your document. If it is not decision-ready, it is not finished."
+    lrn:"An executive audience will not dig the decision out of your document for you. If it is not decision-ready, it is not finished."
   },
   {
     id:"W-11", t:"GovernSight", cat:"Governance intelligence", f:["gi","cyber","reg"], pv:"built",
     sub:"Cybersecurity governance self-assessment that produces its own evidence trail.",
     ctx:"Regulated institutions have to self-assess against supervisory cybersecurity expectations and report the result. Most do it in a spreadsheet that leaves no defensible record.",
-    prb:["Self-assessment done once a year in a workbook does not survive supervisory challenge.","The risk is not failing the assessment — it is being unable to show how the answer was reached or who stood behind it.","Domain-level weakness is invisible when everything reduces to a single percentage."],
+    prb:["Self-assessment done once a year in a workbook does not survive supervisory challenge.","The risk is not failing the assessment. It is being unable to show how the answer was reached or who stood behind it.","Domain-level weakness is invisible when everything reduces to a single percentage."],
     role:"Designed and built the tool.",
     app:["Structured the assessment around the cybersecurity governance domains supervisors actually ask about: cybersecurity governance, risk management practices, technology infrastructure safeguards, third-party risk controls, incident response capabilities and operational resilience.","Scored each domain separately and surfaced them on a maturity radar, so a strong overall score cannot hide a weak domain.","Produced a gap summary naming, per domain, how many gaps are absent versus partial, with a remediation priority attached.","Made the audit trail a by-product of using the tool rather than a separate documentation exercise."],
     sol:"A cybersecurity governance self-assessment producing an overall maturity position, domain scores, a maturity radar and a prioritised gap summary.",
     out:["Deployed within the governance intelligence suite.","Product brief produced as supporting documentation.","Identified as a portfolio priority in the strategic product assessment across the tools, for its position as the only digital product built for this specific supervisory self-assessment requirement."],
-    lrn:"That an assessment tool earns its place by what it leaves behind. The score is the least valuable thing it produces.",
+    lrn:"An assessment tool earns its place by what it leaves behind. The score is the least valuable thing it produces.",
     shots:["governsight-domains","governsight-gaps"]
   },
   {
-    id:"W-12", t:"AEGIS — Financial Crime Governance Operating System", cat:"Governance intelligence", f:["gi","reg","governance"], pv:"built",
+    id:"W-12", t:"AEGIS Financial Crime Governance Operating System", cat:"Governance intelligence", f:["gi","reg","governance"], pv:"built",
     sub:"Diagnostic-first financial crime governance across 7 domains and 10 operational views.",
     ctx:"Financial crime compliance is usually delivered as a checklist against an obligation list, which tells an organisation what it lacks but not what to do on Monday.",
-    prb:["Obligation checklists do not produce a working programme.","Financial crime obligations span multiple regulators and jurisdictions simultaneously.","When an actual event occurs — a sanctions match, a suspected laundering case — the framework rarely tells anyone what to do next."],
+    prb:["Obligation checklists do not produce a working programme.","Financial crime obligations span multiple regulators and jurisdictions simultaneously.","When an actual event occurs, like a sanctions match or a suspected laundering case, the framework rarely tells anyone what to do next."],
     role:"Designed and built the system.",
     app:["Made it diagnostic-first: a single assessment generates the risks, obligations, control gaps, policy gaps, prioritised actions and domain scores rather than the user populating them.","Covered seven financial crime domains and surfaced them through ten operational views instead of one report.","Built five response playbooks, with incident response as the overarching framework the four specific playbooks operate inside.","Grouped the obligation tracker by jurisdiction, covering Nigerian, UK, US, EU and international regimes.","Set explicit posture bands so a score maps to a stated position rather than a number."],
     sol:"A financial crime governance operating system: 35-question diagnostic, 7 domains, 10 operational views, 5 response playbooks and a jurisdiction-grouped obligation tracker with a full audit trail.",
     out:["Built and delivered, with product brief documentation covering all domains, views, playbooks and posture bands.","Regulatory knowledge bases extended across additional African jurisdictions and international standards."],
-    lrn:"That a diagnostic which generates the workspace is a fundamentally different product from one that scores you. The output has to be the starting point for work, not the end of an assessment."
+    lrn:"A diagnostic that generates the workspace is a completely different product from one that just scores you. The output has to be the starting point for work, not the end of an assessment."
   },
   {
     id:"W-13", t:"Governance Stress Testing Platform", cat:"Governance intelligence", f:["gi","governance"], pv:"built",
@@ -1378,7 +1405,7 @@ var WORK = [
     ctx:"Built from scratch. The first version I built assessed governance maturity; I replaced it with a second version that stress tests governance, because maturity and resilience are not the same question.",
     prb:["Maturity assessment tells you what exists. Stress testing tells you what holds when it is tested.","Organisations were being assessed against calm-conditions governance.","Third-party and stakeholder responses risked contaminating an organisation's own scores."],
     role:"Designed and built the platform, including the survey and third-party assessment model.",
-    app:["Built five crisis scenario modules — board oversight, risk management, crisis response, regulatory compliance, and culture and ethics — each carrying six realistic crisis scenarios.","Calibrated scenarios against a detailed governance intake profile so the crisis fits the organisation rather than the other way round.","Separated assessment scope into self, internal stakeholder and third-party, keeping survey results out of the organisation's own dashboard metrics entirely.","Built expiring, single-assessment survey links, and gave respondents a locked results view scoped only to their own assessment."],
+    app:["Built five crisis scenario modules covering board oversight, risk management, crisis response, regulatory compliance, and culture and ethics, each carrying six realistic crisis scenarios.","Calibrated scenarios against a detailed governance intake profile so the crisis fits the organisation rather than the other way round.","Separated assessment scope into self, internal stakeholder and third-party, keeping survey results out of the organisation's own dashboard metrics entirely.","Built expiring, single-assessment survey links, and gave respondents a locked results view scoped only to their own assessment."],
     sol:"A governance stress testing platform producing an executive summary with score ring and RAG status, pillar breakdown, scenario-by-scenario analysis, a governance risk register and priority recommendations.",
     out:["30 crisis scenarios across 5 modules.","Three-tab assessment history separating self-assessment, multi-stakeholder and third-party register.","Multi-stakeholder views revealing where the board, CEO and risk function see governance differently.","Access codes revalidated hourly against a live list, with revocation taking effect mid-session while preserving in-progress work."],
     lrn:"Governance and decisions that have not been tested will fail under pressure.",
@@ -1393,7 +1420,7 @@ var WORK = [
     app:["Positioned it as board-level assurance, not a compliance checker and not an enterprise data management platform.","Anchored the ten domains to established data management and governance standards without naming frameworks in the product itself.","Rebuilt navigation from output-shaped to task-based after user testing showed the original was confusing, and made an interactive world map the primary navigation and the residency map at once.","Replaced a one-shot walkthrough with a spotlight tour that points at the live element the user needs to act on next."],
     sol:"A jurisdiction-aware data governance and sovereignty platform: 10-domain assessment, governance score, maturity by domain, jurisdiction exposure register, declared residency map, recommended actions and a board report with an auto-generated executive summary.",
     out:["Built across 15 jurisdictions at launch with real-geometry world map navigation.","Access codes served from a live list with hourly revalidation, preserving in-progress work through a forced re-authentication."],
-    lrn:"That user testing beats internal logic. The original navigation was organised the way the outputs were organised, which made sense to me and to nobody else.",
+    lrn:"User testing beats internal logic every time. The original navigation was organised the way the outputs were organised, which made sense to me and to nobody else.",
     shots:["dgsd-dashboard"]
   },
   {
@@ -1402,90 +1429,90 @@ var WORK = [
     ctx:"Organisations in the Nigerian financial sector are frequently accountable to several regulators simultaneously and unclear on their combined exposure.",
     prb:["Obligations from different regulators overlap and compound, and assessing them separately understates the exposure.","A simple weighted score misses the answer combinations that actually create risk."],
     role:"Designed and built the tool and its intelligence engine.",
-    app:["Covered obligations across the central bank, the financial intelligence unit, the data protection commission, the securities regulator and the insurance regulator.","Built cross-question combination rules so specific answer patterns escalate the result — exposure that only exists when two conditions are both true.","Applied weighted scoring with automatic risk band uplift rather than a flat total.","Used a two-layer access model with a live access list and named credentials."],
+    app:["Covered obligations across the central bank, the financial intelligence unit, the data protection commission, the securities regulator and the insurance regulator.","Built cross-question combination rules so specific answer patterns escalate the result, catching exposure that only exists when two conditions are both true.","Applied weighted scoring with automatic risk band uplift rather than a flat total.","Used a two-layer access model with a live access list and named credentials."],
     sol:"A regulatory exposure and governance diagnostic producing response-differentiated insight rather than a generic score.",
     out:["Built and delivered, with product brief documentation.","Included in the strategic product assessment across the tool portfolio."],
-    lrn:"That combination rules are where a diagnostic becomes intelligent. Any tool can add up weights; the value is in recognising which pairs of answers matter together."
+    lrn:"Combination rules are where a diagnostic becomes intelligent. Any tool can add up weights; the value is in recognising which pairs of answers matter together."
   },
   {
     id:"W-16", t:"Board Skills Matrix", cat:"Governance intelligence", f:["gi","governance"], pv:"built",
     sub:"Board composition analysis that names the critical gaps and the single points of failure.",
-    ctx:"Board composition gaps are usually noticed after they matter — typically when the board cannot challenge management on a topic nobody around the table understands.",
+    ctx:"Board composition gaps are usually noticed after they matter, which is normally when the board cannot challenge management on a topic nobody around the table understands.",
     prb:["A board can look well covered on paper while one person carries an entire domain.","'We have someone for that' is a resilience risk, not a coverage statement.","Skills reviews produce a matrix and stop there, without saying what to do."],
     role:"Designed and built the tool.",
-    app:["Distinguished a critical gap — no competent member at all — from a single point of failure, where exactly one member covers a domain and their departure removes all oversight.","Covered the domains boards are actually challenged on, including technology and cybersecurity, AI and digital transformation, AML and financial crime, ESG, risk, regulatory and financial oversight.","Attached a stated consequence and a recommended action to each finding rather than leaving the matrix to speak for itself.","Produced governance insights and a slide preview alongside the matrix, so the output goes straight into a board pack."],
+    app:["Distinguished a critical gap, where no member is competent at all, from a single point of failure, where exactly one member covers a domain and their departure removes all oversight.","Covered the domains boards are actually challenged on, including technology and cybersecurity, AI and digital transformation, AML and financial crime, ESG, risk, regulatory and financial oversight.","Attached a stated consequence and a recommended action to each finding rather than leaving the matrix to speak for itself.","Produced governance insights and a slide preview alongside the matrix, so the output goes straight into a board pack."],
     sol:"A board skills matrix with gap analysis, governance insights, a slide preview and PDF and CSV export.",
     out:["Deployed within the governance intelligence suite.","Product brief produced as supporting documentation.","Included in the strategic product assessment across the tool portfolio."],
-    lrn:"That the single point of failure is the finding boards react to. A gap is a recruitment question; a single point of failure is a succession risk sitting in the room.",
+    lrn:"The single point of failure is the finding boards actually react to. A gap is a recruitment question; a single point of failure is a succession risk sitting in the room.",
     shots:["bsm-gaps"]
   },
   {
     id:"W-17", t:"Governance & Regulatory Readiness Diagnostic", cat:"Governance intelligence", f:["gi","reg"], pv:"built",
     sub:"Readiness assessed before the question arrives, not at the point of being asked.",
-    ctx:"Organisations tend to discover they are not ready at the moment somebody asks — a client due diligence questionnaire, an investor, or a regulator.",
+    ctx:"Organisations tend to discover they are not ready at the moment somebody asks: a client due diligence questionnaire, an investor, or a regulator.",
     prb:["Readiness is treated as a state to be confirmed rather than a thing to be assessed.","Governance and regulatory readiness are usually reviewed separately even though they fail together."],
     role:"Designed and built the tool, including its survey and results flows.",
     app:["Assessed governance readiness and regulatory readiness in one structured pass rather than two disconnected reviews.","Separated the assessment, survey and results into distinct flows so a respondent never reaches the wider tool.","Removed external file dependencies from the assessment flow so the tool loads and runs reliably wherever it is deployed."],
     sol:"A governance and regulatory readiness diagnostic with structured assessment, survey distribution and a results report.",
     out:["Deployed within the governance intelligence suite.","Product brief produced as supporting documentation.","Included in the strategic product assessment across the tool portfolio."],
-    lrn:"That readiness only means something with a date attached. Assessed today and assessed after the last three regulatory changes are different answers."
+    lrn:"Readiness only means something with a date attached. Assessed today and assessed after the last three regulatory changes are different answers."
   },
   {
     id:"W-18", t:"Security foundations and technical labs", cat:"Cybersecurity", f:["cyber"], pv:"done",
     sub:"IAM, S3, network monitoring, packet capture, and a healthcare risk register.",
-    ctx:"The technical grounding underneath everything above — a diploma in cybersecurity and applied practice.",
+    ctx:"The technical grounding underneath everything above: a diploma in cybersecurity and applied practice.",
     prb:["Governance advice about technical controls is worth very little if you have never configured one."],
     role:"Completed the labs and produced the outputs.",
     app:["AWS and security labs: IAM, EC2 and S3 security configurations, plus network monitoring and configuration using Wireshark, Snort and Cisco Packet Tracer.","Fintech compliance mapping: mapped NDPR, PCI-DSS and CBN requirements to business operations, identifying gaps and recommending compliance controls.","Cybersecurity risk register lab: built a full risk register for a healthcare organisation covering critical assets, threats, vulnerabilities, risk ratings and mitigation, aligned to HIPAA and enterprise risk standards."],
     sol:"Applied security practice across cloud configuration, network monitoring, compliance mapping and risk register construction.",
     out:["Diploma in Cybersecurity, AltSchool Africa.","ISC2 Certified in Cybersecurity; Cisco Introduction to Cybersecurity.","Risk register and compliance mapping outputs produced."],
-    lrn:"Enough hands-on exposure to know when a control is described accurately and when it is not — which is most of what makes technical governance credible."
+    lrn:"Enough hands-on exposure to tell when a control is described accurately and when it is not, which is most of what makes technical governance credible."
   },
   {
     id:"W-19", t:"AI security", cat:"AI security & governance", f:["ai","cyber"], pv:"know",
     sub:"The security half of trustworthy AI, held alongside the governance half.",
     ctx:"AI governance answers whether a system should operate a given way. AI security answers whether it can be protected at all. Both questions have to be answered by the same person for either answer to be worth much.",
-    prb:["AI systems fail in ways conventional application security does not anticipate — the model, the data and the pipeline are all attack surface.","Governance recommendations about AI security are only as good as the underlying understanding of the threat."],
+    prb:["AI systems fail in ways conventional application security does not anticipate. The model, the data and the pipeline are all attack surface.","Governance recommendations about AI security are only as good as the underlying understanding of the threat."],
     role:"Learning and applying alongside the governance work.",
-    app:["Introduction to AI Security certification.","Applying existing security foundations — controls, vulnerability thinking, information security management — to AI components rather than treating AI security as a separate discipline.","Working it into the AI governance tools, where security and control is one of the three weighted pillars of the maturity model."],
+    app:["Introduction to AI Security certification.","Applying existing security foundations (controls, vulnerability thinking, information security management) to AI components rather than treating AI security as a separate discipline.","Working it into the AI governance tools, where security and control is one of the three weighted pillars of the maturity model."],
     sol:"AI security held as a capability alongside AI governance, rather than as a separate specialism.",
     out:["Introduction to AI Security certification.","Security and control represented as a weighted pillar within the AI governance maturity framework."],
-    lrn:"That the two questions collapse into one in practice. A system nobody can protect should not be operating, whatever the governance framework says."
+    lrn:"The two questions collapse into one once you are doing the work. A system nobody can protect should not be operating, whatever the governance framework says."
   },
   {
-    id:"W-20", t:"Data privacy and cyber incident simulation — DLA Piper", cat:"Regulatory intelligence", f:["reg","cyber"], pv:"know",
+    id:"W-20", t:"Data privacy and cyber incident simulation with DLA Piper", cat:"Regulatory intelligence", f:["reg","cyber"], pv:"know",
     sub:"Breach response, GDPR notification and ransom risk, in a legal practice context.",
     ctx:"A job simulation with DLA Piper's Data Privacy and Cybersecurity team, completed through Forage in September 2025.",
-    prb:["Breach response sits between legal obligation, regulatory notification, security incident management and public communication — and organisations tend to be strong in one of the four."],
+    prb:["Breach response sits between legal obligation, regulatory notification, security incident management and public communication, and organisations tend to be strong in one of the four."],
     role:"Completed the simulation.",
     app:["Analysed complex data breach scenarios and produced actionable advice on GDPR compliance, regulatory notification requirements and ransom payment risks.","Drafted a compliant and strategic media statement addressing the public relations dimension while prioritising transparency and reputational risk."],
     sol:"Simulation outputs covering breach analysis, regulatory advice and external communication.",
     out:["Simulation completed.","Applied legal research, regulatory analysis and incident management practice."],
-    lrn:"How much of incident response is a communications problem, and how early the regulatory clock starts running."
+    lrn:"A lot of incident response turns out to be a communications problem, and the regulatory clock starts running earlier than people expect."
   }
 ];
 
 /* ---------------- governance operating cycle ---------------- */
 var CYCLE = [
   {n:"Assess", d:"Establish where governance actually stands, by domain, rather than assuming the documented position is the real one.", p:"A baseline diagnostic on first configuration, scored transparently by rule."},
-  {n:"Configure", d:"Set the framework to the organisation — its domains, its owners, its proportionality. A large-institution model imposed on a small firm will not be operated.", p:"Configuration-driven onboarding, with the ability to add governance domains the platform does not ship with."},
+  {n:"Configure", d:"Set the framework to the organisation: its domains, its owners, its proportionality. A large-institution model imposed on a small firm will not be operated.", p:"Configuration-driven onboarding, with the ability to add governance domains the platform does not ship with."},
   {n:"Monitor", d:"Keep the position visible between reviews, so governance state is not rediscovered annually.", p:"Governance calendar with RAG status, dashboard health score, global search across records."},
   {n:"Alert", d:"Surface what needs attention before it becomes an overdue item or a breach.", p:"Notification centre separating overdue work, approaching deadlines and risk appetite breaches, so each reads as what it is."},
   {n:"Act", d:"Assign the work to a named person with a date, because governance without an owner is a statement of intent.", p:"Action tracker, RACI and named owners entered as free text, so accountability is not limited to platform account holders."},
   {n:"Evidence", d:"Be able to show it happened. Most governance failures at audit are evidence failures, not control failures.", p:"Evidence index pointing at uploaded files or document links, with automatic attribution and an audit trail holding previous and new values."},
   {n:"Review", d:"Check the framework against reality on a cycle, and check whether anything material has changed since the last look.", p:"Change-detection diagnostic mapping stated changes to the domains that need reassessing, with configurable rules."},
-  {n:"Improve", d:"Feed what the review found back into the framework, so it moves with the organisation rather than ageing against it.", p:"Non-destructive record states — active, archived, superseded — so the framework's history stays readable."}
+  {n:"Improve", d:"Feed what the review found back into the framework, so it moves with the organisation rather than ageing against it.", p:"Non-destructive record states (active, archived, superseded) so the framework's history stays readable."}
 ];
 
 /* ---------------- GOAP layers ---------------- */
 var GLAYERS = [
   {n:"Governance domains", d:"Twelve domains covering corporate governance, risk, regulatory compliance, data protection, cybersecurity, technology, AI governance, people and ethics, third party, continuity and resilience, assurance, and records. Organisations can add domains the platform does not ship with, and the rule engine applies to those too.", f:[["12","standard domains"],["+","custom domains supported"]]},
-  {n:"Governance maturity", d:"A governance health score calculated by transparent rule rather than a black box — the weightings are shown on screen. A score that cannot be explained will not survive its first board question.", f:[["Rule","based scoring"],["Visible","weightings"]]},
+  {n:"Governance maturity", d:"A governance health score calculated by transparent rule rather than a black box. The weightings are shown on screen. A score that cannot be explained will not survive its first board question.", f:[["Rule","based scoring"],["Visible","weightings"]]},
   {n:"Risk", d:"A 5×5 risk register with a clickable heat map, a register-level risk appetite statement, and a separate appetite ceiling on each individual risk. Residual score is compared against that ceiling and flagged as within, at, or above appetite.", f:[["5×5","risk matrix"],["Per-risk","appetite ceilings"]]},
-  {n:"Governance calendar", d:"Everything due, with RAG status — red for overdue, amber approaching, green complete — so the governance year is visible rather than remembered.", f:[["RAG","status model"]]},
+  {n:"Governance calendar", d:"Everything due, with RAG status: red for overdue, amber approaching, green complete, so the governance year is visible rather than remembered.", f:[["RAG","status model"]]},
   {n:"Evidence", d:"The platform is the evidence index, not the document repository. Records point at uploaded files or at links in existing document stores, which keeps it from competing with systems the organisation already has.", f:[["Index","not repository"],["PDF/DOCX","scanning supported"]]},
   {n:"Assurance", d:"An assurance module and action tracker connecting what was found to who is fixing it and by when.", f:[["Named","owners"],["Tracked","actions"]]},
-  {n:"Audit trail", d:"Automatic user attribution on every action, in a dedicated trail holding previous and new values. Nothing is destructively deleted — records move to archived or superseded, so the history stays readable.", f:[["Every","action attributed"],["No","destructive deletion"]]},
+  {n:"Audit trail", d:"Automatic user attribution on every action, in a dedicated trail holding previous and new values. Nothing is destructively deleted. Records move to archived or superseded, so the history stays readable.", f:[["Every","action attributed"],["No","destructive deletion"]]},
   {n:"Monitoring & change detection", d:"A change-detection diagnostic asking what has changed, with a rule engine mapping each change to the domains needing reassessment. The rules are transparent and administrator-configurable, including for custom domains.", f:[["Configurable","rule engine"]]},
   {n:"Board reporting", d:"An executive summary reflecting the live state of every register, plus CSV and PDF exports, so the board conversation starts from the system rather than from a separately maintained deck.", f:[["CSV + PDF","exports"],["Live","executive summary"]]}
 ];
@@ -1494,27 +1521,27 @@ var GLAYERS = [
 var SIMS = [
   { k:"AI governance", paper:"The executive team has deployed an AI tool into a customer-facing process without an impact assessment. It is already influencing decisions. The board has been informed after the fact.",
     opts:[
-      {t:"Suspend the tool immediately pending a full impact assessment.", fb:"Decisive and defensible, and it stops the exposure. The competency question is whether you established the actual risk before acting — suspending a tool that turns out to be low-risk teaches the executive to route around the board next time. Note the reasoning in the minutes either way.", c:["Decisiveness","Risk judgement","Board authority"]},
-      {t:"Allow it to continue under conditions, with human oversight and a deadline for the assessment.", fb:"Proportionate, and it keeps the board in control rather than in opposition. It only holds if the conditions are specific and someone is named against them — 'with oversight' is not a condition, it is a hope. The deadline is what makes this defensible.", c:["Proportionality","Accountability","Oversight design"]},
+      {t:"Suspend the tool immediately pending a full impact assessment.", fb:"Decisive and defensible, and it stops the exposure. The competency question is whether you established the actual risk before acting. Suspending a tool that turns out to be low-risk teaches the executive to route around the board next time. Note the reasoning in the minutes either way.", c:["Decisiveness","Risk judgement","Board authority"]},
+      {t:"Allow it to continue under conditions, with human oversight and a deadline for the assessment.", fb:"Proportionate, and it keeps the board in control rather than in opposition. It only holds if the conditions are specific and someone is named against them. 'With oversight' is not a condition, it is a hope. The deadline is what makes this defensible.", c:["Proportionality","Accountability","Oversight design"]},
       {t:"Note the deployment and commission a review of how it bypassed governance.", fb:"Correctly identifies that the process failure matters more than this one tool. But it leaves the live exposure running while you investigate the cause, and a board that only studies the breach has not addressed it. Most boards need to do both.", c:["Root cause thinking","Risk tolerance","Escalation"]}
     ]},
   { k:"Technology risk", paper:"A material technology risk has been identified in a system the business depends on. Remediation would take the service offline during a peak period. The board must decide how to respond.",
     opts:[
-      {t:"Remediate now and accept the service interruption.", fb:"Puts risk ahead of revenue, which is the right instinct and the harder call. The competency test is whether you interrogated the severity first — a board that always chooses the safe option is not exercising judgement, it is avoiding it.", c:["Risk appetite","Decisiveness"]},
+      {t:"Remediate now and accept the service interruption.", fb:"Puts risk ahead of revenue, which is the right instinct and the harder call. The competency test is whether you interrogated the severity first. A board that always chooses the safe option is not exercising judgement, it is avoiding it.", c:["Risk appetite","Decisiveness"]},
       {t:"Accept the risk formally for the peak period, with compensating controls and a fixed remediation date.", fb:"A real governance decision rather than a deferral, provided three things are recorded: who accepted it, what the compensating controls are, and the date it stops being acceptable. Without those, it is a deferral wearing a governance label.", c:["Risk acceptance","Documentation","Compensating controls"]},
       {t:"Refer it back to management for options before deciding.", fb:"Appropriate if the board genuinely lacks the information to decide, and evasive if it does not. The distinction is whether you specified what information you need and by when. An open-ended referral is how material risks age quietly.", c:["Information sufficiency","Escalation","Board discipline"]}
     ]},
   { k:"Regulatory change", paper:"A regulator has issued new requirements affecting a core part of the business. The compliance date falls inside the current financial year. Management's assessment is that the firm is broadly compliant already.",
     opts:[
-      {t:"Accept management's assessment and monitor to the deadline.", fb:"'Broadly compliant' is the phrase that shows up in most enforcement post-mortems. The competency being tested is challenge — the board's job here is to ask what 'broadly' is doing in that sentence and what evidence sits behind it.", c:["Challenge","Assurance","Regulatory awareness"]},
-      {t:"Commission an independent gap analysis against the new requirements.", fb:"Buys assurance rather than assuming it, and produces evidence you can show the regulator. Worth pairing with a view on proportionality — an independent review of every regulatory change is not sustainable, so record why this one warranted it.", c:["Assurance","Evidence","Proportionality"]},
-      {t:"Require management to map the requirements to controls and report back with gaps identified.", fb:"Keeps ownership where it belongs and produces a traceable artefact. It relies on management's objectivity about its own controls, so the board should specify the format and set a date — otherwise you receive a reassurance rather than a mapping.", c:["Accountability","Traceability","Board direction"]}
+      {t:"Accept management's assessment and monitor to the deadline.", fb:"'Broadly compliant' is the phrase that shows up in most enforcement post-mortems. The competency being tested is challenge. The board's job here is to ask what 'broadly' is doing in that sentence and what evidence sits behind it.", c:["Challenge","Assurance","Regulatory awareness"]},
+      {t:"Commission an independent gap analysis against the new requirements.", fb:"Buys assurance rather than assuming it, and produces evidence you can show the regulator. Worth pairing with a view on proportionality. An independent review of every regulatory change is not sustainable, so record why this one warranted it.", c:["Assurance","Evidence","Proportionality"]},
+      {t:"Require management to map the requirements to controls and report back with gaps identified.", fb:"Keeps ownership where it belongs and produces a traceable artefact. It relies on management's objectivity about its own controls, so the board should specify the format and set a date, otherwise you receive a reassurance rather than a mapping.", c:["Accountability","Traceability","Board direction"]}
     ]},
   { k:"Operational resilience", paper:"A third-party provider supporting a critical service has suffered an incident. Service is degraded but running. The provider has not yet confirmed whether data was affected.",
     opts:[
-      {t:"Invoke the continuity plan and move to the alternative arrangement.", fb:"Tests whether the continuity plan is real. If the alternative arrangement has never been exercised, invoking it under live conditions is itself a risk — which is a finding the board should record regardless of what it decides today.", c:["Continuity","Third-party risk","Preparedness"]},
+      {t:"Invoke the continuity plan and move to the alternative arrangement.", fb:"Tests whether the continuity plan is real. If the alternative arrangement has never been exercised, invoking it under live conditions is itself a risk, which is a finding the board should record regardless of what it decides today.", c:["Continuity","Third-party risk","Preparedness"]},
       {t:"Hold, escalate to the provider, and set a decision point for later today.", fb:"Reasonable under uncertainty, and setting an explicit decision point is what separates holding from drifting. The regulatory clock may already be running on the data question, so the notification assessment should not wait for the provider's confirmation.", c:["Escalation","Regulatory timing","Decision discipline"]},
-      {t:"Treat it as a potential data incident now and begin the notification assessment in parallel.", fb:"Recognises that notification timelines do not pause for a supplier's investigation. The trade-off is that premature assessment consumes scarce capacity during a live incident — worth naming who is doing which of the two workstreams.", c:["Regulatory timing","Data protection","Parallel response"]}
+      {t:"Treat it as a potential data incident now and begin the notification assessment in parallel.", fb:"Recognises that notification timelines do not pause for a supplier's investigation. The trade-off is that premature assessment consumes scarce capacity during a live incident, so it is worth naming who is doing which of the two workstreams.", c:["Regulatory timing","Data protection","Parallel response"]}
     ]}
 ];
 
@@ -1526,7 +1553,7 @@ var CAPS = [
     done:["Information security work within the GRC role","Cybersecurity governance framework","Cyber risk governance regulatory intelligence","AWS and security labs, network monitoring and configuration"],
     work:["W-18","W-11","W-20"] },
   { n:"GRC", ico:"scale",
-    d:"Governance frameworks, risk, compliance, controls, maturity assessment and assurance — built from first principles rather than inherited.",
+    d:"Governance frameworks, risk, compliance, controls, maturity assessment and assurance, built from first principles rather than inherited.",
     know:["ISO 27001","ISO 42001","NIST CSF","NIST AI RMF","COSO ERM","FCA/PRA","CBN guidelines","FATF"],
     done:["Core compliance methodology designed from scratch","PCI DSS project charter","Cybersecurity governance framework","Compliance mapping, risk registers, gap analysis and remediation tracking","Mock gap analysis for a dual-regulated institution","Board-level risk reporting and risk appetite analysis"],
     work:["W-04","W-05","W-10"] },
@@ -1546,7 +1573,7 @@ var CAPS = [
     done:["Human Oversight System, with an Article 14 gap analysis","AI Governance Diagnostic rebuilt into a ten-module operating system","Thought leadership on AI accountability gaps"],
     work:["W-07","W-08","W-09"] },
   { n:"Regulatory intelligence", ico:"radar",
-    d:"Board briefings, regulatory analysis, consultation responses and regulatory interpretation — turning a development into what it means for who decides what.",
+    d:"Board briefings, regulatory analysis, consultation responses and regulatory interpretation, turning a development into what it means for who decides what.",
     know:["CBN, NDPC, SEC Nigeria, NFIU, NAICOM","FCA, PRA, ICO","FATF and international standards","UK GDPR, DPA 2018, NDPA"],
     done:["Board briefings and comparative analyses across UK and Nigeria","Consultation responses and regulatory interpretation","Regulatory Exposure & Governance Diagnostic","Fintech compliance mapping across NDPR, PCI-DSS and CBN"],
     work:["W-09","W-15","W-05"] }
@@ -1555,46 +1582,46 @@ var CAPS = [
 /* ---------------- AI work strip ---------------- */
 var AIWORK = [
   {t:"Human Oversight System", d:"Five-lens structured human review of AI decision output, with a full audit trail.", w:"W-07"},
-  {t:"AI Governance Diagnostic", d:"Three-pillar maturity model — governance, security and control, capability — with a governance floor rule.", w:"W-08"},
+  {t:"AI Governance Diagnostic", d:"Three-pillar maturity model covering governance, security and control, and capability, with a governance floor rule.", w:"W-08"},
   {t:"AI governance operating system", d:"Ten modules from maturity through ISO/IEC 42001 readiness to an AI management system planner.", w:"W-08"},
   {t:"AI regulatory intelligence", d:"Board briefings and interpretation on AI accountability gaps, compliance limitations and governance risks.", w:"W-09"},
   {t:"AI security", d:"Security risks specific to AI systems, held alongside the governance side. Introduction to AI Security certification.", w:"W-19"},
-  {t:"GovernSight", d:"Adjacent security governance — cybersecurity self-assessment and oversight tooling.", w:"W-11"}
+  {t:"GovernSight", d:"Adjacent security governance: cybersecurity self-assessment and oversight tooling.", w:"W-11"}
 ];
 
 /* ---------------- regulatory radar ---------------- */
 var RADAR = [
   { n:"NDPA 2023 / NDPC registration", j:"Nigeria", tags:["ng","dp"], a:-75, r:62,
     note:"Data protection as a named governance domain, and the origin of the residency work.",
-    ch:["Nigeria's data protection regime requires data controllers of major importance to register with the regulator and demonstrate an accountable processing position.","Someone must own data protection as a named domain, with a lawful basis position, retention rules and a defined approach to recording and archiving data.","Undocumented processing is both an enforcement exposure and a commercial one — it now comes up in client due diligence.","Data residency and retention become configuration questions in every system holding personal data, not policy statements sitting outside them.","Data protection built in as one of the 12 governance framework domains, and a Data Governance & Sovereignty Diagnostic that treats residency as something declared and evidenced rather than assumed."] },
+    ch:["Nigeria's data protection regime requires data controllers of major importance to register with the regulator and demonstrate an accountable processing position.","Someone must own data protection as a named domain, with a lawful basis position, retention rules and a defined approach to recording and archiving data.","Undocumented processing is both an enforcement exposure and a commercial one, since it now comes up in client due diligence.","Data residency and retention become configuration questions in every system holding personal data, not policy statements sitting outside them.","Data protection built in as one of the 12 governance framework domains, and a Data Governance & Sovereignty Diagnostic that treats residency as something declared and evidenced rather than assumed."] },
   { n:"CBN cybersecurity expectations", j:"Nigeria", tags:["ng","cy"], a:20, r:32,
     note:"Self-assessment against supervisory cybersecurity expectations, and the reason GovernSight exists.",
-    ch:["Supervisory cybersecurity frameworks require regulated institutions to self-assess against a defined control set and report the result.","Self-assessment has to be evidenced, repeatable and owned — a workbook completed once a year does not survive supervisory challenge.","The risk is not failing the assessment, it is being unable to show how the answer was reached or who stood behind it.","Assessment needs tooling that produces an audit trail as a by-product of being used, rather than requiring a separate documentation exercise.","GovernSight, built around cybersecurity self-assessment compliance, with domain scores, a maturity radar and a prioritised gap summary."] },
+    ch:["Supervisory cybersecurity frameworks require regulated institutions to self-assess against a defined control set and report the result.","Self-assessment has to be evidenced, repeatable and owned. A workbook completed once a year does not survive supervisory challenge.","The risk is not failing the assessment, it is being unable to show how the answer was reached or who stood behind it.","Assessment needs tooling that produces an audit trail as a by-product of being used, rather than requiring a separate documentation exercise.","GovernSight, built around cybersecurity self-assessment compliance, with domain scores, a maturity radar and a prioritised gap summary."] },
   { n:"CBN AML/CFT obligations", j:"Nigeria", tags:["ng","aml"], a:-30, r:92,
     note:"Covered in the regulatory intelligence work and built into the AEGIS obligation tracker.",
-    ch:["Central bank AML/CFT requirements sit alongside financial intelligence unit reporting obligations, and both apply simultaneously.","Financial crime needs its own governance structure — domain ownership, risk assessment, control testing and board visibility — not a compliance sub-task.","Obligations from multiple regulators overlap and compound; assessing them separately understates the exposure.","Obligation tracking has to be grouped by jurisdiction and kept live, because the obligation set moves.","AEGIS, with a jurisdiction-grouped obligation tracker and five response playbooks for when an actual event occurs."] },
-  { n:"SEC Nigeria — digital assets", j:"Nigeria", tags:["ng","da"], a:70, r:92,
+    ch:["Central bank AML/CFT requirements sit alongside financial intelligence unit reporting obligations, and both apply simultaneously.","Financial crime needs its own governance structure, with domain ownership, risk assessment, control testing and board visibility. It is not a compliance sub-task.","Obligations from multiple regulators overlap and compound; assessing them separately understates the exposure.","Obligation tracking has to be grouped by jurisdiction and kept live, because the obligation set moves.","AEGIS, with a jurisdiction-grouped obligation tracker and five response playbooks for when an actual event occurs."] },
+  { n:"SEC Nigeria and digital assets", j:"Nigeria", tags:["ng","da"], a:70, r:92,
     note:"Digital asset regulation covered within the Nigerian regulatory intelligence work.",
-    ch:["Securities regulation has extended to digital assets, bringing a class of business inside a perimeter it previously sat outside.","Firms need a defensible position on whether their product is in scope before the regulator forms one for them.","Perimeter risk is the sharp end: operating outside a licence you were assumed not to need is a different order of exposure from a control gap.","Product and technology decisions become regulatory decisions — what the system does determines which regime applies to it.","Securities regulator obligations included in the Regulatory Exposure & Governance Diagnostic's multi-regulator assessment, and monitoring of consultations through to final rules."] },
+    ch:["Securities regulation has extended to digital assets, bringing a class of business inside a perimeter it previously sat outside.","Firms need a defensible position on whether their product is in scope before the regulator forms one for them.","Perimeter risk is the sharp end: operating outside a licence you were assumed not to need is a different order of exposure from a control gap.","Product and technology decisions become regulatory decisions, because what the system does determines which regime applies to it.","Securities regulator obligations included in the Regulatory Exposure & Governance Diagnostic's multi-regulator assessment, and monitoring of consultations through to final rules."] },
   { n:"FATF standards", j:"International", tags:["aml"], a:140, r:118,
     note:"The international layer underneath both jurisdictions' financial crime regimes.",
     ch:["FATF standards set the international baseline that national AML/CFT regimes implement, with country evaluations driving domestic tightening.","National requirements should be read as an implementation of the standard, which makes changes more predictable than they look.","A jurisdiction's evaluation outcome is a leading indicator of regulatory pressure on institutions operating there.","Controls built to a national minimum may need rework when the national regime moves toward the standard.","FATF included in the regulatory intelligence coverage and in the AEGIS obligation tracker alongside national regimes."] },
   { n:"FCA / PRA and UK MLR 2017", j:"United Kingdom", tags:["uk","aml"], a:-150, r:80,
     note:"Covered in the UK-side regulatory intelligence and in the dual-regulated gap analysis.",
-    ch:["Dual regulation means conduct and prudential expectations apply at once, with money laundering regulations layered across both.","Accountability has to be individual and traceable — the UK model is built around named responsibility rather than committee ownership.","Dual-regulated firms carry compounding risk where the two regimes' expectations interact, which is exactly where mapping exercises tend to stop.","Systems must produce individually attributable records, because collective attribution does not satisfy an individual accountability regime.","The mock gap analysis for a dual-regulated institution, and named-user attribution built into the assurance platform's audit trail."] },
-  { n:"EU AI Act — Article 14 human oversight", j:"European Union", tags:["ai"], a:108, r:32,
+    ch:["Dual regulation means conduct and prudential expectations apply at once, with money laundering regulations layered across both.","Accountability has to be individual and traceable. The UK model is built around named responsibility rather than committee ownership.","Dual-regulated firms carry compounding risk where the two regimes' expectations interact, which is exactly where mapping exercises tend to stop.","Systems must produce individually attributable records, because collective attribution does not satisfy an individual accountability regime.","The mock gap analysis for a dual-regulated institution, and named-user attribution built into the assurance platform's audit trail."] },
+  { n:"EU AI Act Article 14, human oversight", j:"European Union", tags:["ai"], a:108, r:32,
     note:"The Human Oversight System was gap-analysed directly against this article.",
-    ch:["Article 14 requires that high-risk AI systems be designed so they can be effectively overseen by humans during use.","Stating that a human reviews the output is not oversight. The oversight has to be designed, structured and evidenced.","Automation bias is the live risk — an unstructured reviewer confirms the AI's output because nothing in the process requires them to challenge it.","Review interfaces need designed friction: separate assessment grounds, real decision options, and a record of the reasoning.","The Human Oversight System — five review lenses, five decision types, no proposed-decision mode, full audit trail — with a gap analysis produced against the article itself."] },
+    ch:["Article 14 requires that high-risk AI systems be designed so they can be effectively overseen by humans during use.","Stating that a human reviews the output is not oversight. The oversight has to be designed, structured and evidenced.","Automation bias is the live risk. An unstructured reviewer confirms the AI's output because nothing in the process requires them to challenge it.","Review interfaces need designed friction: separate assessment grounds, real decision options, and a record of the reasoning.","The Human Oversight System, with five review lenses, five decision types, no proposed-decision mode and a full audit trail, plus a gap analysis produced against the article itself."] },
   { n:"ISO/IEC 42001", j:"International standard", tags:["ai"], a:-118, r:34,
     note:"Held as a Lead Implementer certification alongside ISO/IEC 27001.",
-    ch:["ISO/IEC 42001 sets out an AI management system, structured to sit alongside an existing information security management system.","AI governance becomes a management system with defined ownership, documentation, internal audit and continual improvement — not a policy statement.","Organisations adopting AI without a management system have no repeatable way to demonstrate control to a customer, an auditor or a regulator.","Readiness needs assessing before certification is attempted, and the gaps are usually documentation and internal audit rather than technology.","An ISO/IEC 42001 readiness module inside the AI governance operating system, and the AI management system design and implementation planner."] },
+    ch:["ISO/IEC 42001 sets out an AI management system, structured to sit alongside an existing information security management system.","AI governance becomes a management system with defined ownership, documentation, internal audit and continual improvement, not a policy statement.","Organisations adopting AI without a management system have no repeatable way to demonstrate control to a customer, an auditor or a regulator.","Readiness needs assessing before certification is attempted, and the gaps are usually documentation and internal audit rather than technology.","An ISO/IEC 42001 readiness module inside the AI governance operating system, and the AI management system design and implementation planner."] },
   { n:"UK GDPR, DPA 2018 and ICO expectations", j:"United Kingdom", tags:["uk","dp"], a:-105, r:118,
     note:"Applied in the breach simulation work and in the privacy design of the tools.",
     ch:["UK data protection law sets notification timelines that begin at awareness, not at the end of the investigation.","Breach response has to run legal, regulatory, security and communications workstreams in parallel, with named owners for each.","Waiting for a third party's confirmation before assessing notification is a common and expensive failure mode.","Systems handling personal data need a documented position on residency, retention and lawful basis before an incident, not during one.","Breach and notification analysis in the DLA Piper simulation, and privacy notices covering both UK and Nigerian regimes built as a standard pattern across the tools."] },
   { n:"ISO/IEC 27001", j:"International standard", tags:["cy"], a:-20, r:62,
     note:"Held as both Lead Auditor and Lead Implementer.",
-    ch:["ISO/IEC 27001 sets the information security management system baseline most client and supervisory expectations reduce to.","Security becomes a governed system with risk assessment, control selection, internal audit and management review — with cybersecurity as a first-class governance domain.","The common failure is control implementation without the management system around it, which leaves an organisation secure but unable to demonstrate it.","Control evidence has to be produced continuously rather than assembled before an audit.","Cybersecurity as one of the 12 governance framework domains, and the evidence index and audit trail in the assurance platform designed to produce evidence as a by-product of use."] },
-  { n:"NDPR, PCI-DSS and CBN — fintech mapping", j:"Nigeria", tags:["ng","dp","cy"], a:45, r:64,
+    ch:["ISO/IEC 27001 sets the information security management system baseline most client and supervisory expectations reduce to.","Security becomes a governed system with risk assessment, control selection, internal audit and management review, with cybersecurity as a first-class governance domain.","The common failure is control implementation without the management system around it, which leaves an organisation secure but unable to demonstrate it.","Control evidence has to be produced continuously rather than assembled before an audit.","Cybersecurity as one of the 12 governance framework domains, and the evidence index and audit trail in the assurance platform designed to produce evidence as a by-product of use."] },
+  { n:"NDPR, PCI-DSS and CBN fintech mapping", j:"Nigeria", tags:["ng","dp","cy"], a:45, r:64,
     note:"A compliance mapping project across three overlapping requirement sets, alongside a PCI DSS project charter.",
     ch:["A Nigerian fintech handling card data sits under data protection rules, card industry standards and central bank guidelines simultaneously.","One operational process can carry obligations from three sources, and each source assumes it is the only one being read.","Mapping requirement-by-requirement in isolation misses the conflicts and the double-counting between the three.","Controls need mapping to business operations rather than to requirement lists, so a single control can be shown to satisfy several obligations.","The fintech compliance mapping project and a PCI DSS project charter, and the cross-referenced ID structure later built into the compliance methodology."] },
   { n:"NAICOM and NFIU obligations", j:"Nigeria", tags:["ng","aml"], a:168, r:92,
@@ -1605,7 +1632,7 @@ var RADAR = [
 /* ---------------- governance intelligence tools ---------------- */
 var TOOLS = [
   {n:"Governance Operating & Assurance Platform", g:["risk","board"], w:"W-03", shot:"goap-dashboard",
-   what:"The governance operating system for the 12-domain framework — calendar, registers, evidence, assurance and audit trail.",
+   what:"The governance operating system for the 12-domain framework: calendar, registers, evidence, assurance and audit trail.",
    p:"A written framework nobody operates.", s:"An operating cycle with named owners, RAG-tracked deadlines and an audit trail.", c:"Governance operating models, assurance design", e:"In use for the firm's framework; product brief and user guide produced."},
   {n:"Governance Stress Testing Platform", g:["risk"], w:"W-13", shot:"gstp-welcome",
    what:"Five crisis scenario modules testing governance under pressure rather than in calm conditions.",
@@ -1614,21 +1641,21 @@ var TOOLS = [
    what:"Board-level data governance and residency assurance across 10 domains and 15 jurisdictions.",
    p:"Organisations assume where their data sits.", s:"Declared residency mapped, with a jurisdiction exposure register.", c:"Data governance, jurisdiction analysis", e:"Real-geometry world map navigation and an auto-generated board report."},
   {n:"AI Governance Diagnostic", g:["ai"], w:"W-08", shot:"agd-dashboard",
-   what:"Three-pillar AI governance maturity — governance, security and control, capability — extended into a ten-module AI governance operating system.",
+   what:"Three-pillar AI governance maturity covering governance, security and control, and capability, extended into a ten-module AI governance operating system.",
    p:"A single AI maturity score hides which pillar is failing, and diagnosing maturity does not tell an organisation how to build what it lacks.", s:"Weighted three-pillar scoring with a governance floor, extended through ISO/IEC 42001 readiness, inventory, risk, impact, policy, audit and skills.", c:"AI governance, maturity modelling, AI management systems", e:"45 questions, 13 sectors, regulatory mapping across 50+ jurisdictions; ten modules in one platform."},
   {n:"Governance Decision Simulator", g:["board"], w:"W-06", shot:"sim-landing",
-   what:"Facilitator-led boardroom training — 101 simulations, 10 domains, 12 scored competencies, 26 countries, 4 sector lenses.",
+   what:"Facilitator-led boardroom training: 101 simulations, 10 domains, 12 scored competencies, 26 countries, 4 sector lenses.",
    p:"Governance training tests recall, not decision-making.", s:"Behavioural scoring across 12 competencies, with no answer key.", c:"Board effectiveness, experiential training design", e:"All 101 simulations playable; verified across thousands of playthrough combinations."},
   {n:"Human Oversight System", g:["ai","risk"], w:"W-07", shot:"hos-dashboard",
    what:"Structured five-lens human review of AI decision output, with five decision types and a full audit trail.",
-   p:"'A human is in the loop' is a claim, not a control.", s:"Designed friction — five separate review grounds before any decision.", c:"Human oversight, AI accountability", e:"Deployed; gap analysis produced against EU AI Act Article 14."},
+   p:"'A human is in the loop' is a claim, not a control.", s:"Designed friction: five separate review grounds before any decision.", c:"Human oversight, AI accountability", e:"Deployed; gap analysis produced against EU AI Act Article 14."},
   {n:"GovernSight", g:["reg","risk"], w:"W-11", shot:"governsight-domains",
    what:"Cybersecurity governance self-assessment across six domains, with a maturity radar and prioritised gap summary.",
    p:"Supervisory self-assessment done in spreadsheets leaves no defensible record.", s:"Structured assessment that produces its audit trail as a by-product.", c:"Cybersecurity governance, supervisory reporting", e:"Deployed; product brief produced; identified as a portfolio priority in the strategic product assessment."},
   {n:"Governance & Regulatory Readiness Diagnostic", g:["reg"], w:"W-17", shot:null,
    what:"Governance readiness and regulatory readiness assessed together, before someone asks.",
    p:"Organisations discover they are not ready at the point of being asked.", s:"One structured pass across both, with separated survey and results flows.", c:"Readiness assessment, regulatory analysis", e:"Deployed; product brief produced."},
-  {n:"AEGIS — Financial Crime Governance Operating System", g:["fc","risk"], w:"W-12", shot:null,
+  {n:"AEGIS Financial Crime Governance Operating System", g:["fc","risk"], w:"W-12", shot:null,
    what:"Diagnostic-first financial crime governance: 7 domains, 10 operational views, 5 response playbooks.",
    p:"Obligation checklists do not produce a working programme.", s:"A single diagnostic that generates the risks, gaps, actions and workspace.", c:"Financial crime governance, playbook design", e:"Jurisdiction-grouped obligation tracker; full product brief produced."},
   {n:"Board Skills Matrix", g:["board"], w:"W-16", shot:"bsm-gaps",
@@ -1642,14 +1669,14 @@ var TOOLS = [
 /* ---------------- certifications ---------------- */
 var CERTS = [
   { g:"Governance", items:[
-    {n:"GRCP — Governance, Risk Management and Compliance Professional", w:"OCEG", d:"May 2026"},
+    {n:"GRCP (Governance, Risk Management and Compliance Professional)", w:"OCEG", d:"May 2026"},
     {n:"ISO/IEC 27001 & ISO 42001 Lead Implementer", w:"International Cybersecurity and Digital Forensics Academy", d:"December 2025"},
     {n:"ISO/IEC 27001 Lead Auditor", w:"Information security management systems", d:"August 2025"}
   ]},
   { g:"Security", items:[
     {n:"Certified in Cybersecurity (CC)", w:"ISC2", d:"May 2024"},
     {n:"Introduction to Cybersecurity", w:"Cisco Networking Academy", d:"February 2024"},
-    {n:"Diploma in Cybersecurity", w:"AltSchool Africa", d:"2024 — 2025"}
+    {n:"Diploma in Cybersecurity", w:"AltSchool Africa", d:"2024 to 2025"}
   ]},
   { g:"AI", items:[
     {n:"Introduction to AI Security", w:"AI security fundamentals", d:"Newly earned", fresh:true},
@@ -1659,7 +1686,7 @@ var CERTS = [
   { g:"Professional development", items:[
     {n:"AI Career Essentials", w:"ALX", d:"November 2024"},
     {n:"Web Development", w:"Code Lagos", d:"September 2018"},
-    {n:"B.A. History & International Studies", w:"University of Ilorin", d:"2018 — 2023"}
+    {n:"B.A. History & International Studies", w:"University of Ilorin", d:"2018 to 2023"}
   ]}
 ];
 (function(){
@@ -1696,9 +1723,18 @@ $$("[data-ic]").forEach(function(el){ el.innerHTML = icon(el.dataset.ic, el.data
 /* ---------------- nav ---------------- */
 (function(){
   var nav=$("#nav"), b=$("#burger");
-  if(b) b.addEventListener("click",function(){
+  if(!b) return;
+  function close(){ nav.classList.remove("open"); b.setAttribute("aria-expanded","false"); }
+  b.addEventListener("click",function(e){
+    e.stopPropagation();
     var o=nav.classList.toggle("open");
     b.setAttribute("aria-expanded",o?"true":"false");
+  });
+  document.addEventListener("click",function(e){
+    if(nav.classList.contains("open")&&!e.target.closest("#nav")) close();
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape"&&nav.classList.contains("open")){ close(); b.focus(); }
   });
 })();
 
@@ -1786,7 +1822,7 @@ buildStack(stack,26); buildStack(stack2,30);
 /* ---------------- screenshot helpers ---------------- */
 function shotHTML(key,btn){
   var cap=SHOTS[key]||"";
-  var t=cap.split("—")[0].trim();
+  var t=cap.split(" · ")[0].trim();
   return '<'+(btn?'button type="button"':'div')+' class="shot" '+(btn?'data-lb="'+key+'"':'')+'>'
     +'<span class="shot-bar"><i></i><i></i><i></i><span>'+esc(t)+'</span></span>'
     +'<span class="shot-svg" role="img" aria-label="'+esc(cap)+'">'+(IMG[key]||"")+'</span>'
@@ -2058,25 +2094,59 @@ document.addEventListener("click",function(e){
   });
 })();
 
-/* ---------------- gallery carousel ---------------- */
+/* ---------------- gallery carousel (auto-scrolling) ---------------- */
 (function(){
-  $$(".js-car-track").forEach(function(tr){
   var keys=Object.keys(SHOTS);
-  tr.innerHTML=keys.map(function(k){ return '<div class="car-item">'+shotHTML(k,true)+'</div>'; }).join("");
-  var count=tr.parentNode.querySelector(".js-car-count"); if(count) count.textContent="01 / "+("0"+keys.length).slice(-2);
-  function step(dir){
-    var w=tr.querySelector(".car-item").offsetWidth+16;
-    tr.scrollBy({left:dir*w,behavior:RM?"auto":"smooth"});
-  }
-  var p=tr.parentNode.querySelector(".js-car-prev"), n=tr.parentNode.querySelector(".js-car-next");
-  if(p) p.addEventListener("click",function(){step(-1);});
-  if(n) n.addEventListener("click",function(){step(1);});
-  tr.addEventListener("scroll",function(){
-    if(!count) return;
-    var w=tr.querySelector(".car-item").offsetWidth+16;
-    var i=Math.min(keys.length,Math.round(tr.scrollLeft/w)+1);
-    count.textContent=("0"+i).slice(-2)+" / "+("0"+keys.length).slice(-2);
-  },{passive:true});
+  $$(".js-car-track").forEach(function(tr){
+    var one=keys.map(function(k){ return '<div class="car-item">'+shotHTML(k,true)+'</div>'; }).join("");
+    tr.innerHTML=one+one;                 // duplicated so the loop is seamless
+    var wrap=tr.parentNode;
+    var count=wrap.querySelector(".js-car-count");
+    var prev=wrap.querySelector(".js-car-prev"), next=wrap.querySelector(".js-car-next");
+    var pos=0, half=0, itemW=0, raf=null, self=false;
+    function measure(){
+      var it=tr.querySelector(".car-item");
+      itemW=(it?it.offsetWidth:400)+16;
+      half=itemW*keys.length;
+    }
+    measure();
+    window.addEventListener("resize",function(){ measure(); },{passive:true});
+    function label(){
+      if(!count||!itemW) return;
+      var i=Math.round(pos/itemW)%keys.length;
+      if(i<0) i+=keys.length;
+      count.textContent=("0"+(i+1)).slice(-2)+" / "+("0"+keys.length).slice(-2);
+    }
+    function norm(){
+      if(!half) return;
+      while(pos>=half) pos-=half;
+      while(pos<0) pos+=half;
+    }
+    function tick(){
+      if(!(lb&&lb.classList.contains("open"))){
+        pos+=0.42; norm();
+        self=true; tr.scrollLeft=pos; self=false;
+        label();
+      }
+      raf=requestAnimationFrame(tick);
+    }
+    tr.addEventListener("scroll",function(){        // keep in step with manual scrolling
+      if(self) return;
+      pos=tr.scrollLeft; norm(); label();
+    },{passive:true});
+    function step(dir){
+      if(!itemW) measure();
+      pos+=dir*itemW; norm();
+      self=true; tr.scrollTo({left:pos,behavior:RM?"auto":"smooth"}); self=false;
+      label();
+    }
+    if(prev) prev.addEventListener("click",function(){ step(-1); });
+    if(next) next.addEventListener("click",function(){ step(1); });
+    label();
+    if(!RM){
+      setTimeout(function(){ measure(); label(); },60);
+      raf=requestAnimationFrame(tick);
+    }
   });
 })();
 
@@ -2102,8 +2172,8 @@ var y=$("#yr"); if(y) y.textContent=new Date().getFullYear();
 
 /* ---------------- page switching ---------------- */
 (function(){
-  var VIEWS=["home", "journey", "experience", "work", "tools", "capabilities", "about"], TITLES={"home":"Victoria Ashaye — Technology Governance, GRC, Cybersecurity, AI Security & Governance","journey":"Career journey — Victoria Ashaye","experience":"Experience — Victoria Ashaye","work":"Selected work — Victoria Ashaye","tools":"Governance intelligence tools — Victoria Ashaye","capabilities":"Capabilities — Victoria Ashaye","about":"About & contact — Victoria Ashaye"};
-  var views=$$("[data-view]"), links=$$("#navlinks a[data-view]");
+  var VIEWS=["home", "journey", "experience", "work", "tools", "capabilities", "about"], TITLES={"home":"Victoria Ashaye · Technology Governance, GRC, Cybersecurity, AI Security & Governance","journey":"Career journey · Victoria Ashaye","experience":"Experience · Victoria Ashaye","work":"Selected work · Victoria Ashaye","tools":"Governance intelligence tools · Victoria Ashaye","capabilities":"Capabilities · Victoria Ashaye","about":"About & contact · Victoria Ashaye"};
+  var views=$$("main > .view"), links=$$("#navlinks a[data-view]");
   function show(v,anchor){
     views.forEach(function(el){ el.hidden = el.dataset.view!==v; });
     links.forEach(function(a){ a.classList.toggle("on",a.dataset.view===v); });
